@@ -1,0 +1,14 @@
+.spacing_sm {
+    height: 5px;
+    margin: 5px 0;
+}
+
+.spacing_md {
+    height: 5px;
+    margin: 10px 0;
+}
+
+.spacing_lg {
+    height: 5px;
+    margin: 20px 0;
+}

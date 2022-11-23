@@ -1,0 +1,19 @@
+.input {
+    background-color: var(--color-primary-2);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--color-grey-1);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

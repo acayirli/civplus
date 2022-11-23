@@ -2,9 +2,9 @@ import React from "react";
 
 import "./contentBox.css";
 
-export function ContentBox({ children }: { children: React.ReactNode }) {
+export function ContentBox({ children, className }: { children: React.ReactNode, className?: string }) {
     return (
-        <div className="content_box">
+        <div className={`${className} content_box`}>
             { children }
         </div>
     );

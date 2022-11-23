@@ -1,0 +1,10 @@
+.drafter-settings {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.settings__presets {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}

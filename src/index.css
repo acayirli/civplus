@@ -35,6 +35,16 @@ h1 {
   font-size: 24px;
 }
 
+h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Alexandria-Regular", sans-serif;
+  font-size: 18px;
+}
+
 p {
   line-height: 1.5;
   font-size: 14px;
