@@ -1,0 +1,6 @@
+.content_box {
+    border-radius: 5px;
+    background-color: var(--color-primary-4);
+    padding: 10px 20px;
+    margin: 10px 0;
+}

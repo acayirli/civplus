@@ -1,0 +1,23 @@
+.sidebar__item {
+    background-color: transparent;
+    border: none;
+    color: var(--color-grey-1);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    min-width: 200px;
+    text-align: left;
+}
+
+.sidebar__item:hover {
+    color: white;
+    background-color: var(--color-grey-3)
+}
+
+.sidebar__item[data-state='active'] {
+    color: white;
+    border-bottom: 3px solid var(--color-secondary);
+}

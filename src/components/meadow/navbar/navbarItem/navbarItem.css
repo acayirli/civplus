@@ -1,0 +1,21 @@
+.navbar__item {
+    background-color: transparent;
+    border: none;
+    color: var(--color-grey-1);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    letter-spacing: 3px;
+    border-radius: 5px;
+}
+
+.navbar__item:hover {
+    color: white;
+    background-color: var(--color-primary-2)
+}
+
+.navbar__item[data-state='active'] {
+    color: white;
+    border-bottom: 3px solid var(--color-secondary);
+}

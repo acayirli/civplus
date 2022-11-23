@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Alexandria-Regular';
+  src: url('assets/fonts/Alexandria-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Alexandria-Bold';
+  src: url('assets/fonts/Alexandria-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Baskerville-Regular';
+  src: url('assets/fonts/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Baskerville-Bold';
+  src: url('assets/fonts/LibreBaskerville-Bold.ttf');
+}
+
+body {
+  font-family: "Alexandria-Regular", sans-serif;
+  background-color: var(--color-primary-darkest);
+  color: var(--color-grey-1);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Baskerville-Bold", sarif;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  color: var(--color-grey-1);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+:root {
+  --color-primary: #123557;
+  --color-primary-dark: #092034;
+  --color-primary-darkest: #04121e;
+  --color-primary-light: #0E5167;
+
+  --color-primary-4: #082238;
+  --color-primary-3: #10324F;
+  --color-primary-2: #173e61;
+  --color-secondary: #C7C4BD;
+
+  --color-grey-6: #1a1e24; 
+  --color-grey-5: #272c33; 
+  --color-grey-4: #3f4652;
+  --color-grey-3: #777d87;
+  --color-grey-2: #a9abaf;
+  --color-grey-1: #cacaca;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  color: var(--color-white);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+  letter-spacing: 3px;
+}
+
+.tab:hover {
+  color: white;
+  border-bottom: 3px solid var(--color-primary-light);
+}
+
+.tab[data-state='active'] {
+  color: white;
+  border-bottom: 3px solid var(--color-secondary);
+}
+
+.tab-content {
+  padding: 20px 0;
+}
