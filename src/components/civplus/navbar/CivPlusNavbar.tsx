@@ -8,7 +8,7 @@ export function CivPlusNavbar() {
         <Navbar>
             <img src={logo}></img>
             <NavbarItem text="Drafter" icon="" />
-            <NavbarItem text="Teams" icon="" />
+            <NavbarItem text="Teams" icon="" active />
             <NavbarItem text="Learn" icon="" />
             <NavbarItem text="About" icon="" />
         </Navbar>

@@ -12,10 +12,10 @@
 
 .navbar__item:hover {
     color: white;
-    background-color: var(--color-primary-2)
+    background-color: var(--color-primary-2);
 }
 
-.navbar__item[data-state='active'] {
+.navbar__item--active {
     color: white;
-    border-bottom: 3px solid var(--color-secondary);
+    background-color: var(--color-primary-2);
 }
