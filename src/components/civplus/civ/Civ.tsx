@@ -1,9 +1,14 @@
+import { CivLabelModel } from "../civLabel/CivLabel";
 import "./civ.css";
 
 export type CivModel = {
     portrait: React.ReactNode,
     leader: string,
-    nation: string
+    nation: string,
+    labels: CivLabelModel[],
+    strength: 1 | 2 | 3,
+    difficulty: 1 | 2 | 3,
+    strategies: string[]
 }
 
 export function Civ({ civ }: { civ: CivModel }) {

@@ -25,27 +25,34 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Baskerville-Regular", sarif;
+  font-family: "Alexandria-Regular", sans-serif;
   letter-spacing: 5px;
   margin-bottom: 10px;
   color: var(--color-grey-1);
 }
 
 h1 {
+  font-family: "Baskerville-Regular", sarif;
   font-size: 28px;
 }
 
 h2 {
+  font-family: "Baskerville-Regular", sarif;
   margin-bottom: 40px;
   font-size: 24px;
 }
 
 h3 {
   font-family: "Alexandria-Regular", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-p {
+h4 {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+p, li {
   line-height: 1.5;
   font-size: 14px;
 }
@@ -59,7 +66,10 @@ p {
   --color-primary-4: #082238;
   --color-primary-3: #10324F;
   --color-primary-2: #173e61;
-  --color-secondary: #C7C4BD;
+
+  --color-secondary-3: #6e2e08;
+  --color-secondary-2: #994210;
+  --color-secondary-1: #b85b26;
 
   --color-grey-6: #1a1e24; 
   --color-grey-5: #272c33; 
