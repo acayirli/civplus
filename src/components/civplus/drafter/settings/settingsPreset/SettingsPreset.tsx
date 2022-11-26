@@ -8,7 +8,7 @@ export function SettingsPreset({ text, drafterSettings, onSelect }: { text: stri
     }
 
     return (
-        <button className="settings-preset" type="button" onChange={handleOnSelect}>
+        <button className="settings-preset" type="button" onClick={handleOnSelect}>
             {text}
         </button>
     );

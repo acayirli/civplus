@@ -1,0 +1,5 @@
+.drafter-results__civs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}

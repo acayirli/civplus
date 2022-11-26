@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { civs } from "../../../../civs";
+import { CivModel, civs } from "../../../../civs";
 import { Main } from "../../../meadow/main/Main";
-import { DrafterCivResults } from "../civs/DrafterCivResults";
+import { DrafterBans } from "../bans/DrafterBans";
+import { DrafterCivResults } from "../drafterCivResults/DrafterCivResults";
 import { DrafterSettings, DrafterSettingsModel } from "../settings/Settings";
 
 import "./drafterMain.css";
@@ -11,10 +12,16 @@ type drafterState = "settings" | "bans" | "results";
 export function DrafterMain() {
     const [drafterState, setDrafterState] = useState<drafterState>("settings");
     const [settings, setSettings] = useState<DrafterSettingsModel>();
+    const [bans, setBans] = useState<string[]>();
 
     function handleSettingsConfirmed(drafterSettings: DrafterSettingsModel) {
-        setDrafterState("bans");
         setSettings(drafterSettings);
+        setDrafterState("bans");
+    }
+
+    function handleBansConfirmed(bans: string[]) {
+        setBans(bans);
+        setDrafterState("results");
     }
 
     switch (drafterState) {
@@ -28,14 +35,14 @@ export function DrafterMain() {
         case "bans":
             return (
                 <Main className="drafter">
-                    { settings?.civsPerPlayer } { settings?.numberOfPlayers }
+                    <DrafterBans onConfirmed={handleBansConfirmed} />
                 </Main>
             );
 
         case "results":
             return (
                 <Main className="drafter">
-                    
+                    <DrafterCivResults settings={settings!} bans={bans!} />
                 </Main>
             );
 

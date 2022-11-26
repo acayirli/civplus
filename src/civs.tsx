@@ -65,6 +65,7 @@ import wilfried from "./assets/images/portraits/wilfried.webp";
 import wilhelmina from "./assets/images/portraits/wilhelmina.webp";
 
 export type CivModel = {
+    id: string,
     portrait: string,
     leader: string,
     nation: string,
@@ -78,6 +79,7 @@ export type CivModel = {
 
 export const civs: { [leader: string]: CivModel } = {
     abraham: {
+        id: "abraham",
         portrait: abraham,
         leader: "Abraham Lincoln",
         nation: "American",
@@ -90,6 +92,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.cityPatronGoddess, pantheons.godOfCraftsmen]
     },
     alexander: {
+        id: "alexander",
         portrait: alexander,
         leader: "Alexander",
         nation: "Macedonian",
@@ -102,6 +105,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfWarAndPlunder, pantheons.godOfTheForge, pantheons.cityPatronGoddess]
     },
     amanitore: {
+        id: "amanitore",
         portrait: amanitore,
         leader: "Amanitore",
         nation: "Nubian",
@@ -115,6 +119,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.religiousIdols, pantheons.godOfCraftsmen]
     },
     ambiorix: {
+        id: "ambiorix",
         portrait: ambiorix,
         leader: "Ambiorix",
         nation: "Gallic",
@@ -127,6 +132,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     basil: {
+        id: "basil",
         portrait: basil,
         leader: "Basil II",
         nation: "Byzantine",
@@ -139,6 +145,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.riverGoddess, pantheons.cityPatronGoddess]
     },
     batrieu: {
+        id: "batrieu",
         portrait: batrieu,
         leader: "Bà Triệu",
         nation: "Vietnamese",
@@ -151,6 +158,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.cityPatronGoddess]
     },
     catherine: {
+        id: "catherine",
         portrait: catherineBq,
         leader: "Catherine de Medici (Black Queen)",
         nation: "French",
@@ -163,6 +171,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     catherineMagnificence: {
+        id: "catherineMagnificence",
         portrait: catherineMagnificence,
         leader: "Catherine de Medici (Magnificence)",
         nation: "French",
@@ -175,6 +184,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     chandragupta: {
+        id: "chandragupta",
         portrait: chandragupta,
         leader: "Chandragupta",
         nation: "Indian",
@@ -188,6 +198,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.riverGoddess, pantheons.sacredPath]
     },
     cleopatra: {
+        id: "cleopatra",
         portrait: cleopatra,
         leader: "Cleopatra",
         nation: "Egyptian",
@@ -200,6 +211,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.ladyOfTheReedsAndMarshes, pantheons.godOfWarAndPlunder, pantheons.religiousSettlements]
     },
     cyrus: {
+        id: "cyrus",
         portrait: cyrus,
         leader: "Cyrus",
         nation: "Persian",
@@ -213,6 +225,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     dido: {
+        id: "dido",
         portrait: dido,
         leader: "Dido",
         nation: "Phoenician",
@@ -225,6 +238,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfTheSea, pantheons.religiousSettlements]
     },
     eleanor: {
+        id: "eleanor",
         portrait: eleanor,
         leader: "Eleanor of Aquitaine",
         nation: "English",
@@ -240,6 +254,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.divineSpark]
     },
     eleanorFrance: {
+        id: "eleanorFrance",
         portrait: eleanorFrance,
         leader: "Eleanor of Aquitaine",
         nation: "French",
@@ -255,6 +270,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.divineSpark]
     },
     frederick: {
+        id: "frederick",
         portrait: frederick,
         leader: "Frederick Barbarossa",
         nation: "German",
@@ -270,6 +286,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.cityPatronGoddess]
     },
     gandhi: {
+        id: "gandhi",
         portrait: gandhi,
         leader: "Gandhi",
         nation: "Indian",
@@ -284,6 +301,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.riverGoddess, pantheons.sacredPath]
     },
     genghis: {
+        id: "genghis",
         portrait: genghis,
         leader: "Genghis Khan",
         nation: "Mongolian",
@@ -298,6 +316,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfWarAndPlunder]
     },
     Gilgamesh: {
+        id: "gilgamesh",
         portrait: gilgamesh,
         leader: "Gilgamesh",
         nation: "Sumerian",
@@ -310,6 +329,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     Gitarja: {
+        id: "gitarja",
         portrait: gitarja,
         leader: "Gitarja",
         nation: "Indonesian",
@@ -327,6 +347,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfTheSea]
     },
     gorgo: {
+        id: "gorgo",
         portrait: gorgo,
         leader: "Gorgo",
         nation: "Greek",
@@ -343,6 +364,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     hammurabi: {
+        id: "hammurabi",
         portrait: hammurabi,
         leader: "Hammurabi",
         nation: "Babylonian",
@@ -355,6 +377,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     harald: {
+        id: "harald",
         portrait: harald,
         leader: "Harald Hardrada",
         nation: "Norwegian",
@@ -371,6 +394,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfTheSea]
     },
     hojo: {
+        id: "hojo",
         portrait: hojo,
         leader: "Hojo Tokimune",
         nation: "Japanese",
@@ -383,6 +407,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfTheSea, pantheons.cityPatronGoddess]
     },
     jadwiga: {
+        id: "jadwiga",
         portrait: jadwiga,
         leader: "Jadwiga",
         nation: "Polish",
@@ -400,6 +425,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.riverGoddess, pantheons.godOfTheSea, pantheons.godOfWarAndPlunder]
     },
     jayavarman: {
+        id: "jayavarman",
         portrait: jayavarman,
         leader: "Jayavarman VII",
         nation: "Khmer",
@@ -413,6 +439,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.riverGoddess]
     },
     joao: {
+        id: "joao",
         portrait: joao,
         leader: "João III",
         nation: "Portuguese",
@@ -425,6 +452,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfTheSea]
     },
     johnCurtin: {
+        id: "johnCurtin",
         portrait: johnCurtin,
         leader: "John Curtin",
         nation: "Australian",
@@ -438,6 +466,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     caesar: {
+        id: "caesar",
         portrait: caesar,
         leader: "Julius Caesar",
         nation: "Roman",
@@ -450,6 +479,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfWarAndPlunder, pantheons.religiousSettlements]
     },
     kristina: {
+        id: "kristina",
         portrait: kristina,
         leader: "Kristina",
         nation: "Swedish",
@@ -465,6 +495,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.divineSpark]
     },
     kublai: {
+        id: "kublai",
         portrait: kublai,
         leader: "Kublai Khan",
         nation: "Chinese",
@@ -477,6 +508,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfWarAndPlunder]
     },
     kublaiMongolia: {
+        id: "kublaiMongolia",
         portrait: kublaiMongolia,
         leader: "Kublai Khan",
         nation: "Mongolian",
@@ -490,6 +522,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfWarAndPlunder]
     },
     kupe: {
+        id: "kupe",
         portrait: kupe,
         leader: "Kupe",
         nation: "Māori",
@@ -503,6 +536,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     ladySixSky: {
+        id: "ladySixSky",
         portrait: ladySixSky,
         leader: "Lady Six Sky",
         nation: "Mayan",
@@ -518,6 +552,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.ladyOfTheReedsAndMarshes]
     },
     lautaro: {
+        id: "lautaro",
         portrait: lautaro,
         leader: "Lautaro",
         nation: "Mapuche",
@@ -533,6 +568,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     mansamusa: {
+        id: "mansamusa",
         portrait: mansamusa,
         leader: "Mansa Musa",
         nation: "Malian",
@@ -548,6 +584,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.desertFolklore]
     },
     matthias: {
+        id: "matthias",
         portrait: matthias,
         leader: "Matthias Corvinus",
         nation: "Hungarian",
@@ -563,6 +600,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfWarAndPlunder]
     },
     menelik: {
+        id: "menelik",
         portrait: menelik,
         leader: "Menelik II",
         nation: "Ethiopian",
@@ -575,6 +613,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     montezuma: {
+        id: "montezuma",
         portrait: montezuma,
         leader: "Montezuma",
         nation: "Aztec",
@@ -590,6 +629,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     mvemba: {
+        id: "mvemba",
         portrait: mvemba,
         leader: "Mvemba a Nzinga",
         nation: "Kongolese",
@@ -602,6 +642,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     nzinga: {
+        id: "nzinga",
         portrait: nzinga,
         leader: "Nzinga Mbande",
         nation: "Kongolese",
@@ -617,6 +658,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     pachacuti: {
+        id: "pachacuti",
         portrait: pachacuti,
         leader: "Pachacuti",
         nation: "Inca",
@@ -633,6 +675,7 @@ export const civs: { [leader: string]: CivModel } = {
         ]
     },
     pedro: {
+        id: "pedro",
         portrait: pedro,
         leader: "Pedro II",
         nation: "Brazilian",
@@ -649,6 +692,7 @@ export const civs: { [leader: string]: CivModel } = {
         ]
     },
     pericles: {
+        id: "pericles",
         portrait: pericles,
         leader: "Pericles",
         nation: "Greek",
@@ -665,6 +709,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     peter: {
+        id: "peter",
         portrait: peter,
         leader: "Peter",
         nation: "Russian",
@@ -680,6 +725,7 @@ export const civs: { [leader: string]: CivModel } = {
         ]
     },
     philip: {
+        id: "philip",
         portrait: philip,
         leader: "Philip II",
         nation: "Spanish",
@@ -696,6 +742,7 @@ export const civs: { [leader: string]: CivModel } = {
         ]
     },
     poundmaker: {
+        id: "poundmaker",
         portrait: poundmaker,
         leader: "Poundmaker",
         nation: "Cree",
@@ -710,6 +757,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfWarAndPlunder, pantheons.religiousSettlements, pantheons.cityPatronGoddess]
     },
     qin: {
+        id: "qin",
         portrait: qin,
         leader: "Qin Shi Huang",
         nation: "Chinese",
@@ -726,6 +774,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     robert: {
+        id: "robert",
         portrait: robert,
         leader: "Robert the Bruce",
         nation: "Scottish",
@@ -744,6 +793,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     saladin: {
+        id: "saladin",
         portrait: saladin,
         leader: "Saladin (Vizier)",
         nation: "Arabian",
@@ -767,6 +817,7 @@ export const civs: { [leader: string]: CivModel } = {
         ]
     },
     saladinSultan: {
+        id: "saladinSultan",
         portrait: saladinSultan,
         leader: "Saladin (Sultan)",
         nation: "Arabian",
@@ -779,6 +830,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.riverGoddess, pantheons.sacredPath]
     },
     seondeok: {
+        id: "seondeok",
         portrait: seondeok,
         leader: "Seondeok",
         nation: "korean",
@@ -793,6 +845,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.fertilityRites]
     },
     shaka: {
+        id: "shaka",
         portrait: shaka,
         leader: "Shaka",
         nation: "Zulu",
@@ -805,6 +858,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfTheForge, pantheons.cityPatronGoddess]
     },
     simon: {
+        id: "simon",
         portrait: simon,
         leader: "Simón Bolívar",
         nation: "Gran Columbian",
@@ -820,6 +874,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     suleiman: {
+        id: "suleiman",
         portrait: suleiman,
         leader: "Suleiman",
         nation: "Ottoman",
@@ -837,6 +892,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.cityPatronGoddess, pantheons.religiousSettlements]
     },
     tamar: {
+        id: "tamar",
         portrait: tamar,
         leader: "Tamar",
         nation: "Georgian",
@@ -850,6 +906,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.religiousIdols]
     },
     teddy: {
+        id: "teddy",
         portrait: teddy,
         leader: "Teddy Roosevelt (Bull Moose)",
         nation: "American",
@@ -869,6 +926,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.earthGoddess]
     },
     teddyRR: {
+        id: "teddyRR",
         portrait: teddyRR,
         leader: "Teddy Roosevelt (Rough Rider)",
         nation: "American",
@@ -881,6 +939,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     tomyris: {
+        id: "tomyris",
         portrait: tomyris,
         leader: "Tomyris",
         nation: "Scythian",
@@ -893,6 +952,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: []
     },
     trajan: {
+        id: "trajan",
         portrait: trajan,
         leader: "Trajan",
         nation: "Roman",
@@ -906,6 +966,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.cityPatronGoddess]
     },
     victoria: {
+        id: "victoria",
         portrait: victoria,
         leader: "Victoria",
         nation: "English",
@@ -918,6 +979,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.godOfTheSea]
     },
     wilfried: {
+        id: "wilfried",
         portrait: wilfried,
         leader: "Wilfried Laurier",
         nation: "Canadian",
@@ -931,6 +993,7 @@ export const civs: { [leader: string]: CivModel } = {
         pantheons: [pantheons.goddessOfTheHunt]
     },
     wilhelmina: {
+        id: "wilhelmina",
         portrait: wilhelmina,
         leader: "Wilhemina",
         nation: "Dutch",

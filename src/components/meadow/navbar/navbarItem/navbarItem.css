@@ -19,3 +19,7 @@
     color: white;
     background-color: var(--color-primary-2);
 }
+
+.navbar__item_icon {
+    margin-right: 10px;
+}
