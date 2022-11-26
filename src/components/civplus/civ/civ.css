@@ -12,17 +12,15 @@
     margin-right: 10px;
 }
 
-.civ__portrait img {
-    width: 60px;
-}
-
 .civ__leader {
     font-family: 'Baskerville-Regular';
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 5px;
 }
 
 .civ__nation {
     color: var(--color-grey-2);
+    font-size: 13px;
+    letter-spacing: 1px;
 }

@@ -1,7 +1,4 @@
-export type CivLabelModel = 
-"Science" | "Culture" | "Religion" | "Production" |
-"Gold" | "War" | "Carry" | "Beginner-friendly" |
-"Timing push" | "Versatile" | "Ward";
+import { CivLabelModel } from "../../../labels";
 
 export function CivLabel({ label }: { label: CivLabelModel }) {
     return (

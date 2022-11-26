@@ -1,5 +1,11 @@
+.drafter-settings {
+    max-width: 512px;
+    margin: 0 auto;
+}
+
 .settings__presets {
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }

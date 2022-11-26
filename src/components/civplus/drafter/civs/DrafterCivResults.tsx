@@ -1,8 +1,9 @@
+import { CivModel } from "../../../../civs";
 import { Button } from "../../../meadow/button/Button";
 import { Container } from "../../../meadow/container/Container";
 import { ContentBox } from "../../../meadow/contentBox/ContentBox";
 import { Space } from "../../../meadow/space/Space";
-import { Civ, CivModel } from "../../civ/Civ";
+import { Civ } from "../../civ/Civ";
 import { CivCard } from "../../civCard/CivCard";
 
 import "./drafterCivResults.css";

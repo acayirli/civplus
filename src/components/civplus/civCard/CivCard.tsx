@@ -1,7 +1,10 @@
+import { CivModel } from "../../../civs";
+import { CivLabelModel } from "../../../labels";
+import { PantheonModel } from "../../../pantheons";
 import { Container } from "../../meadow/container/Container";
 import { ContentBox } from "../../meadow/contentBox/ContentBox";
 import { Space } from "../../meadow/space/Space";
-import { Civ, CivModel } from "../civ/Civ";
+import { Civ } from "../civ/Civ";
 import { CivLabel } from "../civLabel/CivLabel";
 
 import "./civCard.css";
@@ -31,7 +34,7 @@ export function CivCard({ civ }: { civ: CivModel }) {
 
             <div className="civ_card__labels">
                 {
-                    civ.labels.map((label) => <CivLabel label={label} />)
+                    civ.labels.map((label: CivLabelModel) => <CivLabel label={label} />)
                 }
             </div>
 
@@ -42,7 +45,7 @@ export function CivCard({ civ }: { civ: CivModel }) {
 
                 <ul>
                     {
-                        civ.strategies.map((strategy) => <li>{strategy}</li>)
+                        civ.strategies.map((strategy: string) => <li>{strategy}</li>)
                     }
                 </ul>
             </div>
@@ -53,7 +56,7 @@ export function CivCard({ civ }: { civ: CivModel }) {
                 <h4>Pantheons</h4>
 
                 {
-                    civ.strategies.map((pantheon) => <p>{pantheon}</p>)
+                    civ.pantheons.map((pantheon: PantheonModel) => <p>{pantheon.name}</p>)
                 }
             </div>
         </ContentBox>

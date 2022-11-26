@@ -1,21 +1,11 @@
-import { CivLabelModel } from "../civLabel/CivLabel";
+import { CivModel } from "../../../civs";
 import "./civ.css";
-
-export type CivModel = {
-    portrait: React.ReactNode,
-    leader: string,
-    nation: string,
-    labels: CivLabelModel[],
-    strength: 1 | 2 | 3,
-    difficulty: 1 | 2 | 3,
-    strategies: string[]
-}
 
 export function Civ({ civ }: { civ: CivModel }) {
     return (
         <div className="civ">
             <div className="civ__portrait">
-                {civ.portrait}
+                <img src={civ.portrait}></img>
             </div>
 
             <div className="civ__title">
