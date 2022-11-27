@@ -22,6 +22,7 @@ body {
   font-family: "Alexandria-Regular", sans-serif;
   background-color: var(--color-primary-darkest);
   color: var(--color-grey-1);
+  min-width: 375px;
 }
 
 h1, h2, h3, h4, h5 {

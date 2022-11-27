@@ -79,8 +79,8 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
         <Container className="drafter-results" gap="40px">
             {/* <DrafterTimeline activeStep={3} /> */}
 
-            <div style={{ flexGrow: 1 }}>
-                <Container justifyContent="space-between">
+            <div style={{ flexGrow: 1, overflow: "hidden" }}>
+                <Container className="drafter-results__header" justifyContent="space-between">
                     <h2>Results</h2>
 
                     <Container gap="20px">
