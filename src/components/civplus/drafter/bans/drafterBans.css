@@ -16,3 +16,7 @@
     flex-wrap: wrap;
     gap: 15px;
 }
+
+.drafter-bans__civs .civ {
+    width: 200px;
+}

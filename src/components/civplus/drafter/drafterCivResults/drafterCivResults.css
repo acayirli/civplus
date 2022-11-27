@@ -1,8 +1,35 @@
 .drafter-results {
-    max-width: 885px;
+    max-width: 1650px;
     width: 100%;
     margin: 0 auto;
     position: relative;
+}
+
+@media only screen and (max-width: 1315px) {
+    .drafter-results .drafter-timeline {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .drafter-results .civ_card {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 551px) {
+    .drafter-results__civs .civ {
+        width: 100% !important;
+    }
+}
+
+.drafter-results__card_placeholder {
+    width: 484px;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 20px;
+    height: 200px;
+    margin-top: 98px;
 }
 
 .drafter-results .civ_card {
@@ -13,4 +40,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+.drafter-results__civs .civ {
+    width: 200px;
 }

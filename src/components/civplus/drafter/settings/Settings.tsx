@@ -7,9 +7,8 @@ import { InlineInput } from "../../../meadow/inlineInput/InlineInput";
 import { Button } from "../../../meadow/button/Button";
 import { Container } from "../../../meadow/container/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faCircle, faCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { ChangeEvent, useState } from "react";
-import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
 
 export type DrafterSettingsModel = {
     numberOfPlayers: number,
@@ -29,9 +28,15 @@ const presets = [
 export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: (drafterSettings: DrafterSettingsModel) => void }) {
     const [numberOfPlayers, setNumberOfPlayers] = useState<number>(0);
     const [civsPerPlayer, setCivsPerPlayer] = useState<number>(0);
+    const [playerNames, setPlayerNames] = useState<string[]>([]);
+    const [teamNames, setTeamNames] = useState<string[]>([]);
 
     function handleSettingsPresetOnChange(drafterSettings: DrafterSettingsModel) {
-        onSettingsConfirmed(drafterSettings);
+        onSettingsConfirmed({
+            civsPerPlayer: drafterSettings.civsPerPlayer,
+            numberOfPlayers: drafterSettings.numberOfPlayers,
+            playerNames: teamNames.length == 2 ? teamNames : drafterSettings.playerNames
+        });
     }
 
     function handleOnChangeNumberOfPlayer(event: ChangeEvent<HTMLInputElement>) {
@@ -42,32 +47,48 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
         setCivsPerPlayer(parseInt(event.currentTarget.value));
     }
 
+    function handleOnChangePlayerNames(event: ChangeEvent<HTMLInputElement>) {
+        const splitNames = event.currentTarget.value.split(",");
+        setPlayerNames(splitNames.map((name) => name.trim()));
+    }
+
+    function handleOnChangeTeamNames(event: ChangeEvent<HTMLInputElement>) {
+        const splitNames = event.currentTarget.value.split(",");
+        setTeamNames(splitNames.map((name) => name.trim()));
+    }
+
     function handleClickContinueCustomSettings() {
         onSettingsConfirmed({
             civsPerPlayer: civsPerPlayer,
             numberOfPlayers: numberOfPlayers,
-            playerNames: []
+            playerNames: playerNames
         });
     }
 
     return (
         <div className="drafter-settings">
-            <DrafterTimeline activeStep={1} />
+            {/* <DrafterTimeline activeStep={1} /> */}
 
             <h2>Settings</h2>
 
             <p>
-                Start the drafting process by either selecting a preset or inputting custom values below. Team and player names are optional.
+                Start the drafting process by either selecting a preset or inputting custom values below. Team and player names are optional. Seperate names with a comma.
             </p>
 
             <Space spacing="md" />
 
             <h3>Presets</h3>
 
-            <ContentBox className="settings__presets">
-                {
-                    presets.map((preset) => <SettingsPreset key={preset.text} text={preset.text} drafterSettings={preset} onSelect={handleSettingsPresetOnChange} />)
-                }
+            <ContentBox className="">
+                <InlineInput type="text" label="Team names" width={310} onChange={handleOnChangeTeamNames} placeholder="Comma seperated team names..." />
+
+                <Space spacing="sm" />
+
+                <div className="settings__presets">
+                    {
+                        presets.map((preset) => <SettingsPreset key={preset.text} text={preset.text} drafterSettings={preset} onSelect={handleSettingsPresetOnChange} />)
+                    }
+                </div>
             </ContentBox>
 
             <Space spacing="md" />
@@ -75,7 +96,11 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
             <h3>Custom</h3>
 
             <ContentBox>
-                <InlineInput type="number" label="Players" width={143} onChange={handleOnChangeNumberOfPlayer} />
+                <InlineInput type="text" label="Player names" width={310} onChange={handleOnChangePlayerNames} placeholder="Comma seperated player names..." />
+
+                <Space spacing="sm" />
+
+                <InlineInput type="number" label="Number of players" width={143} onChange={handleOnChangeNumberOfPlayer} />
 
                 <Space spacing="sm" />
 

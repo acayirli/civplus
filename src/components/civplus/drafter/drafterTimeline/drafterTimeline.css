@@ -1,14 +1,12 @@
 .drafter-timeline {
-    position: absolute;
     text-align: right;
     width: 200px;
-    height: 100%;
-    left: -240px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     background-color: var(--color-primary-4);
     border-radius: 5px;
+    flex-shrink: 0;
 }
 
 .drafter-timeline__item {

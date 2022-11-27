@@ -10,6 +10,11 @@
     border-radius: 5px;
 }
 
+.navbar__item--disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
 .navbar__item:hover {
     color: white;
     background-color: var(--color-primary-2);

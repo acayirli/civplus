@@ -29,7 +29,7 @@ export function DrafterBans({ onConfirmed }: { onConfirmed: (bans: string[]) => 
 
     return (
         <div className="drafter-bans">
-            <DrafterTimeline activeStep={2} />
+            {/* <DrafterTimeline activeStep={2} /> */}
 
             <Container justifyContent="space-between">
                 <h2>Bans</h2>

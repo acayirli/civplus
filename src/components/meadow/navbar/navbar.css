@@ -4,3 +4,27 @@
     display: flex;
     gap: 20px;
 }
+
+@media only screen and (max-width: 850px) {
+    .navbar img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar img {
+        display: none;
+    }
+
+    .navbar__item_icon {
+        margin-right: 0 !important;
+    }
+
+    .navbar__item span:last-child {
+        display: none;
+    }
+}

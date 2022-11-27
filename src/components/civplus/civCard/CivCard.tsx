@@ -3,7 +3,7 @@ import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CivModel } from "../../../civs";
 import { CivLabelModel } from "../../../labels";
-import { PantheonModel } from "../../../pantheons";
+import { genericPantheons, PantheonModel, pantheons } from "../../../pantheons";
 import { Container } from "../../meadow/container/Container";
 import { ContentBox } from "../../meadow/contentBox/ContentBox";
 import { Space } from "../../meadow/space/Space";
@@ -11,6 +11,7 @@ import { Civ } from "../civ/Civ";
 import { CivLabel } from "../civLabel/CivLabel";
 
 import "./civCard.css";
+import { Pantheon } from "../pantheon/Pantheon";
 
 export function CivCard({ civ }: { civ: CivModel }) {
     return (
@@ -28,19 +29,19 @@ export function CivCard({ civ }: { civ: CivModel }) {
                         <div>
                             <span>
                                 {
-                                    [...Array(civ.strength)].map((index) => <FontAwesomeIcon key={index} icon={faStar} />)
+                                    [...Array(civ.strength)].map((star, index) => <FontAwesomeIcon key={index} icon={faStar} />)
                                 }
                                 {
-                                    [...Array(3 - civ.strength)].map((index) => <FontAwesomeIcon key={index} icon={farStar} />)
+                                    [...Array(3 - civ.strength)].map((star, index) => <FontAwesomeIcon key={index} icon={farStar} />)
                                 }
                             </span>
 
                             <span>
                                 {
-                                    [...Array(civ.difficulty)].map((index) => <FontAwesomeIcon key={index} icon={faStar} />)
+                                    [...Array(civ.difficulty)].map((star, index) => <FontAwesomeIcon key={index} icon={faStar} />)
                                 }
                                 {
-                                    [...Array(3 - civ.difficulty)].map((index) => <FontAwesomeIcon key={index} icon={farStar} />)
+                                    [...Array(3 - civ.difficulty)].map((star, index) => <FontAwesomeIcon key={index} icon={farStar} />)
                                 }
                             </span>
                         </div>
@@ -52,7 +53,7 @@ export function CivCard({ civ }: { civ: CivModel }) {
 
             <div className="civ_card__labels">
                 {
-                    civ.labels.map((label: CivLabelModel) => <CivLabel label={label} />)
+                    civ.labels.map((label: CivLabelModel) => <CivLabel key={label} label={label} />)
                 }
             </div>
 
@@ -63,7 +64,9 @@ export function CivCard({ civ }: { civ: CivModel }) {
 
                 <ul>
                     {
-                        civ.strategies.map((strategy: string) => <li>{strategy}</li>)
+                        civ.strategies.length > 0 
+                        ? civ.strategies.map((strategy: string, index) => <li key={index}>{strategy}</li>)
+                        : <li>No information available.</li>
                     }
                 </ul>
             </div>
@@ -78,7 +81,7 @@ export function CivCard({ civ }: { civ: CivModel }) {
 
                         <ul>
                             {
-                                civ.counters.map((counter: string) => <li>{counter}</li>)
+                                civ.counters.map((counter: string, index) => <li key={index}>{counter}</li>)
                             }
                         </ul>
                     </div>
@@ -91,7 +94,17 @@ export function CivCard({ civ }: { civ: CivModel }) {
                 <h4>Pantheons</h4>
 
                 {
-                    civ.pantheons.map((pantheon: PantheonModel) => <p>{pantheon.name}</p>)
+                    civ.pantheons.length > 0 &&
+                    civ.pantheons.map((pantheon: PantheonModel, index) => <img key={index} src={pantheon.image} />)
+                }
+                {
+                    civ.pantheons.length == 0 &&
+                    <p>
+                        Pick any generic pantheon, for example one of the following:
+                        {
+                            genericPantheons.sort(() => 0.5 - Math.random()).slice(0, 3).map((pantheon: PantheonModel, index) => <img key={index} src={pantheon.image} />)
+                        }
+                    </p>
                 }
             </div>
         </ContentBox>

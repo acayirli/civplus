@@ -608,7 +608,7 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 2,
         labels: ["Religion", "Versatile"],
         strategies: [
-            "Start with only three holy sites, you generate enough faith from other sources (traders and unique improvement). Don't forget to always settle on hills."
+            
         ],
         pantheons: []
     },

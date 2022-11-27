@@ -1,7 +1,7 @@
 import { faShareNodes, faSync } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { useMemo } from "react";
+import React, { useState } from "react";
+import { useMemo, MouseEvent } from "react";
 import { CivModel, civs } from "../../../../civs";
 import { Button } from "../../../meadow/button/Button";
 import { Container } from "../../../meadow/container/Container";
@@ -20,6 +20,10 @@ type PlayerResult = {
 }
 
 function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[]): PlayerResult[] {
+    if(settings.numberOfPlayers > Object.keys(civs).length) {
+        return [];
+    }
+
     const playerResults = [];
     let unbannedRemainingCivs = Object.values(civs).filter(civ => !bans.includes(civ.id)).sort(() => 0.5 - Math.random());
     const civsPerPlayerForReal = settings.numberOfPlayers * settings.civsPerPlayer > unbannedRemainingCivs.length ? Math.floor(unbannedRemainingCivs.length / settings.numberOfPlayers) : settings.civsPerPlayer;
@@ -29,7 +33,7 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
 
         playerResults.push(
             {
-                name: "Player " + (i + 1),
+                name: settings.playerNames[i] ? settings.playerNames[i] : "Player " + (i + 1),
                 civs: playerCivs
             }
         );
@@ -41,7 +45,17 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
 }
 
 export function DrafterCivResults({ settings, bans }: { settings: DrafterSettingsModel, bans: string[] }) {
+    const [hoveredCiv, setHoveredCiv] = useState<CivModel | null>(null);
+
     const results = useMemo(() => calculateDrafterResults(settings, bans), [settings, bans]);
+
+    function handleOnMouseEnterCiv(e: any, civ: CivModel) {
+        setHoveredCiv(civ);
+    }
+
+    function handleOnMouseLeaveCiv() {
+        setHoveredCiv(null);
+    }
 
     function getPlayerMarkup(playerResult: PlayerResult) {
         return (
@@ -51,8 +65,8 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
                 <ContentBox className="drafter-results__civs">
                     {
                         playerResult.civs.length > 0
-                            ? playerResult.civs.map((civ) => <Civ key={civ.id} civ={civ} />)
-                            : <div>There are no remaining leaders. Try banning fewer leaders.</div>
+                            ? playerResult.civs.map((civ) => <Civ key={civ.id} civ={civ} onMouseEnter={e => handleOnMouseEnterCiv(e, civ)} onMouseLeave={handleOnMouseLeaveCiv} />)
+                            : <p>There are no remaining leaders. Try banning fewer leaders or reducing the number of players.</p>
                     }
                 </ContentBox>
 
@@ -62,22 +76,32 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
     }
 
     return (
-        <div className="drafter-results">
-            <DrafterTimeline activeStep={3} />
-            <CivCard civ={civs.catherine} />
+        <Container className="drafter-results" gap="40px">
+            {/* <DrafterTimeline activeStep={3} /> */}
 
-            <Container justifyContent="space-between">
-                <h2>Results</h2>
+            <div style={{ flexGrow: 1 }}>
+                <Container justifyContent="space-between">
+                    <h2>Results</h2>
 
-                <Container gap="20px">
-                    <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={function () { console.log("ASD") }} />
-                    <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={function () { console.log("ASD") }} variant="secondary" />
+                    <Container gap="20px">
+                        <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={function () { console.log("ASD") }} />
+                        <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={function () { console.log("ASD") }} variant="secondary" />
+                    </Container>
                 </Container>
-            </Container>
+
+                {
+                    results.length > 0
+                        ? results.map((playerResult) => <React.Fragment key={playerResult.name}>{getPlayerMarkup(playerResult)}</React.Fragment>)
+                        : <ContentBox>No players were added or your input was invalid.</ContentBox>
+                }
+            </div>
 
             {
-                results.map((playerResult) => <React.Fragment key={playerResult.name}>{getPlayerMarkup(playerResult)}</React.Fragment>)
+                results.length > 0 &&
+                (hoveredCiv
+                    ? <CivCard civ={hoveredCiv} />
+                    : <ContentBox className="drafter-results__card_placeholder"><Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container></ContentBox>)
             }
-        </div>
+        </Container>
     );
 }

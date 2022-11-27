@@ -1,20 +1,18 @@
 .civ_card {
-    position: absolute;
-    right: 0;
-    width: 400px;
-    right: -440px;
+    width: 484px;
     margin: 0;
 }
 
 .civ_card__stats {
     display: flex;
+    flex-shrink: 0;
 }
 .civ_card__stats > div {
     display: flex;
     flex-direction: column;
 }
 
-.civ_card__stats span {
+.civ_card__stats > div:first-child span {
     margin-right: 5px;
 }
 
