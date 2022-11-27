@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.drafter-results .civ_card {
+    margin-top: 98px;
+}
+
 .drafter-results__civs {
     display: flex;
     flex-wrap: wrap;

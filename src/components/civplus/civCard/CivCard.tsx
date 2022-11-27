@@ -1,3 +1,6 @@
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CivModel } from "../../../civs";
 import { CivLabelModel } from "../../../labels";
 import { PantheonModel } from "../../../pantheons";
@@ -13,18 +16,33 @@ export function CivCard({ civ }: { civ: CivModel }) {
     return (
         <ContentBox className="civ_card">
             <div className="civ_card__header">
-                <Container justifyContent="space-between">
+                <Container justifyContent="space-between" gap="5px">
                     <Civ civ={civ} />
 
-                    <div>
+                    <div className="civ_card__stats">
                         <div>
-                            Strength: {civ.strength}
+                            <span>Power</span>
+                            <span>Difficulty</span>
                         </div>
 
-                        <Space spacing="sm" />
-
                         <div>
-                            Difficulty: {civ.difficulty}
+                            <span>
+                                {
+                                    [...Array(civ.strength)].map((index) => <FontAwesomeIcon key={index} icon={faStar} />)
+                                }
+                                {
+                                    [...Array(3 - civ.strength)].map((index) => <FontAwesomeIcon key={index} icon={farStar} />)
+                                }
+                            </span>
+
+                            <span>
+                                {
+                                    [...Array(civ.difficulty)].map((index) => <FontAwesomeIcon key={index} icon={faStar} />)
+                                }
+                                {
+                                    [...Array(3 - civ.difficulty)].map((index) => <FontAwesomeIcon key={index} icon={farStar} />)
+                                }
+                            </span>
                         </div>
                     </div>
                 </Container>
@@ -51,6 +69,23 @@ export function CivCard({ civ }: { civ: CivModel }) {
             </div>
 
             <Space spacing="md" />
+
+            {
+                civ.counters &&
+                <>
+                    <div className="civ_card__counters">
+                        <h4>Counters</h4>
+
+                        <ul>
+                            {
+                                civ.counters.map((counter: string) => <li>{counter}</li>)
+                            }
+                        </ul>
+                    </div>
+
+                    <Space spacing="md" />
+                </>
+            }
 
             <div className="civ_card__pantheons">
                 <h4>Pantheons</h4>

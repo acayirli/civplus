@@ -1,4 +1,4 @@
-import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import { faShareNodes, faSync } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useMemo } from "react";
@@ -29,7 +29,7 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
 
         playerResults.push(
             {
-                name: "Player " + i,
+                name: "Player " + (i + 1),
                 civs: playerCivs
             }
         );
@@ -64,11 +64,15 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
     return (
         <div className="drafter-results">
             <DrafterTimeline activeStep={3} />
+            <CivCard civ={civs.catherine} />
 
             <Container justifyContent="space-between">
                 <h2>Results</h2>
 
-                <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={function () { console.log("ASD") }} />
+                <Container gap="20px">
+                    <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={function () { console.log("ASD") }} />
+                    <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={function () { console.log("ASD") }} variant="secondary" />
+                </Container>
             </Container>
 
             {

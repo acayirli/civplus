@@ -331,3 +331,7 @@
   summary {
     display: list-item;
   }
+
+  ul {
+    padding-left: 17px
+  }

@@ -11,10 +11,22 @@
     cursor: pointer;
 }
 
+.button--secondary {
+    background-color: var(--color-grey-4);
+}
+
 .button:hover {
     background-color: var(--color-secondary-1);
 }
 
 .button:active {
     background-color: var(--color-secondary-3);
+}
+
+.button--secondary:hover {
+    background-color: var(--color-grey-3);
+}
+
+.button--secondary:active {
+    background-color: var(--color-grey-5);
 }

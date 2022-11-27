@@ -1,3 +1,29 @@
 .civ_card {
-    max-width: 500px;
+    position: absolute;
+    right: 0;
+    width: 400px;
+    right: -440px;
+    margin: 0;
+}
+
+.civ_card__stats {
+    display: flex;
+}
+.civ_card__stats > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.civ_card__stats span {
+    margin-right: 5px;
+}
+
+.civ_card__stats span:first-child {
+    margin-bottom: 5px;
+}
+
+.civ_card__labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
