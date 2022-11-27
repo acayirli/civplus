@@ -95,14 +95,14 @@ export function CivCard({ civ }: { civ: CivModel }) {
 
                 {
                     civ.pantheons.length > 0 &&
-                    civ.pantheons.map((pantheon: PantheonModel, index) => <img key={index} src={pantheon.image} />)
+                    civ.pantheons.map((pantheon: PantheonModel, index) => <Pantheon key={index} pantheon={pantheon} />)
                 }
                 {
                     civ.pantheons.length == 0 &&
                     <p>
                         Pick any generic pantheon, for example one of the following:
                         {
-                            genericPantheons.sort(() => 0.5 - Math.random()).slice(0, 3).map((pantheon: PantheonModel, index) => <img key={index} src={pantheon.image} />)
+                            genericPantheons.sort(() => 0.5 - Math.random()).slice(0, 3).map((pantheon: PantheonModel, index) => <Pantheon key={index} pantheon={pantheon} />)
                         }
                     </p>
                 }
