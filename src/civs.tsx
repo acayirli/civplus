@@ -995,7 +995,7 @@ export const civs: { [leader: string]: CivModel } = {
     wilhelmina: {
         id: "wilhelmina",
         portrait: wilhelmina,
-        leader: "Wilhemina",
+        leader: "Wilhelmina",
         nation: "Dutch",
         strength: 2,
         difficulty: 1,
