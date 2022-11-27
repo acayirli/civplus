@@ -26,9 +26,9 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: "Alexandria-Regular", sans-serif;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   margin-bottom: 10px;
-  color: var(--color-grey-1);
+  color: white;
 }
 
 h1 {
@@ -44,11 +44,12 @@ h2 {
 
 h3 {
   font-family: "Alexandria-Regular", sans-serif;
-  font-size: 20px;
+  letter-spacing: 2px;
+  font-size: 18px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 

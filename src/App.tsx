@@ -14,9 +14,6 @@ export function App() {
             navbar={
                 <CivPlusNavbar />
             }
-            sidebar={
-                <DrafterSidebar />
-            }
             main={
                 <DrafterMain />
             } />

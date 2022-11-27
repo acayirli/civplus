@@ -5,6 +5,7 @@ import { civs } from "../../../../civs";
 import { Button } from "../../../meadow/button/Button";
 import { Container } from "../../../meadow/container/Container";
 import { ContentBox } from "../../../meadow/contentBox/ContentBox";
+import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
 import { CivBanButton } from "./civBanButton/CivBanButton";
 
 import "./drafterBans.css";
@@ -28,6 +29,8 @@ export function DrafterBans({ onConfirmed }: { onConfirmed: (bans: string[]) => 
 
     return (
         <div className="drafter-bans">
+            <DrafterTimeline activeStep={2} />
+
             <Container justifyContent="space-between">
                 <h2>Bans</h2>
 

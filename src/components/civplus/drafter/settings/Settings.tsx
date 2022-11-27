@@ -7,8 +7,9 @@ import { InlineInput } from "../../../meadow/inlineInput/InlineInput";
 import { Button } from "../../../meadow/button/Button";
 import { Container } from "../../../meadow/container/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faCircle, faCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { ChangeEvent, useState } from "react";
+import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
 
 export type DrafterSettingsModel = {
     numberOfPlayers: number,
@@ -51,7 +52,15 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
 
     return (
         <div className="drafter-settings">
+            <DrafterTimeline activeStep={1} />
+
             <h2>Settings</h2>
+
+            <p>
+                Start the drafting process by either selecting a preset or inputting custom values below. Team and player names are optional.
+            </p>
+
+            <Space spacing="md" />
 
             <h3>Presets</h3>
 

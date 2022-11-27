@@ -9,6 +9,7 @@ import { ContentBox } from "../../../meadow/contentBox/ContentBox";
 import { Space } from "../../../meadow/space/Space";
 import { Civ } from "../../civ/Civ";
 import { CivCard } from "../../civCard/CivCard";
+import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
 import { DrafterSettingsModel } from "../settings/Settings";
 
 import "./drafterCivResults.css";
@@ -24,7 +25,7 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
     const civsPerPlayerForReal = settings.numberOfPlayers * settings.civsPerPlayer > unbannedRemainingCivs.length ? Math.floor(unbannedRemainingCivs.length / settings.numberOfPlayers) : settings.civsPerPlayer;
 
     for (let i = 0; i < settings.numberOfPlayers; i++) {
-        const playerCivs = unbannedRemainingCivs.slice(0, civsPerPlayerForReal);
+        const playerCivs = unbannedRemainingCivs.slice(0, civsPerPlayerForReal).sort((a, b) => a.leader.localeCompare(b.leader));
 
         playerResults.push(
             {
@@ -49,9 +50,9 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
 
                 <ContentBox className="drafter-results__civs">
                     {
-                        playerResult.civs.length > 0 
-                        ? playerResult.civs.map((civ) => <Civ key={civ.id} civ={civ} />) 
-                        : <div>There are no remaining leaders. Try banning fewer leaders.</div>
+                        playerResult.civs.length > 0
+                            ? playerResult.civs.map((civ) => <Civ key={civ.id} civ={civ} />)
+                            : <div>There are no remaining leaders. Try banning fewer leaders.</div>
                     }
                 </ContentBox>
 
@@ -62,8 +63,10 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
 
     return (
         <div className="drafter-results">
+            <DrafterTimeline activeStep={3} />
+
             <Container justifyContent="space-between">
-                <h2>Civs</h2>
+                <h2>Results</h2>
 
                 <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={function () { console.log("ASD") }} />
             </Container>

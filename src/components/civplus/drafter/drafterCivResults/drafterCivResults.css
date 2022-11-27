@@ -1,3 +1,10 @@
+.drafter-results {
+    max-width: 885px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
 .drafter-results__civs {
     display: flex;
     flex-wrap: wrap;

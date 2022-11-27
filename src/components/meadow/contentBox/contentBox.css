@@ -4,3 +4,7 @@
     padding: 10px 20px;
     margin: 10px 0;
 }
+
+.content_box:last-child {
+    margin-bottom: 0;
+}

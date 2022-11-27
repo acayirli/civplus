@@ -1,6 +1,13 @@
 .drafter-settings {
     max-width: 512px;
     margin: 0 auto;
+    position: relative;
+}
+
+@media only screen and (max-width: 1023px) {
+    .drafter-settings .drafter-timeline {
+        display: none;
+    }
 }
 
 .settings__presets {
