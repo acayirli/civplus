@@ -27,7 +27,7 @@ import hojo from "./assets/images/portraits/hojo.webp";
 import jadwiga from "./assets/images/portraits/Jadwiga.webp";
 import jayavarman from "./assets/images/portraits/Jayavarman.webp";
 import joao from "./assets/images/portraits/Joao.webp";
-import johnCurtin from "./assets/images/portraits/JohnCurtin.webp";
+import johnCurtin from "./assets/images/portraits/johnCurtin.webp";
 import caesar from "./assets/images/portraits/caesar.webp";
 import kristina from "./assets/images/portraits/Kristina.webp";
 import kublai from "./assets/images/portraits/kublai.webp";
