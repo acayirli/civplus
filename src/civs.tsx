@@ -333,7 +333,7 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [pantheons.godOfWarAndPlunder]
     },
-    Gilgamesh: {
+    gilgamesh: {
         id: "gilgamesh",
         portrait: gilgamesh,
         leader: "Gilgamesh",
@@ -346,7 +346,7 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: []
     },
-    Gitarja: {
+    gitarja: {
         id: "gitarja",
         portrait: gitarja,
         leader: "Gitarja",

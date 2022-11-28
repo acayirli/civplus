@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CivModel, civs } from "../../../../civs";
 import { Main } from "../../../meadow/main/Main";
 import { DrafterBans } from "../bans/DrafterBans";
@@ -13,6 +13,7 @@ export function DrafterMain() {
     const [drafterState, setDrafterState] = useState<drafterState>("settings");
     const [settings, setSettings] = useState<DrafterSettingsModel>();
     const [bans, setBans] = useState<string[]>();
+    const [drafterResults, setDrafterResults] = useState();
 
     function handleSettingsConfirmed(drafterSettings: DrafterSettingsModel) {
         setSettings(drafterSettings);
@@ -23,6 +24,22 @@ export function DrafterMain() {
         setBans(bans);
         setDrafterState("results");
     }
+
+    // read results from url
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlDrafterResults = urlParams.get("drafterresults");
+        
+        if (urlDrafterResults) {
+            const parsedDrafterResults = JSON.parse(urlDrafterResults);
+
+            if (parsedDrafterResults) {
+                const playerResults = parsedDrafterResults.map((result: { name: string, civs: string[] }) => ({ name: result.name, civs: result.civs.map((civ) => civs[civ]) }));
+                setDrafterResults(playerResults);
+                setDrafterState("results");
+            }
+        }
+    }, [])
 
     switch (drafterState) {
         case "settings":
@@ -42,7 +59,7 @@ export function DrafterMain() {
         case "results":
             return (
                 <Main className="drafter">
-                    <DrafterCivResults settings={settings!} bans={bans!} />
+                    <DrafterCivResults settings={settings!} bans={bans!} results={drafterResults} />
                 </Main>
             );
 

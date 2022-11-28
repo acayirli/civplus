@@ -1,6 +1,6 @@
 import { faShareNodes, faSync } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMemo, MouseEvent } from "react";
 import { CivModel, civs } from "../../../../civs";
 import { Button } from "../../../meadow/button/Button";
@@ -20,7 +20,7 @@ type PlayerResult = {
 }
 
 function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[]): PlayerResult[] {
-    if(settings.numberOfPlayers > Object.keys(civs).length) {
+    if (settings.numberOfPlayers > Object.keys(civs).length) {
         return [];
     }
 
@@ -44,10 +44,20 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
     return playerResults;
 }
 
-export function DrafterCivResults({ settings, bans }: { settings: DrafterSettingsModel, bans: string[] }) {
+export function DrafterCivResults({ settings, bans, results }: { settings: DrafterSettingsModel, bans: string[], results?: PlayerResult[] }) {
     const [hoveredCiv, setHoveredCiv] = useState<CivModel | null>(null);
 
-    const results = useMemo(() => calculateDrafterResults(settings, bans), [settings, bans]);
+    const calculatedResults = results ? results : useMemo(() => calculateDrafterResults(settings, bans), [settings, bans, results]);
+    
+    // write results to url
+    useEffect(() => {
+        const reducedResults = calculatedResults.map((playerResult) =>
+        ({
+            name: playerResult.name, civs: playerResult.civs.map((civ) => civ.id)
+        }));
+        const uriEncodedReults = encodeURIComponent(JSON.stringify(reducedResults));
+        history.replaceState(null, "", "drafter?drafterresults=" + uriEncodedReults);
+    }, [settings, bans, results]);
 
     function handleOnMouseEnterCiv(e: any, civ: CivModel) {
         setHoveredCiv(civ);
@@ -55,6 +65,14 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
 
     function handleOnMouseLeaveCiv() {
         setHoveredCiv(null);
+    }
+
+    function handleOnClickShare() {
+        navigator.clipboard.writeText(window.location.href);
+    }
+
+    function handleOnClickRestart() {
+        window.location.href = "/civplus/drafter";
     }
 
     function getPlayerMarkup(playerResult: PlayerResult) {
@@ -84,20 +102,20 @@ export function DrafterCivResults({ settings, bans }: { settings: DrafterSetting
                     <h2>Results</h2>
 
                     <Container gap="20px">
-                        <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={function () { console.log("ASD") }} />
-                        <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={function () { console.log("ASD") }} variant="secondary" />
+                        <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={handleOnClickShare} />
+                        <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={handleOnClickRestart} variant="secondary" />
                     </Container>
                 </Container>
 
                 {
-                    results.length > 0
-                        ? results.map((playerResult) => <React.Fragment key={playerResult.name}>{getPlayerMarkup(playerResult)}</React.Fragment>)
+                    calculatedResults.length > 0
+                        ? calculatedResults.map((playerResult) => <React.Fragment key={playerResult.name}>{getPlayerMarkup(playerResult)}</React.Fragment>)
                         : <ContentBox>No players were added or your input was invalid.</ContentBox>
                 }
             </div>
 
             {
-                results.length > 0 &&
+                calculatedResults.length > 0 &&
                 (hoveredCiv
                     ? <CivCard civ={hoveredCiv} />
                     : <ContentBox className="drafter-results__card_placeholder"><Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container></ContentBox>)
