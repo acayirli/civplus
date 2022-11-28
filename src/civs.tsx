@@ -43,7 +43,7 @@ import mvemba from "./assets/images/portraits/mvemba.webp";
 import nzinga from "./assets/images/portraits/nzinga.webp";
 import pachacuti from "./assets/images/portraits/Pachacuti.webp";
 import pedro from "./assets/images/portraits/pedro.webp";
-import pericles from "./assets/images/portraits/pericles.webp";
+import pericles from "./assets/images/portraits/Pericles.webp";
 import peter from "./assets/images/portraits/Peter.webp";
 import philip from "./assets/images/portraits/Philip.webp";
 import poundmaker from "./assets/images/portraits/Poundmaker.webp";
