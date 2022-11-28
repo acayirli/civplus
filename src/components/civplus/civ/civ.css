@@ -25,6 +25,7 @@
 
 .civ__leader {
     font-family: 'Baskerville-Regular';
+    line-height: 17px;
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 5px;
