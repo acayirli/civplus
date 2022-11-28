@@ -50,7 +50,7 @@ import poundmaker from "./assets/images/portraits/Poundmaker.webp";
 import qin from "./assets/images/portraits/qin.webp";
 import robert from "./assets/images/portraits/robert.webp";
 import saladin from "./assets/images/portraits/Saladin.webp";
-import saladinSultan from "./assets/images/portraits/SaladinSultan.webp";
+import saladinSultan from "./assets/images/portraits/saladinSultan.webp";
 import seondeok from "./assets/images/portraits/Seondeok.webp";
 import shaka from "./assets/images/portraits/Shaka.webp";
 import simon from "./assets/images/portraits/simon.webp";
