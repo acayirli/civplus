@@ -25,6 +25,11 @@ export function DrafterMain() {
         setDrafterState("results");
     }
 
+    function handleOnClickRestart() {
+        history.replaceState(null, "", import.meta.env.BASE_URL);
+        setDrafterState("settings");
+    }
+
     // read results from url
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -59,7 +64,7 @@ export function DrafterMain() {
         case "results":
             return (
                 <Main className="drafter">
-                    <DrafterCivResults settings={settings!} bans={bans!} results={drafterResults} />
+                    <DrafterCivResults settings={settings!} bans={bans!} results={drafterResults} onRestart={handleOnClickRestart} />
                 </Main>
             );
 

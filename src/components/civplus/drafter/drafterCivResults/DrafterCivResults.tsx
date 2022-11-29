@@ -46,7 +46,7 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
     return playerResults;
 }
 
-export function DrafterCivResults({ settings, bans, results }: { settings: DrafterSettingsModel, bans: string[], results?: PlayerResult[] }) {
+export function DrafterCivResults({ settings, bans, results, onRestart }: { settings: DrafterSettingsModel, bans: string[], results?: PlayerResult[], onRestart: () => void }) {
     const [hoveredCiv, setHoveredCiv] = useState<CivModel | null>(null);
     const [activeLabels, setActiveLabels] = useState<CivLabelModel[]>([]);
 
@@ -64,7 +64,7 @@ export function DrafterCivResults({ settings, bans, results }: { settings: Draft
             name: playerResult.name, civs: playerResult.civs.map((civ) => civ.id)
         }));
         const uriEncodedReults = encodeURIComponent(JSON.stringify(reducedResults));
-        history.replaceState(null, "", "?drafterresults=" + uriEncodedReults);
+        history.replaceState(null, "", import.meta.env.BASE_URL + "?drafterresults=" + uriEncodedReults);
     }, [settings, bans, results]);
 
     function handleOnMouseEnterCiv(e: any, civ: CivModel) {
@@ -77,10 +77,6 @@ export function DrafterCivResults({ settings, bans, results }: { settings: Draft
 
     function handleOnClickShare() {
         navigator.clipboard.writeText(window.location.href);
-    }
-
-    function handleOnClickRestart() {
-        window.location.href = "/";
     }
 
     function handleOnClickActiveLabels(label: CivLabelModel) {
@@ -125,7 +121,7 @@ export function DrafterCivResults({ settings, bans, results }: { settings: Draft
 
                     <Container gap="20px">
                         <Button text="Share" icon={<FontAwesomeIcon icon={faShareNodes} />} onClick={handleOnClickShare} />
-                        <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={handleOnClickRestart} variant="secondary" />
+                        <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={onRestart} variant="secondary" />
                     </Container>
                 </Container>
 
