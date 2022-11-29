@@ -44,7 +44,7 @@ export function DrafterMain() {
                 setDrafterState("results");
             }
         }
-    }, [])
+    }, []);
 
     switch (drafterState) {
         case "settings":

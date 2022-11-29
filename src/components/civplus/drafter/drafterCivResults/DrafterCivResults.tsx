@@ -50,7 +50,7 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
     const [hoveredCiv, setHoveredCiv] = useState<CivModel | null>(null);
     const [activeLabels, setActiveLabels] = useState<CivLabelModel[]>([]);
 
-    const calculatedResults = results ? results : useMemo(() => calculateDrafterResults(settings, bans), [settings, bans, results]);
+    const calculatedResults = results ? results : useMemo(() => calculateDrafterResults(settings, bans), [settings, bans]);
     const labels = useMemo(() => {
         const allDraftedCivs = calculatedResults.reduce((accumulator: CivModel[], currentValue) => { return accumulator.concat(currentValue.civs) }, []);
         const allLabels = allDraftedCivs.reduce((accumulator: CivLabelModel[], currentValue) => { return accumulator.concat(currentValue.labels) }, []);
@@ -66,7 +66,7 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
         const uriEncodedReults = encodeURIComponent(JSON.stringify(reducedResults));
         history.replaceState(null, "", import.meta.env.BASE_URL + "?drafterresults=" + uriEncodedReults);
     }, [settings, bans, results]);
-
+    
     function handleOnMouseEnterCiv(e: any, civ: CivModel) {
         setHoveredCiv(civ);
     }
