@@ -64,7 +64,7 @@ export function DrafterCivResults({ settings, bans, results }: { settings: Draft
             name: playerResult.name, civs: playerResult.civs.map((civ) => civ.id)
         }));
         const uriEncodedReults = encodeURIComponent(JSON.stringify(reducedResults));
-        history.replaceState(null, "", "drafter?drafterresults=" + uriEncodedReults);
+        history.replaceState(null, "", "?drafterresults=" + uriEncodedReults);
     }, [settings, bans, results]);
 
     function handleOnMouseEnterCiv(e: any, civ: CivModel) {
