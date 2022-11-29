@@ -1,21 +1,34 @@
+import { useState } from "react";
 import { DrafterMain } from "./components/civplus/drafter/drafterMain/DrafterMain";
-import { DrafterSidebar } from "./components/civplus/drafter/drafterSidebar/DrafterSidebar";
-import { CivPlusNavbar } from "./components/civplus/navbar/CivPlusNavbar";
+import { LearnMain } from "./components/civplus/learn/leanMain/LearnMain";
+import { CivPlusNavbar, Page } from "./components/civplus/navbar/CivPlusNavbar";
 import { AppShell } from "./components/meadow/appShell/AppShell";
-import { Button } from "./components/meadow/button/Button";
-import { Main } from "./components/meadow/main/Main";
-import { Navbar } from "./components/meadow/navbar/Navbar";
-import { NavbarItem } from "./components/meadow/navbar/navbarItem/NavbarItem";
-import { Sidebar } from "./components/meadow/sidebar/Sidebar";
 
 export function App() {
+    const [activePage, setActivePage] = useState<Page>("Drafter");
+
+    function handleOnChange(newActivePage: Page) {
+        setActivePage(newActivePage);
+    }
+
+    function getMainMarkup() {
+        switch (activePage) {
+            case "Drafter":
+                return <DrafterMain />
+            case "Learn":
+                return <LearnMain />
+            default:
+                return <div>Unsupported app state.</div>
+        }
+    }
+
     return (
         <AppShell
             navbar={
-                <CivPlusNavbar />
+                <CivPlusNavbar activePage={activePage} onChangePage={handleOnChange} />
             }
             main={
-                <DrafterMain />
+                getMainMarkup()
             } />
     );
 }
