@@ -58,3 +58,7 @@
 .drafter-results__civs .civ {
     width: 200px;
 }
+
+.drafter-results__disabled_civ {
+    opacity: .3;
+}

@@ -230,7 +230,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Persian",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile", "War"],
+        labels: ["Versatile", "War", "Beginner-friendly"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "You can do a timing push with your unique unit (with a general and ram)."
@@ -244,7 +244,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Phoenician",
         strength: 2,
         difficulty: 1,
-        labels: ["Gold", "Wide"],
+        labels: ["Naval", "Gold", "Wide", "Beginner-friendly"],
         strategies: [
             "Standard harbor opening.",
             "Mass produce settlers."
@@ -258,7 +258,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "English",
         strength: 2,
         difficulty: 2,
-        labels: ["Versatile", "Culture"],
+        labels: ["Versatile", "Culture", "Naval"],
         strategies: [
             "Standard theather square opening."
         ],
@@ -291,7 +291,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "German",
         strength: 3,
         difficulty: 1,
-        labels: ["Production", "Versatile", "Carry"],
+        labels: ["Production", "Versatile", "Carry", "Beginner-friendly"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Go into industrial zones, then campus, then encampment.",
@@ -394,7 +394,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Babylonian",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile", "Science"],
+        labels: ["Versatile", "Science", "Beginner-friendly"],
         strategies: [
             "You can do any opening.",
             "In FFA, standard commercial hub + Magnus opening is recommended.",
@@ -429,7 +429,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Japanese",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile", "Beginner-friendly", "Carry"],
+        labels: ["Versatile", "Beginner-friendly", "Carry", "Naval"],
         strategies: [
             "You can do any opening.",
             "Standard harbor opening is recommended.",
@@ -495,7 +495,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Australian",
         strength: 3,
         difficulty: 2,
-        labels: ["Versatile", "Science", "Carry"],
+        labels: ["Versatile", "Science", "Carry", "Naval"],
         strategies: [
             "You can do any opening.",
             "In FFA, standard commercial hub + Magnus opening is recommended.",
@@ -542,7 +542,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Chinese",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile"],
+        labels: ["Versatile", "Beginner-friendly"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Quickly transition to international trade routes."
@@ -556,7 +556,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Mongolian",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile", "Timing push"],
+        labels: ["Versatile", "Timing push", "Beginner-friendly"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Quickly transition to international trade routes.",
@@ -1067,7 +1067,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "English",
         strength: 2,
         difficulty: 1,
-        labels: ["Naval", "Versatile"],
+        labels: ["Naval", "Versatile", "Beginner-friendly"],
         strategies: [
             "Standard harbor opening."
         ],
@@ -1095,7 +1095,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Dutch",
         strength: 2,
         difficulty: 1,
-        labels: ["Versatile", "Beginner-friendly"],
+        labels: ["Versatile", "Beginner-friendly", "Naval"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Quickly transition to international trade routes."

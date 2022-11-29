@@ -1,4 +1,19 @@
 .civ_label {
     border-radius: 3px;
     font-size: 14px;
+    border: none;
+    padding: 5px 10px;
+    background-color: var(--color-grey-1);
+    transition: .2s;
+    white-space: nowrap;
+}
+
+.civ_label--toggle:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.civ_label--active, .civ_label--active:hover {
+    background-color: #3d71a1;
+    color: white;
 }

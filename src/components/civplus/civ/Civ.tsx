@@ -2,9 +2,9 @@ import { MouseEventHandler } from "react";
 import { CivModel } from "../../../civs";
 import "./civ.css";
 
-export function Civ({ civ, onMouseEnter, onMouseLeave }: { civ: CivModel, onMouseEnter?: MouseEventHandler, onMouseLeave?: MouseEventHandler }) {
+export function Civ({ civ, onMouseEnter, onMouseLeave, className }: { civ: CivModel, onMouseEnter?: MouseEventHandler, onMouseLeave?: MouseEventHandler, className?: string }) {
     return (
-        <div className="civ" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <div className={`civ ${className}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <div className="civ__portrait">
                 <img src={civ.portrait}></img>
             </div>

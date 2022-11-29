@@ -37,6 +37,8 @@ export function DrafterBans({ onConfirmed }: { onConfirmed: (bans: string[]) => 
                 <Button text="Continue" icon={<FontAwesomeIcon icon={faCircleRight} />} onClick={handleContinueClick} />
             </Container>
 
+            <p>Select which leaders to ban from the draft (or continue without bans).</p>
+
             <ContentBox className="drafter-bans__civs">
                 {
                     Object.values(civs).map((civ) => <CivBanButton key={civ.id} civ={civ} banned={bans.includes(civ.id)} onClick={handleBanClick} />)
