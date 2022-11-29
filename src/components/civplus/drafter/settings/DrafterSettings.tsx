@@ -106,7 +106,7 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
 
                 <InlineInput type="text" label="Player names" width={310} onChange={handleOnChangePlayerNames} placeholder="Comma seperated player names..." />
 
-                <Space spacing="sm" />
+                <Space spacing="lg" />
 
                 <Container justifyContent="space-between">
                     <p>* required</p>

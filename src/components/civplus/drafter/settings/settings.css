@@ -4,14 +4,27 @@
     position: relative;
 }
 
-@media only screen and (max-width: 1023px) {
-    .drafter-settings .drafter-timeline {
-        display: none;
-    }
+.settings__presets {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.settings__presets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+@media only screen and (max-width: 512px) {
+    .settings__presets {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .input_inline {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .input_inline label {
+        margin-bottom: 10px;
+    }
+
+    .input_inline input {
+        width: 100% !important;
+    }
 }
