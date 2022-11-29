@@ -72,7 +72,7 @@ export function DrafterCivResults({ settings, bans, results }: { settings: Draft
     }
 
     function handleOnClickRestart() {
-        window.location.href = "/civplus/drafter";
+        window.location.href = "/";
     }
 
     function getPlayerMarkup(playerResult: PlayerResult) {
