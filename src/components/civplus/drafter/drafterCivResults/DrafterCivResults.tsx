@@ -141,11 +141,12 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
             </div>
 
             {
-                calculatedResults.length > 0 &&
-                (hoveredCiv
-                    ? <CivCard civ={hoveredCiv} />
-                    : <ContentBox className="drafter-results__card_placeholder"><Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container></ContentBox>)
+                hoveredCiv && <CivCard civ={hoveredCiv} />
             }
+
+            <ContentBox className={`drafter-results__card_placeholder ${calculateDrafterResults.length > 0 && hoveredCiv ? "drafter-results__card_placeholder--invis" : ""}`}>
+                <Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container>
+            </ContentBox>
         </Container>
     );
 }

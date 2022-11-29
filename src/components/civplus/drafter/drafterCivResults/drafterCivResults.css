@@ -36,12 +36,22 @@
     }
 }
 
+.drafter-results .civ_card {
+    position: fixed;
+    top: 114px;
+    right: 57px;
+}
+
 .drafter-results__card_placeholder {
     width: 484px;
     flex-shrink: 0;
     margin: 0;
     padding: 20px;
     height: 200px;
+}
+
+.drafter-results__card_placeholder--invis {
+    visibility: hidden;
 }
 
 .drafter-results__civs {
