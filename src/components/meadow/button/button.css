@@ -30,3 +30,8 @@
 .button--secondary:active {
     background-color: var(--color-grey-5);
 }
+
+.button:disabled {
+    opacity: .3;
+    pointer-events: none;
+}

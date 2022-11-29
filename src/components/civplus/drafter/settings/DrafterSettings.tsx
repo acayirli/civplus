@@ -26,8 +26,8 @@ const presets = [
 ]
 
 export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: (drafterSettings: DrafterSettingsModel) => void }) {
-    const [numberOfPlayers, setNumberOfPlayers] = useState<number>(0);
-    const [civsPerPlayer, setCivsPerPlayer] = useState<number>(0);
+    const [numberOfPlayers, setNumberOfPlayers] = useState<number | null>(null);
+    const [civsPerPlayer, setCivsPerPlayer] = useState<number | null>(null);
     const [playerNames, setPlayerNames] = useState<string[]>([]);
     const [teamNames, setTeamNames] = useState<string[]>([]);
 
@@ -59,8 +59,8 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
 
     function handleClickContinueCustomSettings() {
         onSettingsConfirmed({
-            civsPerPlayer: civsPerPlayer,
-            numberOfPlayers: numberOfPlayers,
+            civsPerPlayer: civsPerPlayer!,
+            numberOfPlayers: numberOfPlayers!,
             playerNames: playerNames
         });
     }
@@ -96,20 +96,21 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
             <h3>Custom</h3>
 
             <ContentBox>
+                <InlineInput type="number" label="Number of players *" width={143} onChange={handleOnChangeNumberOfPlayer} />
+
+                <Space spacing="sm" />
+
+                <InlineInput type="number" label="Civs per Player *" width={143} onChange={handleOnChangeCivsPerPlayer} />
+
+                <Space spacing="sm" />
+
                 <InlineInput type="text" label="Player names" width={310} onChange={handleOnChangePlayerNames} placeholder="Comma seperated player names..." />
 
                 <Space spacing="sm" />
 
-                <InlineInput type="number" label="Number of players" width={143} onChange={handleOnChangeNumberOfPlayer} />
-
-                <Space spacing="sm" />
-
-                <InlineInput type="number" label="Civs per Player" width={143} onChange={handleOnChangeCivsPerPlayer} />
-
-                <Space spacing="sm" />
-
-                <Container justifyContent="flex-end">
-                    <Button text="Continue" icon={<FontAwesomeIcon icon={faCircleRight} />} onClick={handleClickContinueCustomSettings} />
+                <Container justifyContent="space-between">
+                    <p>* required</p>
+                    <Button text="Continue" icon={<FontAwesomeIcon icon={faCircleRight} />} onClick={handleClickContinueCustomSettings} disabled={!civsPerPlayer || !numberOfPlayers} />
                 </Container>
             </ContentBox>
         </div>

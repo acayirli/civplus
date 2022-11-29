@@ -12,7 +12,7 @@ import { Civ } from "../../civ/Civ";
 import { CivCard } from "../../civCard/CivCard";
 import { CivLabel } from "../../civLabel/CivLabel";
 import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
-import { DrafterSettingsModel } from "../settings/Settings";
+import { DrafterSettingsModel } from "../settings/DrafterSettings";
 
 import "./drafterCivResults.css";
 

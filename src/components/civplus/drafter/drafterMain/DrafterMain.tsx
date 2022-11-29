@@ -3,7 +3,7 @@ import { CivModel, civs } from "../../../../civs";
 import { Main } from "../../../meadow/main/Main";
 import { DrafterBans } from "../bans/DrafterBans";
 import { DrafterCivResults } from "../drafterCivResults/DrafterCivResults";
-import { DrafterSettings, DrafterSettingsModel } from "../settings/Settings";
+import { DrafterSettings, DrafterSettingsModel } from "../settings/DrafterSettings";
 
 import "./drafterMain.css";
 

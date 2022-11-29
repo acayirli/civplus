@@ -1,4 +1,4 @@
-import { DrafterSettingsModel } from "../Settings";
+import { DrafterSettingsModel } from "../DrafterSettings";
 import "./settingsPreset.css";
 
 export function SettingsPreset({ text, drafterSettings, onSelect }: { text: string, drafterSettings: DrafterSettingsModel, onSelect: (drafterSettings: DrafterSettingsModel) => void }) {
