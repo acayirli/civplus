@@ -609,7 +609,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Do a timing push with your unique unit."
         ],
         counters: [
-            "Don't enter golden age. (jk <3)"
+            "Don't enter golden age. jk <3"
         ],
         pantheons: []
     },
@@ -627,7 +627,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Use your exceptional gold income to buy buildings to offset your production malus."
         ],
         counters: [
-            "Very vulnerable early."
+            "Vulnerable early.",
+            "Use spies to siphon funds."
         ],
         pantheons: [pantheons.desertFolklore]
     },
@@ -662,7 +663,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Always settle on hills.",
             "You can do a timing push with your unique unit."
         ],
-        pantheons: []
+        pantheons: [pantheons.sacredPath, pantheons.riverGoddess]
     },
     montezuma: {
         id: "montezuma",
