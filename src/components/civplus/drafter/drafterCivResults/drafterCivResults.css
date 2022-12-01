@@ -37,9 +37,8 @@
 }
 
 .drafter-results .civ_card {
-    position: fixed;
-    top: 114px;
-    right: 57px;
+    position: sticky;
+    top: 0;
 }
 
 .drafter-results__card_placeholder {
@@ -48,10 +47,8 @@
     margin: 0;
     padding: 20px;
     height: 200px;
-}
-
-.drafter-results__card_placeholder--invis {
-    visibility: hidden;
+    position: sticky;
+    top: 0;
 }
 
 .drafter-results__civs {
