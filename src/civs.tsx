@@ -852,7 +852,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Qin Shi Huang is vulnerable early, as he will focus wonder production above all else."
         ],
         pantheons: [],
-        beliefs: [beliefs.follower.divineInspiration]
+        beliefs: [beliefs.follower.divineInspiration, beliefs.founder.sacredPlaces]
     },
     robert: {
         id: "robert",
