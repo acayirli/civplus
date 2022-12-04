@@ -20,3 +20,7 @@
 .drafter-bans__civs .civ {
     width: 200px;
 }
+
+.drafter-bans__banned_civ {
+    opacity: .3;
+}

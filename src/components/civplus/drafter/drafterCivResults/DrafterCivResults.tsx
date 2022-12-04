@@ -11,6 +11,7 @@ import { Space } from "../../../meadow/space/Space";
 import { Civ } from "../../civ/Civ";
 import { CivCard } from "../../civCard/CivCard";
 import { CivLabel } from "../../civLabel/CivLabel";
+import { CivLabelFilters } from "../../CivLabelFilters/CivLabelFilters";
 import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
 import { DrafterSettingsModel } from "../settings/DrafterSettings";
 
@@ -79,13 +80,8 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
         navigator.clipboard.writeText(window.location.href);
     }
 
-    function handleOnClickActiveLabels(label: CivLabelModel) {
-        if (activeLabels.includes(label)) {
-            setActiveLabels(activeLabels.filter((item) => item != label));
-        }
-        else {
-            setActiveLabels(activeLabels.concat(label));
-        }
+    function handleOnChangeLabelFilters(labels: CivLabelModel[]) {
+        setActiveLabels(labels);
     }
 
     function getPlayerMarkup(playerResult: PlayerResult) {
@@ -125,11 +121,7 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
                     </Container>
                 </Container>
 
-                <Container wrap="wrap">
-                    {
-                        labels.sort((a, b) => a.localeCompare(b)).map((label) => <CivLabel key={label} label={label} onClick={handleOnClickActiveLabels} />)
-                    }
-                </Container>
+                <CivLabelFilters labels={labels} onChange={handleOnChangeLabelFilters} />
 
                 <Space spacing="md" />
 
