@@ -1,25 +1,24 @@
 import { faCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { civs } from "../../../../civs";
+import { CivModel, civs } from "../../../../civs";
 import { Button } from "../../../meadow/button/Button";
 import { Container } from "../../../meadow/container/Container";
 import { ContentBox } from "../../../meadow/contentBox/ContentBox";
-import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
-import { CivBanButton } from "./civBanButton/CivBanButton";
+import { CivButton } from "../../civButton/CivButton";
 
 import "./drafterBans.css";
 
 export function DrafterBans({ onConfirmed }: { onConfirmed: (bans: string[]) => void }) {
     const [bans, setBans] = useState<string[]>([]);
 
-    function handleBanClick(civName: string) {
-        if (bans.includes(civName)) {
-            setBans(bans.filter(x => x != civName));
+    function handleBanClick(civ: CivModel) {
+        if (bans.includes(civ.id)) {
+            setBans(bans.filter(x => x != civ.id));
 
         }
         else {
-            setBans([...bans, civName]);
+            setBans([...bans, civ.id]);
         }
     }
 
@@ -29,8 +28,6 @@ export function DrafterBans({ onConfirmed }: { onConfirmed: (bans: string[]) => 
 
     return (
         <div className="drafter-bans">
-            {/* <DrafterTimeline activeStep={2} /> */}
-
             <Container justifyContent="space-between">
                 <h2>Bans</h2>
 
@@ -41,7 +38,7 @@ export function DrafterBans({ onConfirmed }: { onConfirmed: (bans: string[]) => 
 
             <ContentBox className="drafter-bans__civs">
                 {
-                    Object.values(civs).map((civ) => <CivBanButton key={civ.id} civ={civ} banned={bans.includes(civ.id)} onClick={handleBanClick} />)
+                    Object.values(civs).map((civ) => <CivButton key={civ.id} civ={civ} className={bans.includes(civ.id) ? "drafter-bans__banned_civ" : ""} onClick={handleBanClick} />)
                 }
             </ContentBox>
         </div>
