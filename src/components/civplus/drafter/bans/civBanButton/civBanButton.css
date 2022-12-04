@@ -4,6 +4,7 @@
     padding: 5px;
     border-radius: 3px;
     position: relative;
+    user-select: none;
 }
 
 .civ-ban-button:hover {

@@ -47,7 +47,7 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
 }
 
 export function DrafterCivResults({ settings, bans, results, onRestart }: { settings: DrafterSettingsModel, bans: string[], results?: PlayerResult[], onRestart: () => void }) {
-    const [hoveredCiv, setHoveredCiv] = useState<CivModel | null>(null);
+    const [hoveredCiv, setHoveredCiv] = useState<CivModel | null>();
     const [activeLabels, setActiveLabels] = useState<CivLabelModel[]>([]);
 
     const calculatedResults = results ? results : useMemo(() => calculateDrafterResults(settings, bans), [settings, bans]);
@@ -141,12 +141,10 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
             </div>
 
             {
-                hoveredCiv && <CivCard civ={hoveredCiv} />
+                calculateDrafterResults.length > 0 && hoveredCiv 
+                ? <CivCard civ={hoveredCiv} /> 
+                : <ContentBox className="drafter-results__card_placeholder"><Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container></ContentBox>
             }
-
-            <ContentBox className={`drafter-results__card_placeholder ${calculateDrafterResults.length > 0 && hoveredCiv ? "drafter-results__card_placeholder--invis" : ""}`}>
-                <Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container>
-            </ContentBox>
         </Container>
     );
 }

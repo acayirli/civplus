@@ -456,7 +456,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Attack her before she unlocks Winged Hussars.",
             "Spam Pikeman, which you can then upgrade to Pike & Shot, to defend against Winged Hussars."
         ],
-        pantheons: [pantheons.riverGoddess, pantheons.godOfTheSea, pantheons.godOfWarAndPlunder]
+        pantheons: [pantheons.riverGoddess, pantheons.sacredPath, pantheons.godOfWarAndPlunder]
     },
     jayavarman: {
         id: "jayavarman",

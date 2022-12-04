@@ -18,6 +18,7 @@ export function DrafterMain() {
     function handleSettingsConfirmed(drafterSettings: DrafterSettingsModel) {
         setSettings(drafterSettings);
         setDrafterState("bans");
+        setDrafterResults(undefined);
     }
 
     function handleBansConfirmed(bans: string[]) {
@@ -28,6 +29,7 @@ export function DrafterMain() {
     function handleOnClickRestart() {
         history.replaceState(null, "", import.meta.env.BASE_URL);
         setDrafterState("settings");
+        setDrafterResults(undefined);
     }
 
     // read results from url
