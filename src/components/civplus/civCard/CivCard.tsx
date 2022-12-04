@@ -12,6 +12,8 @@ import { CivLabel } from "../civLabel/CivLabel";
 
 import "./civCard.css";
 import { Pantheon } from "../pantheon/Pantheon";
+import { BeliefModel } from "../../../beliefs";
+import { Belief } from "../belief/Belief";
 
 export function CivCard({ civ }: { civ: CivModel }) {
     return (
@@ -107,6 +109,23 @@ export function CivCard({ civ }: { civ: CivModel }) {
                     </p>
                 }
             </div>
+
+            <Space spacing="md" />
+
+            {
+                civ.beliefs &&
+                <>
+                    <div className="civ_card__beliefs">
+                        <h4>Beliefs</h4>
+
+                        {
+                            civ.beliefs.map((belief: PantheonModel, index) => <Belief key={index} belief={belief} />)
+                        }
+                    </div>
+
+                    <Space spacing="md" />
+                </>
+            }
         </ContentBox>
     );
 }

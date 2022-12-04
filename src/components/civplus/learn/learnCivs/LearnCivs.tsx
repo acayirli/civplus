@@ -48,7 +48,7 @@ export function LearnCivs() {
 
                         <CivsContentBox>
                             {
-                                Object.values(civs).map((civ) => <CivButton civ={civ} onClick={handleOnClickCivButton}
+                                Object.values(civs).map((civ) => <CivButton key={civ.id} civ={civ} onClick={handleOnClickCivButton}
                                     className={activeLabels.length > 0 && !activeLabels.some(label => civ.labels.includes(label)) ? "learn-civs__disabled_civ" : ""}></CivButton>)
                             }
                         </CivsContentBox>

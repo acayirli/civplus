@@ -63,6 +63,7 @@ import trajan from "./assets/images/portraits/Trajan.webp";
 import victoria from "./assets/images/portraits/Victoria.webp";
 import wilfried from "./assets/images/portraits/wilfried.webp";
 import wilhelmina from "./assets/images/portraits/Wilhelmina.webp";
+import { BeliefModel, beliefs } from "./beliefs";
 
 export type CivModel = {
     id: string,
@@ -74,7 +75,8 @@ export type CivModel = {
     difficulty: 1 | 2 | 3,
     strategies: string[],
     counters?: string[],
-    pantheons: PantheonModel[]
+    pantheons: PantheonModel[],
+    beliefs?: BeliefModel[]
 }
 
 export const civs: { [leader: string]: CivModel } = {
@@ -121,7 +123,8 @@ export const civs: { [leader: string]: CivModel } = {
             "A good option can be to start with three holy sites with jesuit education. You have passive faith income from your pyramids.",
             "Place pyramids next to districts. District adjacency is less important with Amanitore."
         ],
-        pantheons: [pantheons.religiousIdols, pantheons.godOfCraftsmen]
+        pantheons: [pantheons.religiousIdols, pantheons.godOfCraftsmen],
+        beliefs: [beliefs.follower.jesuitEducation, beliefs.founder.layMinistry]
     },
     ambiorix: {
         id: "ambiorix",
@@ -151,7 +154,11 @@ export const civs: { [leader: string]: CivModel } = {
             "Play with the crusade belief, it is easy for Basil to convert enemy cities.",
             "Do a timing push with your unique unit."
         ],
-        pantheons: [pantheons.riverGoddess, pantheons.cityPatronGoddess]
+        counters: [
+            "Deny crusade."
+        ],
+        pantheons: [pantheons.riverGoddess, pantheons.cityPatronGoddess],
+        beliefs: [beliefs.enhancer.crusade]
     },
     batrieu: {
         id: "batrieu",
@@ -207,7 +214,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Standard holy site opening.",
             "Defend yourself early with your unique unit."
         ],
-        pantheons: [pantheons.riverGoddess, pantheons.sacredPath]
+        pantheons: [pantheons.riverGoddess, pantheons.sacredPath],
+        beliefs: [beliefs.enhancer.crusade]
     },
     cleopatra: {
         id: "cleopatra",
@@ -221,7 +229,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Standard commercial hub + Magnus opening.",
             "Quickly transition to international trade routes."
         ],
-        pantheons: [pantheons.ladyOfTheReedsAndMarshes, pantheons.godOfWarAndPlunder, pantheons.religiousSettlements]
+        pantheons: [pantheons.ladyOfTheReedsAndMarshes, pantheons.godOfWarAndPlunder, pantheons.religiousSettlements],
+        beliefs: [beliefs.follower.religiousCommunity]
     },
     cyrus: {
         id: "cyrus",
@@ -263,7 +272,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Standard theather square opening."
         ],
         counters: [
-            "Contest great works. Leaders like Perciles, Gorgo, Peter, Qin Shi Huang and Sweden are good at this."
+            "Contest great works."
         ],
         pantheons: [pantheons.divineSpark]
     },
@@ -280,7 +289,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Go into theather squares."
         ],
         counters: [
-            "Contest great works. Leaders like Perciles, Gorgo, Peter, Qin Shi Huang and Sweden are good at this."
+            "Contest great works."
         ],
         pantheons: [pantheons.divineSpark]
     },
@@ -299,7 +308,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Mass produce cuirassier armies before researching tanks and steamroll your opponents."
         ],
         counters: [
-            "Since Frederick will focus commercial hubs and industrial zones, his stats will be bad, punish him for that."
+            "Vulnerable early."
         ],
         pantheons: [pantheons.cityPatronGoddess]
     },
@@ -316,7 +325,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Encourage other players to spread their religion to your cities.",
             "Defend yourself early with your unique unit."
         ],
-        pantheons: [pantheons.riverGoddess, pantheons.sacredPath]
+        pantheons: [pantheons.riverGoddess, pantheons.sacredPath],
+        beliefs: [beliefs.follower.choralMusic]
     },
     genghis: {
         id: "genghis",
@@ -360,10 +370,8 @@ export const civs: { [leader: string]: CivModel } = {
             "You can play with less holy sites.",
             "Try a caravel + unique unit timing push. You can buy ships with faith."
         ],
-        counters: [
-            "Philip is a naval leader, who has bonus combat strength against other religions and can create fleets earlier."
-        ],
-        pantheons: [pantheons.godOfTheSea]
+        pantheons: [pantheons.godOfTheSea],
+        beliefs: [beliefs.follower.jesuitEducation]
     },
     gorgo: {
         id: "gorgo",
@@ -383,7 +391,7 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         counters: [
             "Vulnerable before she researches fascisms.",
-            "Contest great works"
+            "Contest great works."
         ],
         pantheons: []
     },
@@ -416,11 +424,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Go into harbors.",
             "Rush your unique holy site building.",
         ],
-        counters: [
-            "Vulnerable from land.",
-            "Philip is strong against religious naval leaders."
-        ],
-        pantheons: [pantheons.godOfTheSea]
+        pantheons: [pantheons.godOfTheSea],
+        beliefs: [beliefs.follower.choralMusic]
     },
     hojo: {
         id: "hojo",
@@ -436,7 +441,8 @@ export const civs: { [leader: string]: CivModel } = {
             "You can do a timing push with your unique unit.",
             "You can do a very strong caravel timing push."
         ],
-        pantheons: [pantheons.godOfTheSea, pantheons.cityPatronGoddess]
+        pantheons: [pantheons.godOfTheSea, pantheons.cityPatronGoddess],
+        beliefs: [beliefs.follower.zenMeditation, beliefs.founder.layMinistry]
     },
     jadwiga: {
         id: "jadwiga",
@@ -456,7 +462,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Attack her before she unlocks Winged Hussars.",
             "Spam Pikeman, which you can then upgrade to Pike & Shot, to defend against Winged Hussars."
         ],
-        pantheons: [pantheons.riverGoddess, pantheons.sacredPath, pantheons.godOfWarAndPlunder]
+        pantheons: [pantheons.riverGoddess, pantheons.sacredPath, pantheons.godOfWarAndPlunder],
+        beliefs: [beliefs.follower.choralMusic, beliefs.follower.reliquaries, beliefs.worship.darEMehr, beliefs.enhancer.crusade]
     },
     jayavarman: {
         id: "jayavarman",
@@ -630,7 +637,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Vulnerable early.",
             "Use spies to siphon funds."
         ],
-        pantheons: [pantheons.desertFolklore]
+        pantheons: [pantheons.desertFolklore],
+        beliefs: [beliefs.follower.feedTheWorld, beliefs.founder.stewardship]
     },
     matthias: {
         id: "matthias",
@@ -663,7 +671,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Always settle on hills.",
             "You can do a timing push with your unique unit."
         ],
-        pantheons: [pantheons.sacredPath, pantheons.riverGoddess]
+        pantheons: [pantheons.sacredPath, pantheons.riverGoddess],
+        beliefs: [beliefs.founder.stewardship]
     },
     montezuma: {
         id: "montezuma",
@@ -733,7 +742,8 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [
             pantheons.fertilityRites, pantheons.earthGoddess, pantheons.cityPatronGoddess
-        ]
+        ],
+        beliefs: [beliefs.follower.jesuitEducation, beliefs.founder.stewardship]
     },
     pedro: {
         id: "pedro",
@@ -750,7 +760,8 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [
             pantheons.sacredPath, pantheons.cityPatronGoddess
-        ]
+        ],
+        beliefs: [beliefs.follower.jesuitEducation, beliefs.follower.feedTheWorld]
     },
     pericles: {
         id: "pericles",
@@ -767,7 +778,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Try to become suzerain of as many city states as possible (focus uncontested city states first)."
         ],
         counters: [
-            "Kill city states. Frederick Barbarossa has +7 combat strength against city states."
+            "Kill city states."
         ],
         pantheons: []
     },
@@ -787,7 +798,8 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [
             pantheons.danceOfTheAurora, pantheons.goddessOfTheHunt, pantheons.riverGoddess
-        ]
+        ],
+        beliefs: [beliefs.follower.feedTheWorld, beliefs.founder.tithe]
     },
     philip: {
         id: "philip",
@@ -804,7 +816,8 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [
             pantheons.godOfTheSea, pantheons.riverGoddess
-        ]
+        ],
+        beliefs: [beliefs.follower.jesuitEducation]
     },
     poundmaker: {
         id: "poundmaker",
@@ -838,7 +851,8 @@ export const civs: { [leader: string]: CivModel } = {
         counters: [
             "Qin Shi Huang is vulnerable early, as he will focus wonder production above all else."
         ],
-        pantheons: []
+        pantheons: [],
+        beliefs: [beliefs.follower.divineInspiration]
     },
     robert: {
         id: "robert",
@@ -855,7 +869,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Always build your unique improvement next to city centers."
         ],
         counters: [
-            "Rush Temple of Artemis & Colosseum to deny it to Robert the Bruce (it's always worth rushing anyway)."
+            "Contest Temple of Artemis & Colosseum."
         ],
         pantheons: []
     },
@@ -878,13 +892,14 @@ export const civs: { [leader: string]: CivModel } = {
             "You can do a timing push with your unique unit."
         ],
         counters: [
-            "Like most religious leaders, Saladin is vulnerable early.",
+            "Vulnerable early.",
             "Deny choral music & tithe.",
             "Build pikeman against a likely Mamluk push."
         ],
         pantheons: [
             pantheons.riverGoddess, pantheons.sacredPath
-        ]
+        ],
+        beliefs: [beliefs.follower.choralMusic, beliefs.worship.darEMehr, beliefs.founder.tithe]
     },
     saladinSultan: {
         id: "saladinSultan",
@@ -904,7 +919,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Pick tithe to offset your high gold maintenance.",
             "Do a timing push with your unique unit."
         ],
-        pantheons: [pantheons.riverGoddess, pantheons.sacredPath]
+        pantheons: [pantheons.riverGoddess, pantheons.sacredPath],
+        beliefs: [beliefs.follower.choralMusic, beliefs.worship.darEMehr, beliefs.founder.tithe]
     },
     seondeok: {
         id: "seondeok",
@@ -995,7 +1011,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Go into theather squares.",
             "You can do a timing push with your unique unit."
         ],
-        pantheons: [pantheons.religiousIdols]
+        pantheons: [pantheons.religiousIdols],
+        beliefs: [beliefs.follower.jesuitEducation, beliefs.founder.papalPrimacy]
     },
     teddy: {
         id: "teddy",
@@ -1015,7 +1032,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Vulnerable early.",
             "Deny Eiffel Tower."
         ],
-        pantheons: [pantheons.earthGoddess]
+        pantheons: [pantheons.earthGoddess],
+        beliefs: [beliefs.follower.jesuitEducation]
     },
     teddyRR: {
         id: "teddyRR",
@@ -1087,7 +1105,8 @@ export const civs: { [leader: string]: CivModel } = {
             "Use your unique unit to mass produce national parks and secure a strong culture victory.",
             "Use your unique unit to defend yourself."
         ],
-        pantheons: [pantheons.goddessOfTheHunt]
+        pantheons: [pantheons.goddessOfTheHunt],
+        beliefs: [beliefs.follower.jesuitEducation, beliefs.founder.layMinistry]
     },
     wilhelmina: {
         id: "wilhelmina",
