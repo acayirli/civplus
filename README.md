@@ -1,4 +1,4 @@
-# civplus
+# CIV +
 A website that provides useful tools for the game Civilization.
 
 Currently there is only a drafter and a learn page, where you can find tips how to play each leader.
