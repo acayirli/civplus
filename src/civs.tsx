@@ -139,7 +139,7 @@ export const civs: { [leader: string]: CivModel } = {
             "Go into industrial zones.",
             "You can do a good timing push with Man-At-Arms (with a general and ram)."
         ],
-        pantheons: []
+        pantheons: [pantheons.stoneCircles, pantheons.godOfCraftsmen]
     },
     basil: {
         id: "basil",
@@ -505,10 +505,10 @@ export const civs: { [leader: string]: CivModel } = {
         labels: ["Versatile", "Science", "Carry", "Naval"],
         strategies: [
             "You can do any opening.",
-            "In FFA, standard commercial hub + Magnus opening is recommended.",
+            "In FFA, standard harbor + Magnus opening is recommended.",
             "In Teamers, standard campus opening is recommended.",
         ],
-        pantheons: []
+        pantheons: [pantheons.godOfTheSea, pantheons.divineSpark]
     },
     caesar: {
         id: "caesar",
