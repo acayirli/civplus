@@ -107,7 +107,6 @@ export const genericPantheons = [
     pantheons.ladyOfTheReedsAndMarshes,
     pantheons.goddessOfTheHunt,
     pantheons.godOfTheOpenSky,
-    pantheons.godOfTheForge,
     pantheons.goddessOfFestivals,
     pantheons.divineSpark
 ]
