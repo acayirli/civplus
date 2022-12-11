@@ -59,6 +59,16 @@ p, li {
   font-size: 14px;
 }
 
+a {
+  color: var(--color-secondary-2);
+  text-decoration: none;
+  transition: .2s;
+}
+
+a:hover {
+  color: var(--color-secondary-1);
+}
+
 :root {
   --color-primary: #123557;
   --color-primary-dark: #092034;

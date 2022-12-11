@@ -18,11 +18,11 @@ export type DrafterSettingsModel = {
 
 const presets = [
     { civsPerPlayer: 5, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "1 v 1" },
-    { civsPerPlayer: 8, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "2 v 2" },
-    { civsPerPlayer: 12, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "3 v 3" },
-    { civsPerPlayer: 15, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "4 v 4" },
-    { civsPerPlayer: 17, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "5 v 5" },
-    { civsPerPlayer: 20, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "6 v 6" },
+    { civsPerPlayer: 10, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "2 v 2" },
+    { civsPerPlayer: 15, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "3 v 3" },
+    { civsPerPlayer: 20, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "4 v 4" },
+    { civsPerPlayer: 24, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "5 v 5" },
+    { civsPerPlayer: 28, numberOfPlayers: 2, playerNames: ["Team 1", "Team 2"], text: "6 v 6" },
 ]
 
 export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: (drafterSettings: DrafterSettingsModel) => void }) {

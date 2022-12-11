@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AboutMain } from "./components/civplus/about/aboutMain/AboutMain";
 import { DrafterMain } from "./components/civplus/drafter/drafterMain/DrafterMain";
 import { LearnMain } from "./components/civplus/learn/leanMain/LearnMain";
 import { CivPlusNavbar, Page } from "./components/civplus/navbar/CivPlusNavbar";
@@ -17,6 +18,8 @@ export function App() {
                 return <DrafterMain />
             case "Learn":
                 return <LearnMain />
+            case "About":
+                return <AboutMain />
             default:
                 return <div>Unsupported app state.</div>
         }
