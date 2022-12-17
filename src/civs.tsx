@@ -40,6 +40,7 @@ import matthias from "./assets/images/portraits/matthias.webp";
 import menelik from "./assets/images/portraits/menelik.webp";
 import montezuma from "./assets/images/portraits/Montezuma.webp";
 import mvemba from "./assets/images/portraits/mvemba.webp";
+import nader from "./assets/images/portraits/nader.webp";
 import nzinga from "./assets/images/portraits/nzinga.webp";
 import pachacuti from "./assets/images/portraits/Pachacuti.webp";
 import pedro from "./assets/images/portraits/pedro.webp";
@@ -55,9 +56,11 @@ import seondeok from "./assets/images/portraits/Seondeok.webp";
 import shaka from "./assets/images/portraits/Shaka.webp";
 import simon from "./assets/images/portraits/simon.webp";
 import suleiman from "./assets/images/portraits/Suleiman.webp";
+import suleimanMuhtesem from "./assets/images/portraits/suleimanMuhtesem.webp";
 import tamar from "./assets/images/portraits/Tamar.webp";
 import teddy from "./assets/images/portraits/teddy.webp";
 import teddyRR from "./assets/images/portraits/teddyRR.webp";
+import tokugawa from "./assets/images/portraits/tokugawa.webp";
 import tomyris from "./assets/images/portraits/Tomyris.webp";
 import trajan from "./assets/images/portraits/Trajan.webp";
 import victoria from "./assets/images/portraits/Victoria.webp";
@@ -707,6 +710,19 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: []
     },
+    nader: {
+        id: "nader",
+        portrait: nader,
+        leader: "Nader Shah",
+        nation: "Persian",
+        strength: 2,
+        difficulty: 1,
+        labels: ["Culture", "War"],
+        strategies: [
+            "Standard commercial hub + Magnus opening."
+        ],
+        pantheons: [pantheons.godOfWarAndPlunder, pantheons.godOfTheForge, pantheons.cityPatronGoddess]
+    },
     nzinga: {
         id: "nzinga",
         portrait: nzinga,
@@ -995,6 +1011,19 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [pantheons.cityPatronGoddess, pantheons.religiousSettlements]
     },
+    suleimanMuhtesem: {
+        id: "suleimanMuhtesem",
+        portrait: suleimanMuhtesem,
+        leader: "Suleiman (Muhteşem)",
+        nation: "Ottoman",
+        strength: 3,
+        difficulty: 2,
+        labels: ["Versatile", "Carry"],
+        strategies: [
+            "Standard commercial hub + Magnus opening."
+        ],
+        pantheons: []
+    },
     tamar: {
         id: "tamar",
         portrait: tamar,
@@ -1049,6 +1078,21 @@ export const civs: { [leader: string]: CivModel } = {
 
         ],
         pantheons: []
+    },
+    tokugawa: {
+        id: "tokugawa",
+        portrait: tokugawa,
+        leader: "Tokugawa",
+        nation: "Japanese",
+        strength: 3,
+        difficulty: 1,
+        labels: ["Versatile", "Beginner-friendly"],
+        strategies: [
+            "Standard commercial hub + Magnus opening."
+        ],
+        pantheons: [
+            pantheons.godOfTheSea
+        ]
     },
     tomyris: {
         id: "tomyris",
