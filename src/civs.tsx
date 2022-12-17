@@ -1088,7 +1088,7 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 1,
         labels: ["Versatile", "Beginner-friendly"],
         strategies: [
-            "Standard commercial hub + Magnus opening."
+            "Standard harbor hub + Magnus opening."
         ],
         pantheons: [
             pantheons.godOfTheSea
