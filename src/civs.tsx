@@ -138,9 +138,7 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 2,
         labels: ["Versatile", "Production", "Culture", "Carry"],
         strategies: [
-            "Standard commercial hub + Magnus opening.",
-            "Go into industrial zones.",
-            "You can do a good timing push with Man-At-Arms (with a general and ram)."
+            "Start with your unique industrial zone.",
         ],
         pantheons: [pantheons.stoneCircles, pantheons.godOfCraftsmen]
     },
