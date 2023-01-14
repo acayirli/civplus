@@ -27,8 +27,8 @@ export function App() {
 
     return (
         <AppShell
-            navbar={
-                <CivPlusNavbar activePage={activePage} onChangePage={handleOnChange} />
+            navbar={null
+                //<CivPlusNavbar activePage={activePage} onChangePage={handleOnChange} />
             }
             main={
                 getMainMarkup()
