@@ -980,8 +980,8 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 1,
         labels: ["War", "Timing push"],
         strategies: [
-            "Standard commercial hub + Magnus opening.",
-            "Go into encampments.",
+            "Start with your unique encampment in every city.",
+            "Go into commercial hubs & campus.",
             "Do a timing push with your unique unit."
         ],
         pantheons: [pantheons.godOfTheForge, pantheons.cityPatronGoddess]
