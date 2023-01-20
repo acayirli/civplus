@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CivLabelModel } from "../../../labels";
+import { Tag } from "../../meadow/tag/Tag";
 
 import "./civLabel.css";
 
@@ -8,11 +9,14 @@ export function CivLabel({ label, onClick }: { label: CivLabelModel, onClick?: (
 
     function handleOnClick() {
         setIsActive(!isActive);
+        
+        if(onClick)
+        {
+            onClick(label);
+        }
     }
 
     return (
-        <button className={`civ_label ${onClick ? "civ_label--toggle" : ""} ${isActive ? "civ_label--active" : ""}`} type="button" onClick={onClick ? () => { handleOnClick(); onClick(label); } : undefined}>
-            {label}
-        </button>
+        <Tag label={label} onClick={handleOnClick}></Tag>
     );
 }

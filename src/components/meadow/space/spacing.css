@@ -1,3 +1,8 @@
+.spacing_xs {
+    height: 0;
+    margin: 5px 0;
+}
+
 .spacing_sm {
     height: 5px;
     margin: 5px 0;

@@ -8,6 +8,7 @@ import { Button } from "../../../meadow/button/Button";
 import { Container } from "../../../meadow/container/Container";
 import { ContentBox } from "../../../meadow/contentBox/ContentBox";
 import { Space } from "../../../meadow/space/Space";
+import { Tag } from "../../../meadow/tag/Tag";
 import { Civ } from "../../civ/Civ";
 import { CivCard } from "../../civCard/CivCard";
 import { CivLabel } from "../../civLabel/CivLabel";
@@ -50,6 +51,7 @@ function calculateDrafterResults(settings: DrafterSettingsModel, bans: string[])
 export function DrafterCivResults({ settings, bans, results, onRestart }: { settings: DrafterSettingsModel, bans: string[], results?: PlayerResult[], onRestart: () => void }) {
     const [hoveredCiv, setHoveredCiv] = useState<CivModel | null>();
     const [activeLabels, setActiveLabels] = useState<CivLabelModel[]>([]);
+    const [activePlayerTags, setActivePlayerTags] = useState<string[]>([]);
 
     const calculatedResults = results ? results : useMemo(() => calculateDrafterResults(settings, bans), [settings, bans]);
     const labels = useMemo(() => {
@@ -67,7 +69,7 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
         const uriEncodedReults = encodeURIComponent(JSON.stringify(reducedResults));
         history.replaceState(null, "", import.meta.env.BASE_URL + "?drafterresults=" + uriEncodedReults);
     }, [settings, bans, results]);
-    
+
     function handleOnMouseEnterCiv(e: any, civ: CivModel) {
         setHoveredCiv(civ);
     }
@@ -82,6 +84,19 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
 
     function handleOnChangeLabelFilters(labels: CivLabelModel[]) {
         setActiveLabels(labels);
+    }
+
+    function handleOnChangeActivePlayerTags(tag: string) {
+        let newPlayerTags;
+
+        if (activePlayerTags.includes(tag)) {
+            newPlayerTags = activePlayerTags.filter((item) => item != tag);
+            setActivePlayerTags(newPlayerTags);
+        }
+        else {
+            newPlayerTags = activePlayerTags.concat(tag);
+            setActivePlayerTags(newPlayerTags);
+        }
     }
 
     function getPlayerMarkup(playerResult: PlayerResult) {
@@ -102,15 +117,13 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
                     }
                 </ContentBox>
 
-                <Space spacing="lg" />
+                <Space spacing="md" />
             </>
         );
     }
 
     return (
         <Container className="drafter-results" gap="40px">
-            {/* <DrafterTimeline activeStep={3} /> */}
-
             <div style={{ flexGrow: 1, overflow: "hidden" }}>
                 <Container className="drafter-results__header" justifyContent="space-between">
                     <h2>Results</h2>
@@ -121,21 +134,36 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
                     </Container>
                 </Container>
 
+                Tags
+
+                <Space spacing="xs" />
+
                 <CivLabelFilters labels={labels} onChange={handleOnChangeLabelFilters} />
+
+                <Space spacing="md" />
+
+                Players
+
+                <Space spacing="xs" />
+
+                <Container>
+                    {calculatedResults.length > 0 && calculatedResults.map((playerResult) => <Tag key={playerResult.name} label={playerResult.name} onClick={handleOnChangeActivePlayerTags}></Tag>)}
+                </Container>
 
                 <Space spacing="md" />
 
                 {
                     calculatedResults.length > 0
-                        ? calculatedResults.map((playerResult) => <React.Fragment key={playerResult.name}>{getPlayerMarkup(playerResult)}</React.Fragment>)
+                        ? calculatedResults.map((playerResult) => (activePlayerTags.length == 0 || activePlayerTags.includes(playerResult.name)) &&
+                            <React.Fragment key={playerResult.name}>{getPlayerMarkup(playerResult)}</React.Fragment>)
                         : <ContentBox>No players were added or your input was invalid.</ContentBox>
                 }
             </div>
 
             {
-                calculateDrafterResults.length > 0 && hoveredCiv 
-                ? <CivCard civ={hoveredCiv} /> 
-                : <ContentBox className="drafter-results__card_placeholder"><Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container></ContentBox>
+                calculatedResults.length > 0 && hoveredCiv
+                    ? <CivCard civ={hoveredCiv} />
+                    : <ContentBox className="drafter-results__card_placeholder"><Container justifyContent="center" alignItems="center" fill>Hover over leaders to learn about them.</Container></ContentBox>
             }
         </Container>
     );
