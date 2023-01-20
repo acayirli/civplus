@@ -49,6 +49,7 @@ import peter from "./assets/images/portraits/Peter.webp";
 import philip from "./assets/images/portraits/Philip.webp";
 import poundmaker from "./assets/images/portraits/Poundmaker.webp";
 import qin from "./assets/images/portraits/qin.webp";
+import qinUnifier from "./assets/images/portraits/qin_unifier.webp";
 import robert from "./assets/images/portraits/robert.webp";
 import saladin from "./assets/images/portraits/Saladin.webp";
 import saladinSultan from "./assets/images/portraits/saladinSultan.webp";
@@ -66,6 +67,10 @@ import trajan from "./assets/images/portraits/Trajan.webp";
 import victoria from "./assets/images/portraits/Victoria.webp";
 import wilfried from "./assets/images/portraits/wilfried.webp";
 import wilhelmina from "./assets/images/portraits/Wilhelmina.webp";
+import wuzetian from "./assets/images/portraits/wuzetian.webp";
+import yongle from "./assets/images/portraits/yongle.webp";
+
+
 import { BeliefModel, beliefs } from "./beliefs";
 
 export type CivModel = {
@@ -851,7 +856,7 @@ export const civs: { [leader: string]: CivModel } = {
     qin: {
         id: "qin",
         portrait: qin,
-        leader: "Qin Shi Huang",
+        leader: "Qin Shi Huang (Mandate of Heaven)",
         nation: "Chinese",
         strength: 3,
         difficulty: 3,
@@ -867,6 +872,19 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [],
         beliefs: [beliefs.follower.divineInspiration, beliefs.founder.sacredPlaces]
+    },
+    qinUnifier: {
+        id: "qinUnifier",
+        portrait: qinUnifier,
+        leader: "Qin Shi Huang (Unifier)",
+        nation: "Chinese",
+        strength: 1,
+        difficulty: 1,
+        labels: [],
+        strategies: [
+            "Don't play this leader. He is trash.",
+        ],
+        pantheons: [],
     },
     robert: {
         id: "robert",
@@ -1164,4 +1182,31 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: []
     },
+    wuzetian: {
+        id: "wuzetian",
+        portrait: wuzetian,
+        leader: "Wu Zetian",
+        nation: "Chinese",
+        strength: 3,
+        difficulty: 3,
+        labels: ["Versatile"],
+        strategies: [
+            "Standard commercial hub + Magnus opening.",
+        ],
+        pantheons: []
+    },
+    yongle: {
+        id: "yongle",
+        portrait: yongle,
+        leader: "Yongle ",
+        nation: "Chinese",
+        strength: 3,
+        difficulty: 2,
+        labels: ["Versatile", "Tall"],
+        strategies: [
+            "Standard commercial hub + Magnus opening.",
+            "Get your cities to 10 pop quickly"
+        ],
+        pantheons: []
+    }
 }
