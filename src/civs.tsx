@@ -11,6 +11,7 @@ import catherineBq from "./assets/images/portraits/catherineBq.webp";
 import catherineMagnificence from "./assets/images/portraits/catherineMagnificence.webp";
 import chandragupta from "./assets/images/portraits/Chandragupta.webp";
 import cleopatra from "./assets/images/portraits/Cleopatra.webp";
+import cleopatraPto from "./assets/images/portraits/cleo_pto.webp";
 import cyrus from "./assets/images/portraits/cyrus.webp";
 import dido from "./assets/images/portraits/Dido.webp";
 import eleanor from "./assets/images/portraits/eleanor.webp";
@@ -50,6 +51,7 @@ import philip from "./assets/images/portraits/Philip.webp";
 import poundmaker from "./assets/images/portraits/Poundmaker.webp";
 import qin from "./assets/images/portraits/qin.webp";
 import qinUnifier from "./assets/images/portraits/qin_unifier.webp";
+import ramses from "./assets/images/portraits/ramses.webp";
 import robert from "./assets/images/portraits/robert.webp";
 import saladin from "./assets/images/portraits/Saladin.webp";
 import saladinSultan from "./assets/images/portraits/saladinSultan.webp";
@@ -58,6 +60,7 @@ import shaka from "./assets/images/portraits/Shaka.webp";
 import simon from "./assets/images/portraits/simon.webp";
 import suleiman from "./assets/images/portraits/Suleiman.webp";
 import suleimanMuhtesem from "./assets/images/portraits/suleimanMuhtesem.webp";
+import sundiata from "./assets/images/portraits/sundiata.webp";
 import tamar from "./assets/images/portraits/Tamar.webp";
 import teddy from "./assets/images/portraits/teddy.webp";
 import teddyRR from "./assets/images/portraits/teddyRR.webp";
@@ -226,7 +229,7 @@ export const civs: { [leader: string]: CivModel } = {
     cleopatra: {
         id: "cleopatra",
         portrait: cleopatra,
-        leader: "Cleopatra",
+        leader: "Cleopatra (Egyptian)",
         nation: "Egyptian",
         strength: 2,
         difficulty: 1,
@@ -237,6 +240,19 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [pantheons.ladyOfTheReedsAndMarshes, pantheons.godOfWarAndPlunder, pantheons.religiousSettlements],
         beliefs: [beliefs.follower.religiousCommunity]
+    },
+    cleopatraPto: {
+        id: "cleopatraPto",
+        portrait: cleopatraPto,
+        leader: "Cleopatra (Ptolemaic)",
+        nation: "Egyptian",
+        strength: 3,
+        difficulty: 1,
+        labels: ["Beginner-friendly"],
+        strategies: [
+            "Coming soon..."
+        ],
+        pantheons: [pantheons.ladyOfTheReedsAndMarshes, pantheons.earthGoddess],
     },
     cyrus: {
         id: "cyrus",
@@ -880,9 +896,22 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Chinese",
         strength: 1,
         difficulty: 1,
-        labels: [],
+        labels: ["War"],
         strategies: [
             "Don't play this leader. He is trash.",
+        ],
+        pantheons: [],
+    },
+    ramses: {
+        id: "ramses",
+        portrait: ramses,
+        leader: "Ramses II",
+        nation: "Egyptian",
+        strength: 3,
+        difficulty: 1,
+        labels: ["Beginner-friendly", "Versatile"],
+        strategies: [
+            "Coming soon...",
         ],
         pantheons: [],
     },
@@ -1037,6 +1066,19 @@ export const civs: { [leader: string]: CivModel } = {
         labels: ["Versatile", "Carry"],
         strategies: [
             "Standard commercial hub + Magnus opening."
+        ],
+        pantheons: []
+    },
+    sundiata: {
+        id: "sundiata",
+        portrait: sundiata,
+        leader: "Sundiata Keita",
+        nation: "Malian",
+        strength: 3,
+        difficulty: 3,
+        labels: ["Gold", "Culture"],
+        strategies: [
+            "Coming soon..."
         ],
         pantheons: []
     },
