@@ -25,7 +25,15 @@ body {
   min-width: 375px;
 }
 
-h1, h2, h3, h4, h5 {
+b {
+  font-family: "Alexandria-Bold", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Alexandria-Regular", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -54,7 +62,20 @@ h4 {
   letter-spacing: 0px;
 }
 
-p, li {
+.fancy_title {
+  font-family: 'Baskerville-Regular';
+  line-height: 17px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: white;
+  flex-shrink: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-shadow: 0px 0px 5px #fff;
+}
+
+p,
+li {
   line-height: 1.5;
   font-size: 14px;
 }
@@ -83,8 +104,8 @@ a:hover {
   --color-secondary-2: #994210;
   --color-secondary-1: #b85b26;
 
-  --color-grey-6: #1a1e24; 
-  --color-grey-5: #272c33; 
+  --color-grey-6: #1a1e24;
+  --color-grey-5: #272c33;
   --color-grey-4: #3f4652;
   --color-grey-3: #777d87;
   --color-grey-2: #a9abaf;

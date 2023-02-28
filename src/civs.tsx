@@ -898,7 +898,7 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 1,
         labels: ["War"],
         strategies: [
-            "Don't play this leader. He is trash.",
+            "Don't play this leader.",
         ],
         pantheons: [],
     },
