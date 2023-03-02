@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { civs } from "../../../../civs";
 import { Space } from "../../../meadow/space/Space";
 import { Civ } from "../../civ/Civ";
@@ -16,6 +17,20 @@ function getWinRate(player: PlayerProfileModel) {
 }
 
 export function Lists({ players, civData, games }: { players: { [player: string]: PlayerProfileModel }, civData: { [civ: string]: CivProfileModel }, games: Game[] }) {
+    function getGameMode(game: Game) {
+        if (game.placements.length == 2) {
+            if (game.placements.some((placement) => placement.length > 1)) {
+                return `Teamers ${game.placements[0].length}v${game.placements[1].length}`;
+            }
+            else {
+                return "Duel";
+            }
+        }
+        else {
+            return `FFA ${game.placements.length}`;
+        }
+    }
+
     return (
         <div className="stats">
             <h2>Stats</h2>
@@ -89,10 +104,32 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                     <h3>Recent games</h3>
 
                     {
-                        games.map((game, index) =>
-                            <div key={index} className="stats-lists__entry stats-lists__entry--game">
-                                {game.date}
-                            </div>)
+                        games
+                            .sort((a, b) => DateTime.fromISO(b.date).toMillis() - DateTime.fromISO(a.date).toMillis())
+                            .map((game, index) =>
+                                <div key={index} className="stats-lists__entry stats-lists__entry--game">
+                                    <div className="fancy_title">
+                                        {DateTime.fromISO(game.date).toFormat("dd.MM.yyyy HH:mm")}
+                                    </div>
+
+                                    <div className="stats-lists__extra-stats">
+                                        <span>
+                                            Mode
+                                            <br />
+                                            <b>
+                                                { getGameMode(game) }
+                                            </b>
+                                        </span>
+
+                                        <span>
+                                            Winners
+                                            <br />
+                                            {game.hasVictory
+                                                ? <b>{game.placements.slice(0, game.placements.length / 2).map((placement) => placement.map((player) => player.player).join(" "))}</b>
+                                                : <i style={{}}>(draw)</i>}
+                                        </span>
+                                    </div>
+                                </div>)
                     }
                 </div>
             </div>

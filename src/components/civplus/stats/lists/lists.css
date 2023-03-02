@@ -1,6 +1,7 @@
 .stats {
     margin: 0 auto;
     width: 100%;
+    max-width: 1920px;
 }
 
 .stats-lists {
@@ -26,6 +27,10 @@
 
 .stats-lists__entry--player .fancy_title {
     flex-grow: 1;
+}
+
+.stats-lists__entry--game > * {
+    flex-basis: 50%;
 }
 
 .stats-lists__extra-stats {
