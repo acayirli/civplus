@@ -1,0 +1,247 @@
+{
+    "shaka": {
+        "name": "shaka",
+        "picks": 0,
+        "bans": 3,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0,
+            1,
+            2
+        ]
+    },
+    "ambiorix": {
+        "name": "ambiorix",
+        "picks": 0,
+        "bans": 3,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0,
+            1,
+            2
+        ]
+    },
+    "lautaro": {
+        "name": "lautaro",
+        "picks": 0,
+        "bans": 2,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0,
+            2
+        ]
+    },
+    "basil": {
+        "name": "basil",
+        "picks": 0,
+        "bans": 3,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0,
+            1,
+            2
+        ]
+    },
+    "seondeok": {
+        "name": "seondeok",
+        "picks": 0,
+        "bans": 1,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0
+        ]
+    },
+    "hojo": {
+        "name": "hojo",
+        "picks": 1,
+        "bans": 2,
+        "wins": 0,
+        "losses": 0,
+        "draws": 1,
+        "gameIds": [
+            0,
+            1,
+            2
+        ]
+    },
+    "kublai": {
+        "name": "kublai",
+        "picks": 1,
+        "bans": 1,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0,
+            1
+        ]
+    },
+    "batrieu": {
+        "name": "batrieu",
+        "picks": 1,
+        "bans": 2,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0,
+            1,
+            2
+        ]
+    },
+    "philip": {
+        "name": "philip",
+        "picks": 1,
+        "bans": 0,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            0
+        ]
+    },
+    "gorgo": {
+        "name": "gorgo",
+        "picks": 2,
+        "bans": 0,
+        "wins": 1,
+        "losses": 0,
+        "draws": 1,
+        "gameIds": [
+            0,
+            1
+        ]
+    },
+    "trajan": {
+        "name": "trajan",
+        "picks": 1,
+        "bans": 0,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "gameIds": [
+            0
+        ]
+    },
+    "johnCurtin": {
+        "name": "johnCurtin",
+        "picks": 2,
+        "bans": 0,
+        "wins": 0,
+        "losses": 1,
+        "draws": 1,
+        "gameIds": [
+            0,
+            1
+        ]
+    },
+    "yongle": {
+        "name": "yongle",
+        "picks": 1,
+        "bans": 0,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "gameIds": [
+            0
+        ]
+    },
+    "montezuma": {
+        "name": "montezuma",
+        "picks": 1,
+        "bans": 0,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "gameIds": [
+            0
+        ]
+    },
+    "suleimanMuhtesem": {
+        "name": "suleimanMuhtesem",
+        "picks": 1,
+        "bans": 0,
+        "wins": 0,
+        "losses": 0,
+        "draws": 1,
+        "gameIds": [
+            1
+        ]
+    },
+    "teddyRR": {
+        "name": "teddyRR",
+        "picks": 1,
+        "bans": 0,
+        "wins": 0,
+        "losses": 0,
+        "draws": 1,
+        "gameIds": [
+            1
+        ]
+    },
+    "menelik": {
+        "name": "menelik",
+        "picks": 1,
+        "bans": 0,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            2
+        ]
+    },
+    "harald": {
+        "name": "harald",
+        "picks": 1,
+        "bans": 0,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            2
+        ]
+    },
+    "ramses": {
+        "name": "ramses",
+        "picks": 1,
+        "bans": 0,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "gameIds": [
+            2
+        ]
+    },
+    "gandhi": {
+        "name": "gandhi",
+        "picks": 1,
+        "bans": 0,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "gameIds": [
+            2
+        ]
+    },
+    "saladin": {
+        "name": "saladin",
+        "picks": 1,
+        "bans": 0,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "gameIds": [
+            2
+        ]
+    }
+}

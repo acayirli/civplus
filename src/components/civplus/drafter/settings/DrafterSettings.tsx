@@ -68,7 +68,6 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
     return (
         <div className="drafter-settings">
             {/* <DrafterTimeline activeStep={1} /> */}
-
             <h2>Settings</h2>
 
             <p>

@@ -1,0 +1,129 @@
+[
+    {
+        "date": "2023-02-22T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Tim",
+                    "civ": "kublai"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "batrieu"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "philip"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "gorgo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "yongle"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "montezuma"
+                }
+            ]            
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "ambiorix",
+            "lautaro",
+            "basil",
+            "seondeok",
+            "hojo"
+        ]
+    },
+
+    {
+        "date": "2023-02-24T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "suleimanMuhtesem"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "gorgo"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "teddyRR"
+                }
+            ]
+        ],
+        "hasVictory": false,
+        "bans": [
+            "shaka",
+            "ambiorix",
+            "batrieu",
+            "basil",
+            "kublai"
+        ]
+    },
+
+    {
+        "date": "2023-02-25T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "menelik"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "harald"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "ramses"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gandhi"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "saladin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "ambiorix",
+            "batrieu",
+            "basil",
+            "hojo",
+            "lautaro"
+        ]
+    }
+]

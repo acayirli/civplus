@@ -3,6 +3,7 @@ import { AboutMain } from "./components/civplus/about/aboutMain/AboutMain";
 import { DrafterMain } from "./components/civplus/drafter/drafterMain/DrafterMain";
 import { LearnMain } from "./components/civplus/learn/leanMain/LearnMain";
 import { CivPlusNavbar, Page } from "./components/civplus/navbar/CivPlusNavbar";
+import { StatsMain } from "./components/civplus/stats/statsMain/StatsMain";
 import { AppShell } from "./components/meadow/appShell/AppShell";
 
 export function App() {
@@ -16,6 +17,8 @@ export function App() {
         switch (activePage) {
             case "Drafter":
                 return <DrafterMain />
+            case "Stats":
+                return <StatsMain />
             case "Learn":
                 return <LearnMain />
             case "About":
@@ -27,8 +30,8 @@ export function App() {
 
     return (
         <AppShell
-            navbar={null
-                //<CivPlusNavbar activePage={activePage} onChangePage={handleOnChange} />
+            navbar={
+                <CivPlusNavbar activePage={activePage} onChangePage={handleOnChange} />
             }
             main={
                 getMainMarkup()
