@@ -26,7 +26,7 @@ export function CivPlusNavbar({ activePage, onChangePage }: { activePage: Page, 
 
     return (
         <Navbar>
-            <img src={logo}></img>
+            <img src={logo} style={{height: "40px"}}></img>
             <NavbarItem text="Drafter" icon={<FontAwesomeIcon icon={faRightLeft} />} active={activePage == "Drafter"} onClick={handleDrafterOnClick} />
             <NavbarItem text="Stats" icon={<FontAwesomeIcon icon={faChartSimple} />} active={activePage == "Stats"} onClick={handleStatsOnClick} />
             <NavbarItem text="Learn" icon={<FontAwesomeIcon icon={faBookOpen} />} active={activePage == "Learn"} onClick={handleLearnOnClick} />
