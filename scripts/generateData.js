@@ -10,11 +10,17 @@ function isWin(index, placements) {
 
 gamesData.forEach((game, gameIndex) => {
     game.bans.forEach((ban) => {
-        if(civs.hasOwnProperty(ban)) {
-            civs[ban].bans += 1; 
+        if (civs.hasOwnProperty(ban)) {
+            const civObject = civs[ban];
+
+            civObject.bans += 1;
+
+            if (!civObject.gameIds.includes(gameIndex)) {
+                civObject.gameIds.push(gameIndex);
+            }
         }
         else {
-            civs[ban] = { name: ban, picks: 0, bans: 1 };
+            civs[ban] = { name: ban, picks: 0, bans: 1, wins: 0, losses: 0, draws: 0, gameIds: [gameIndex] };
         }
     });
 
@@ -60,11 +66,35 @@ gamesData.forEach((game, gameIndex) => {
                 };
             }
 
-            if(civs.hasOwnProperty(playerData.civ)) {
-                civs[playerData.civ].picks += 1; 
+            if (civs.hasOwnProperty(playerData.civ)) {
+                const civObject = civs[playerData.civ];
+
+                civObject.picks += 1;
+
+                if (hasVictory && istWin) {
+                    civObject.wins += 1;
+                }
+                else if (hasVictory && !istWin) {
+                    civObject.losses += 1;
+                }
+                else {
+                    civObject.draws += 1;
+                }
+
+                if (!civObject.gameIds.includes(gameIndex)) {
+                    civObject.gameIds.push(gameIndex);
+                }
             }
             else {
-                civs[playerData.civ] = { name: playerData.civ, picks: 1, bans: 0 };
+                civs[playerData.civ] = {
+                    name: playerData.civ,
+                    picks: 1,
+                    bans: 0,
+                    wins: hasVictory && istWin ? 1 : 0,
+                    losses: hasVictory && !istWin ? 1 : 0,
+                    draws: !hasVictory ? 1 : 0,
+                    gameIds: [gameIndex]
+                };
             }
         });
     });

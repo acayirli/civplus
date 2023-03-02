@@ -176,7 +176,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Vietnamese",
         strength: 3,
         difficulty: 3,
-        labels: ["Versatile", "Culture"],
+        labels: ["Versatile", "Culture", "Timing push"],
         strategies: [
             "You can do any opening.",
             "Place your unique encampment adjacent to as many districts as possible, to generate a lot of culture. They don't consume a district slot.",
@@ -402,7 +402,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Greek",
         strength: 3,
         difficulty: 2,
-        labels: ["Culture", "War"],
+        labels: ["Culture", "War", "Timing push"],
         strategies: [
             "Standard theather square opening.",
             "Always settle next to hills (place theather square on hill next to city center).",

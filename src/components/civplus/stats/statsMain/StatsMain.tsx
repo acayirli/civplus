@@ -18,7 +18,11 @@ export type Game = {
 export type CivProfileModel = {
     name: string,
     picks: number,
-    bans: number
+    bans: number,
+    wins: number,
+    losses: number,
+    draws: number,
+    gameIds: number[]
 }
 
 export type PlayerProfileModel = {

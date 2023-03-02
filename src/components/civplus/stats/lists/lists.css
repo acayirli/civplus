@@ -5,14 +5,14 @@
 
 .stats-lists {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
 }
 
 .stats-lists__list {
     display: flex;
     flex-direction: column;
-    flex-basis: 50%;
 }
 
 .stats-lists__entry {
@@ -21,17 +21,16 @@
     background-color: var(--color-primary-4);
     margin-bottom: 10px;
     display: flex;
-    gap: 10px;
+    align-items: center;
 }
 
 .stats-lists__entry--player .fancy_title {
-    font-size: 18px;
-    line-height: initial;
-    margin-bottom: 5px;
+    flex-grow: 1;
 }
 
-.stats-lists__player-stats {
+.stats-lists__extra-stats {
     display: flex;
     gap: 15px;
     white-space: nowrap;
+    font-size: 13px;
 }
