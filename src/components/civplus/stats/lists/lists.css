@@ -1,13 +1,12 @@
 .stats {
     margin: 0 auto;
-    width: 100%;
     max-width: 1920px;
 }
 
 .stats-lists {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 40px;
 }
 
@@ -17,25 +16,36 @@
 }
 
 .stats-lists__entry {
-    padding: 20px;
     border-radius: 2px;
     background-color: var(--color-primary-4);
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    padding: 10px 20px;
+    max-width: 450px;
+    height: 85px;
 }
 
 .stats-lists__entry--player .fancy_title {
     flex-grow: 1;
+    margin-right: 10px;
 }
 
-.stats-lists__entry--game > * {
-    flex-basis: 50%;
+.stats-lists__entry--game .stats-lists__extra-stats {
+    flex-grow: 1;
+    display: flex;
+    gap: 15px;
+}
+
+.stats-lists__entry--game .fancy_title {
+    margin-right: 20px;
+    white-space: nowrap;
 }
 
 .stats-lists__extra-stats {
-    display: flex;
-    gap: 15px;
-    white-space: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
     font-size: 13px;
+    white-space: nowrap;
 }

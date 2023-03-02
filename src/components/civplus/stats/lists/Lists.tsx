@@ -89,7 +89,9 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                         }
                     </div>
 
-                    <div className="stats-lists__list" style={{ marginTop: "64px" }}>
+                    <Space spacing="md" />
+
+                    <div className="stats-lists__list">
                         <h3>Most banned leaders</h3>
 
                         <CivStatsList civList={Object.values(civData)
@@ -109,7 +111,9 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                             .map((game, index) =>
                                 <div key={index} className="stats-lists__entry stats-lists__entry--game">
                                     <div className="fancy_title">
-                                        {DateTime.fromISO(game.date).toFormat("dd.MM.yyyy HH:mm")}
+                                        {DateTime.fromISO(game.date).toFormat("dd.MM.yyyy")}
+                                        <br/>
+                                        {DateTime.fromISO(game.date).toFormat("HH:mm")}
                                     </div>
 
                                     <div className="stats-lists__extra-stats">

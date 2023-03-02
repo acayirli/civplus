@@ -23,15 +23,10 @@ export function CivStatsList({ civList }: { civList: CivProfileModel[] }) {
 
                         <div className="stats-lists__extra-stats">
                             <span>Picked <br /> <b>{civ.picks}</b></span>
-
-                            <span>Banned <br /> <b>{civ.bans}</b></span>
-
                             <span>Wins <br /> <b>{civ.wins}</b></span>
-
-                            <span>Losses <br /> <b>{civ.losses}</b></span>
-
                             <span>Draws <br /> <b>{civ.draws}</b></span>
-
+                            <span>Banned <br /> <b>{civ.bans}</b></span>
+                            <span>Losses <br /> <b>{civ.losses}</b></span>
                             <span>Winrate <br /> <b>{getWinRate(civ)}</b></span>
                         </div>
                     </div>)
