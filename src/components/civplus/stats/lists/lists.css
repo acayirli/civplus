@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    min-width: 170px;
     max-width: 450px;
     height: 85px;
 }
@@ -49,3 +50,73 @@
     font-size: 13px;
     white-space: nowrap;
 }
+
+@media only screen and (max-width: 640px) {
+    .main {
+        padding: 20px;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        margin: initial;
+    }
+
+    .stats h2 {
+        margin-bottom: 60px;
+    }
+
+    .stats h3 {
+        position: absolute;
+    }
+
+    .stats_lists__players-header {
+        top: -30px;
+    }
+
+    .stats_lists__most-picked-header {
+        top: 150px;
+    }
+
+    .stats_lists__most-banned-header {
+        top: 330px;
+    }
+
+    .stats_lists__recent-games-header {
+        top: 510px;
+    }
+
+    .stats-lists {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 80px;
+    }
+
+    .stats-lists .spacing_md {
+        height: 20px;
+        margin: 30px 0;
+    }
+
+    .stats-lists__list {
+        flex-direction: row;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .stats-lists__entry {
+        padding: 5px 10px;
+        height: 100px;
+        margin-bottom: 0;
+        margin-right: 20px;
+        scroll-snap-align: start;
+    }
+
+    .stats-lists__entry .fancy_title {
+        margin-right: 0;
+    }
+
+    .stats-lists__extra-stats {
+        display: none !important;
+    }
+  }

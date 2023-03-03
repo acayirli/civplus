@@ -37,7 +37,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
 
             <div className="stats-lists">
                 <div className="stats-lists__list">
-                    <h3>Players</h3>
+                    <h3 className="stats_lists__players-header">Players</h3>
 
                     {
                         Object.values(players)
@@ -78,7 +78,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
 
                 <div>
                     <div className="stats-lists__list">
-                        <h3>Most picked leaders</h3>
+                        <h3 className="stats_lists__most-picked-header">Most picked leaders</h3>
 
                         {
                             <CivStatsList civList={Object.values(civData)
@@ -92,7 +92,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                     <Space spacing="md" />
 
                     <div className="stats-lists__list">
-                        <h3>Most banned leaders</h3>
+                        <h3 className="stats_lists__most-banned-header">Most banned leaders</h3>
 
                         <CivStatsList civList={Object.values(civData)
                             .sort((civA, civB) => {
@@ -103,7 +103,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                 </div>
 
                 <div className="stats-lists__list">
-                    <h3>Recent games</h3>
+                    <h3 className="stats_lists__recent-games-header">Recent games</h3>
 
                     {
                         games
