@@ -125,5 +125,38 @@
             "hojo",
             "lautaro"
         ]
+    },
+
+    {
+        "date": "2023-03-03T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "joao"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "saladinSultan"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "ambiorix",
+            "batrieu",
+            "basil",
+            "teddyRR",
+            "genghis",
+            "tokugawa",
+            "suleiman"
+        ]
     }
 ]
