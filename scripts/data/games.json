@@ -158,5 +158,95 @@
             "tokugawa",
             "suleiman"
         ]
+    },
+
+    {
+        "date": "2023-03-05T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "mansa"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "genghis"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "kublai"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "montezuma"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "batrieu",
+            "shaka",
+            "teddyRR",
+            "harald",
+            "jadwiga",
+            "peter"
+        ]
+    },
+
+    {
+        "date": "2023-03-05T23:50:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "nzinga"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "wilhelmina"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "philip"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "lautaro"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "joao"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "batrieu",
+            "shaka",
+            "teddyRR",
+            "harald",
+            "trajan",
+            "peter"
+        ]
     }
 ]
