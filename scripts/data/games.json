@@ -161,7 +161,7 @@
     },
 
     {
-        "date": "2023-03-05T20:00:00",
+        "date": "2023-03-04T20:00:00",
         "placements": [
             [
                 {
@@ -206,7 +206,7 @@
     },
 
     {
-        "date": "2023-03-05T23:50:00",
+        "date": "2023-03-04T23:50:00",
         "placements": [
             [
                 {
@@ -247,6 +247,59 @@
             "harald",
             "trajan",
             "peter"
+        ]
+    },
+
+    {
+        "date": "2023-03-05T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gandhi"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "pachacuti"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "joao"
+                },
+                {
+                    "player": "Hannes",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Torben",
+                    "civ": "wilhelmina"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "genghis",
+            "shaka",
+            "hojo",
+            "harald",
+            "seondeok",
+            "philip"
         ]
     }
 ]
