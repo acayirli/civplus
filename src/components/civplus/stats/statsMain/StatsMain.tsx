@@ -33,7 +33,6 @@ export type PlayerProfileModel = {
     draws: number,
     gameIds: number[],
     civs: { [civ: string]: { civ: string, numberOfTimesPlayed: number } },
-    civsSortedByNumberOfTimesPlayed: string[]
 }
 
 export type PlayerInGame = {

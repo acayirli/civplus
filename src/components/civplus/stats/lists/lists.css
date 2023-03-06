@@ -25,6 +25,12 @@
     min-width: 170px;
     max-width: 450px;
     height: 85px;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.stats-lists__entry:hover {
+    background-color: var(--color-primary-3);
 }
 
 .stats-lists__entry--player .fancy_title {

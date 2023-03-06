@@ -100,13 +100,6 @@ gamesData.forEach((game, gameIndex) => {
     });
 });
 
-Object.values(players).forEach((player) => {
-    player.civsSortedByNumberOfTimesPlayed = Object.keys(player.civs);
-    player.civsSortedByNumberOfTimesPlayed.sort((civA, civB) => {
-        return player.civs[civB].numberOfTimesPlayed - player.civs[civA].numberOfTimesPlayed;
-    });
-});
-
 const playersJsonString = JSON.stringify(players);
 const civsJsonString = JSON.stringify(civs);
 

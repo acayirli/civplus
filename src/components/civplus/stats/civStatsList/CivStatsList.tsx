@@ -13,12 +13,12 @@ function getWinRate(civ: CivProfileModel) {
     return isNaN(winRate) ? "-" : winRate + " %";
 }
 
-export function CivStatsList({ civList }: { civList: CivProfileModel[] }) {
+export function CivStatsList({ civList, onClick }: { civList: CivProfileModel[], onClick?: (civ: CivProfileModel) => void}) {
     return (
         <>
             {
                 civList.map((civ, index) =>
-                    <div key={index} className="stats-lists__entry stats-lists__entry--civ">
+                    <div key={index} className="stats-lists__entry stats-lists__entry--civ" onClick={onClick ? () => onClick(civ) : undefined}>
                         <Civ civ={civs[civ.name]} />
 
                         <div className="stats-lists__extra-stats">

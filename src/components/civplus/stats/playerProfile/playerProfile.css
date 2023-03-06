@@ -1,0 +1,36 @@
+.player-profile {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.player-profile__dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.player-profile__widget {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-profile__widget > *:not(h3) {
+    flex-grow: 1;
+}
+
+.player-profile__most-played {
+    grid-row-start: span 4;
+}
+
+.player-profile__playstyle {
+    grid-row-start: span 2;
+}
+
+.player-profile__stats {
+    grid-row-start: span 3;
+}
+
+.player-profile__recent {
+    grid-row-start: span 2;
+}
