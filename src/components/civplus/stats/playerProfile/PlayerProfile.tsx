@@ -7,6 +7,7 @@ import "./playerProfile.css";
 
 import civs from "../../../../../scripts/data/civs.json";
 import { CivPortrait } from "../../civPortrait/CivPortrait";
+import { PlaystyleRadar } from "./playstyleRadar/PlaystyleRadar";
 
 export function PlayerProfile({ player }: { player: PlayerProfileModel }) {
     const civsAsCivProfiles = Object.values(player.civs)
@@ -51,7 +52,7 @@ export function PlayerProfile({ player }: { player: PlayerProfileModel }) {
                     <h3>Playstyle</h3>
 
                     <ContentBox>
-                        asd
+                        <PlaystyleRadar labels={[{label: "Production", occurences: 12}, {label: "Versatile", occurences: 14}, {label: "Science", occurences: 14}, {label: "Gold", occurences: 10}, {label: "Culture", occurences: 8}, {label: "War", occurences: 12}, {label: "Beginner-friendly", occurences: 6}]} />
                     </ContentBox>
                 </div>
 
