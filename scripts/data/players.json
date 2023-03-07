@@ -13,10 +13,7 @@
                 "civ": "kublai",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "kublai"
-        ]
+        }
     },
     "Selim": {
         "name": "Selim",
@@ -58,15 +55,7 @@
                 "civ": "lautaro",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "teddyRR",
-            "batrieu",
-            "ramses",
-            "victoria",
-            "kublai",
-            "lautaro"
-        ]
+        }
     },
     "Jacob": {
         "name": "Jacob",
@@ -92,12 +81,7 @@
                 "civ": "joao",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "philip",
-            "johnCurtin",
-            "joao"
-        ]
+        }
     },
     "Luca": {
         "name": "Luca",
@@ -130,13 +114,7 @@
                 "civ": "philip",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "gorgo",
-            "pedro",
-            "harald",
-            "philip"
-        ]
+        }
     },
     "Abdul": {
         "name": "Abdul",
@@ -170,23 +148,15 @@
                 "civ": "saladinSultan",
                 "numberOfTimesPlayed": 1
             },
-            "mansa": {
-                "civ": "mansa",
+            "mansamusa": {
+                "civ": "mansamusa",
                 "numberOfTimesPlayed": 1
             },
             "suleiman": {
                 "civ": "suleiman",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "gandhi",
-            "trajan",
-            "suleimanMuhtesem",
-            "saladinSultan",
-            "mansa",
-            "suleiman"
-        ]
+        }
     },
     "Mirko": {
         "name": "Mirko",
@@ -207,11 +177,7 @@
                 "civ": "saladin",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "johnCurtin",
-            "saladin"
-        ]
+        }
     },
     "Lukas": {
         "name": "Lukas",
@@ -232,11 +198,7 @@
                 "civ": "hojo",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "yongle",
-            "hojo"
-        ]
+        }
     },
     "Maxim": {
         "name": "Maxim",
@@ -262,12 +224,7 @@
                 "civ": "pachacuti",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "montezuma",
-            "joao",
-            "pachacuti"
-        ]
+        }
     },
     "Schmiddl": {
         "name": "Schmiddl",
@@ -283,10 +240,7 @@
                 "civ": "menelik",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "menelik"
-        ]
+        }
     },
     "Tobi": {
         "name": "Tobi",
@@ -307,11 +261,7 @@
                 "civ": "nzinga",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "genghis",
-            "nzinga"
-        ]
+        }
     },
     "Jonas": {
         "name": "Jonas",
@@ -337,12 +287,7 @@
                 "civ": "cleopatra",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "hojo",
-            "wilhelmina",
-            "cleopatra"
-        ]
+        }
     },
     "Alex": {
         "name": "Alex",
@@ -363,11 +308,7 @@
                 "civ": "joao",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "montezuma",
-            "joao"
-        ]
+        }
     },
     "Hannes": {
         "name": "Hannes",
@@ -383,10 +324,7 @@
                 "civ": "gorgo",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "gorgo"
-        ]
+        }
     },
     "Torben": {
         "name": "Torben",
@@ -402,9 +340,6 @@
                 "civ": "wilhelmina",
                 "numberOfTimesPlayed": 1
             }
-        },
-        "civsSortedByNumberOfTimesPlayed": [
-            "wilhelmina"
-        ]
+        }
     }
 }

@@ -9,7 +9,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
-import { CivLabelModel } from '../../../../../labels';
+import { CivLabelModel, labels as allLabels } from '../../../../../labels';
 
 ChartJS.register(
     RadialLinearScale,
@@ -17,22 +17,53 @@ ChartJS.register(
     LineElement,
     Filler,
     Tooltip,
-    Legend
+    Legend,
 );
 
 export function PlaystyleRadar({ labels }: { labels: { label: CivLabelModel, occurences: number }[] }) {
+    const allLabelsExceptBeginner = allLabels.filter((label) => label != "Beginner-friendly");
+
     const data = {
-        labels: labels.map((label) => label.label),
+        labels: allLabelsExceptBeginner.map((label) => label),
         datasets: [
             {
                 label: '',
-                data: labels.map((label) => label.occurences),
-                backgroundColor: 'rgba(255, 255, 255, 0.4)',
-                borderColor: '#ccc',
+                data: allLabelsExceptBeginner.map((label) => {
+                    const filteredLabel = labels.filter((x) => x.label == label);
+                    return filteredLabel.length > 0 ? filteredLabel[0].occurences : 0;
+                }),
+                backgroundColor: 'rgba(153, 66, 16, 0.6)',
+                borderColor: '#6e2e08',
                 borderWidth: 1,
             },
         ],
     };
 
-    return <Radar data={data} />;
+    return <Radar data={data} options={{
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            r: {
+                pointLabels: {
+                    color: "#cacaca",
+                    font: {
+                        size: 13,
+                        family: "Alexandria-Regular"
+                    }
+                },
+                ticks: {
+                    display: false // Hides the labels in the middel (numbers)
+                },
+                angleLines: {
+                    color: "rgba(204, 204, 204, .5)"
+                },
+                grid: {
+                    color: "rgba(204, 204, 204, .5)"
+                }
+            },
+        }
+    }} />;
 }

@@ -1,4 +1,4 @@
-import { civs as civEntries } from "../../../../civs";
+import { civs as allCivs } from "../../../../civs";
 import { ContentBox } from "../../../meadow/contentBox/ContentBox";
 import { CivStatsList } from "../civStatsList/CivStatsList";
 import { CivProfileModel, PlayerProfileModel } from "../statsMain/StatsMain";
@@ -8,11 +8,16 @@ import "./playerProfile.css";
 import civs from "../../../../../scripts/data/civs.json";
 import { CivPortrait } from "../../civPortrait/CivPortrait";
 import { PlaystyleRadar } from "./playstyleRadar/PlaystyleRadar";
+import { CivLabelModel } from "../../../../labels";
+
+function getMostPlayedCiv(player: PlayerProfileModel) {
+    return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
+}
 
 export function PlayerProfile({ player }: { player: PlayerProfileModel }) {
     const civsAsCivProfiles = Object.values(player.civs)
         .sort((civA, civB) => {
-            return civA.numberOfTimesPlayed - civB.numberOfTimesPlayed
+            return civB.numberOfTimesPlayed - civA.numberOfTimesPlayed
         })
         .map((civ): CivProfileModel => ({
             bans: 0,
@@ -22,12 +27,22 @@ export function PlayerProfile({ player }: { player: PlayerProfileModel }) {
             name: civ.civ,
             picks: civ.numberOfTimesPlayed,
             wins: 0
-        }))
+        }));
+
+    const playstyleRadar: { [key: string]: { label: CivLabelModel, occurences: number } } = {};
+
+    Object.values(player.civs).forEach((civ) => {
+        const civDetails = allCivs[civ.civ];
+        civDetails.labels.forEach((label) => {
+            playstyleRadar[label] = playstyleRadar[label] || { label: label, occurences: 0 };
+            playstyleRadar[label].occurences += civ.numberOfTimesPlayed;
+        });
+    });
 
     return (
         <div className="player-profile">
             <h2>
-                <CivPortrait civ={civEntries[Object.values(player.civs)[0].civ]} />
+                <CivPortrait civ={allCivs[getMostPlayedCiv(player)]} />
                 {player.name}
             </h2>
 
@@ -52,7 +67,7 @@ export function PlayerProfile({ player }: { player: PlayerProfileModel }) {
                     <h3>Playstyle</h3>
 
                     <ContentBox>
-                        <PlaystyleRadar labels={[{label: "Production", occurences: 12}, {label: "Versatile", occurences: 14}, {label: "Science", occurences: 14}, {label: "Gold", occurences: 10}, {label: "Culture", occurences: 8}, {label: "War", occurences: 12}, {label: "Beginner-friendly", occurences: 6}]} />
+                        <PlaystyleRadar labels={Object.values(playstyleRadar)} />
                     </ContentBox>
                 </div>
 

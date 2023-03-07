@@ -18,6 +18,10 @@ function getWinRate(player: PlayerProfileModel) {
     return Math.floor(player.wins / getNumberOfGames(player) * 100);
 }
 
+function getMostPlayedCiv(player: PlayerProfileModel) {
+    return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
+}
+
 export function Lists({ players, civData, games }: { players: { [player: string]: PlayerProfileModel }, civData: { [civ: string]: CivProfileModel }, games: Game[] }) {
     const [selectedDetail, setSelectedDetail] = useState<PlayerProfileModel | CivProfileModel | Game>();
 
@@ -85,7 +89,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                                 })
                                 .map((player) =>
                                     <div key={player.name} className="stats-lists__entry stats-lists__entry--player" onClick={() => handleClickEntry(player)}>
-                                        <CivPortrait civ={civs[player.civsSortedByNumberOfTimesPlayed[0]]} />
+                                        <CivPortrait civ={civs[getMostPlayedCiv(player)]} />
 
                                         <div className="fancy_title">
                                             {player.name}
