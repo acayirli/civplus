@@ -74,10 +74,6 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
         setHoveredCiv(civ);
     }
 
-    function handleOnMouseLeaveCiv() {
-        setHoveredCiv(null);
-    }
-
     function handleOnClickShare() {
         navigator.clipboard.writeText(window.location.href);
     }
@@ -111,8 +107,7 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
                                 <Civ key={civ.id}
                                     className={activeLabels.length > 0 && !activeLabels.some(label => civ.labels.includes(label)) ? "drafter-results__disabled_civ" : ""}
                                     civ={civ}
-                                    onMouseEnter={e => handleOnMouseEnterCiv(e, civ)}
-                                    onMouseLeave={handleOnMouseLeaveCiv} />)
+                                    onMouseEnter={e => handleOnMouseEnterCiv(e, civ)} />)
                             : <p>There are no remaining leaders. Try banning fewer leaders or reducing the number of players.</p>
                     }
                 </ContentBox>

@@ -246,7 +246,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: cleopatraPto,
         leader: "Cleopatra (Ptolemaic)",
         nation: "Egyptian",
-        strength: 3,
+        strength: 2,
         difficulty: 1,
         labels: ["Beginner-friendly", "Versatile"],
         strategies: [
@@ -376,7 +376,7 @@ export const civs: { [leader: string]: CivModel } = {
         strategies: [
             "Standard commercial hub + Magnus opening.",
         ],
-        pantheons: []
+        pantheons: [pantheons.godOfTheForge]
     },
     gitarja: {
         id: "gitarja",
@@ -712,7 +712,7 @@ export const civs: { [leader: string]: CivModel } = {
         counters: [
             "Deny settles."
         ],
-        pantheons: []
+        pantheons: [pantheons.godOfTheForge]
     },
     mvemba: {
         id: "mvemba",
