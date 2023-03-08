@@ -1,6 +1,7 @@
 import { DateTime } from "luxon";
 import { useState } from "react";
 import { civs } from "../../../../civs";
+import { ContentBox } from "../../../meadow/contentBox/ContentBox";
 import { Space } from "../../../meadow/space/Space";
 import { Civ } from "../../civ/Civ";
 import { CivPortrait } from "../../civPortrait/CivPortrait";
@@ -53,7 +54,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
 
     if (selectedDetail) {
         if (isPlayer(selectedDetail)) {
-            return <PlayerProfile player={selectedDetail} />;
+            return <PlayerProfile player={selectedDetail} onClickBack={() => { setSelectedDetail(undefined) }} />;
         }
         else if (isCiv(selectedDetail)) {
             return <p>asd</p>;
@@ -68,7 +69,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                 <h2>Stats</h2>
 
                 <div className="stats-lists">
-                    <div className="stats-lists__list">
+                    <ContentBox className="stats-lists__list stats-lists__list--players">
                         <h3 className="stats_lists__players-header">Players</h3>
 
                         {
@@ -106,39 +107,35 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                                         </div>
                                     </div>)
                         }
-                    </div>
+                    </ContentBox>
 
-                    <div>
-                        <div className="stats-lists__list">
-                            <h3 className="stats_lists__most-picked-header">Most picked leaders</h3>
+                    <ContentBox className="stats-lists__list stats-lists__list--picked">
+                        <h3 className="stats_lists__most-picked-header">Most picked leaders</h3>
 
-                            {
-                                <CivStatsList
-                                    onClick={handleClickEntry}
-                                    civList={Object.values(civData)
-                                        .sort((civA, civB) => {
-                                            return civB.picks - civA.picks;
-                                        })
-                                        .slice(0, 5)} />
-                            }
-                        </div>
-
-                        <Space spacing="md" />
-
-                        <div className="stats-lists__list">
-                            <h3 className="stats_lists__most-banned-header">Most banned leaders</h3>
-
+                        {
                             <CivStatsList
                                 onClick={handleClickEntry}
                                 civList={Object.values(civData)
                                     .sort((civA, civB) => {
-                                        return civB.bans - civA.bans;
+                                        return civB.picks - civA.picks;
                                     })
                                     .slice(0, 5)} />
-                        </div>
-                    </div>
+                        }
+                    </ContentBox>
 
-                    <div className="stats-lists__list">
+                    <ContentBox className="stats-lists__list stats-lists__list--banned">
+                        <h3 className="stats_lists__most-banned-header">Most banned leaders</h3>
+
+                        <CivStatsList
+                            onClick={handleClickEntry}
+                            civList={Object.values(civData)
+                                .sort((civA, civB) => {
+                                    return civB.bans - civA.bans;
+                                })
+                                .slice(0, 5)} />
+                    </ContentBox>
+
+                    <ContentBox className="stats-lists__list stats-lists__list--recent">
                         <h3 className="stats_lists__recent-games-header">Recent games</h3>
 
                         {
@@ -171,7 +168,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                                         </div>
                                     </div>)
                         }
-                    </div>
+                    </ContentBox>
                 </div>
             </div>
         );

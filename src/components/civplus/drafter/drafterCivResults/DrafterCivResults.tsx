@@ -98,18 +98,20 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
     function getPlayerMarkup(playerResult: PlayerResult) {
         return (
             <>
-                <h3>{playerResult.name}</h3>
+                <ContentBox>
+                    <h3>{playerResult.name}</h3>
 
-                <ContentBox className="drafter-results__civs">
-                    {
-                        playerResult.civs.length > 0
-                            ? playerResult.civs.map((civ) =>
-                                <Civ key={civ.id}
-                                    className={activeLabels.length > 0 && !activeLabels.some(label => civ.labels.includes(label)) ? "drafter-results__disabled_civ" : ""}
-                                    civ={civ}
-                                    onMouseEnter={e => handleOnMouseEnterCiv(e, civ)} />)
-                            : <p>There are no remaining leaders. Try banning fewer leaders or reducing the number of players.</p>
-                    }
+                    <div className="drafter-results__civs">
+                        {
+                            playerResult.civs.length > 0
+                                ? playerResult.civs.map((civ) =>
+                                    <Civ key={civ.id}
+                                        className={activeLabels.length > 0 && !activeLabels.some(label => civ.labels.includes(label)) ? "drafter-results__disabled_civ" : ""}
+                                        civ={civ}
+                                        onMouseEnter={e => handleOnMouseEnterCiv(e, civ)} />)
+                                : <p>There are no remaining leaders. Try banning fewer leaders or reducing the number of players.</p>
+                        }
+                    </div>
                 </ContentBox>
 
                 <Space spacing="md" />

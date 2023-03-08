@@ -3,6 +3,15 @@
     margin: 0 auto;
 }
 
+.player-profile .content_box {
+    margin: 0;
+}
+
+.player-profile__title {
+    display: flex;
+    align-items: center;
+}
+
 .player-profile__dashboard {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

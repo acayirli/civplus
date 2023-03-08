@@ -9,12 +9,16 @@ import civs from "../../../../../scripts/data/civs.json";
 import { CivPortrait } from "../../civPortrait/CivPortrait";
 import { PlaystyleRadar } from "./playstyleRadar/PlaystyleRadar";
 import { CivLabelModel } from "../../../../labels";
+import { Space } from "../../../meadow/space/Space";
+import { Button } from "../../../meadow/button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 function getMostPlayedCiv(player: PlayerProfileModel) {
     return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
 }
 
-export function PlayerProfile({ player }: { player: PlayerProfileModel }) {
+export function PlayerProfile({ player, onClickBack }: { player: PlayerProfileModel, onClickBack: () => void }) {
     const civsAsCivProfiles = Object.values(player.civs)
         .sort((civA, civB) => {
             return civB.numberOfTimesPlayed - civA.numberOfTimesPlayed
@@ -41,49 +45,47 @@ export function PlayerProfile({ player }: { player: PlayerProfileModel }) {
 
     return (
         <div className="player-profile">
+            <Button onClick={onClickBack} text="Back" icon={<FontAwesomeIcon icon={faCircleLeft} />} variant="free" />
+
+            <Space spacing="lg" />
+
             <h2>
-                <CivPortrait civ={allCivs[getMostPlayedCiv(player)]} />
                 {player.name}
             </h2>
 
             <div className="player-profile__dashboard">
                 <div className="player-profile__widget player-profile__rating">
-                    <h3>Rating</h3>
-
                     <ContentBox>
-                        asd
+                    <h3>Rating</h3>
+                        Coming soon...
                     </ContentBox>
                 </div>
 
                 <div className="player-profile__widget player-profile__most-played">
+                    <ContentBox>
                     <h3>Most played leaders</h3>
-
-                    <div>
                         <CivStatsList civList={civsAsCivProfiles} />
-                    </div>
+                    </ContentBox>
                 </div>
 
                 <div className="player-profile__widget player-profile__playstyle">
-                    <h3>Playstyle</h3>
-
                     <ContentBox>
+                    <h3>Playstyle</h3>
                         <PlaystyleRadar labels={Object.values(playstyleRadar)} />
                     </ContentBox>
                 </div>
 
                 <div className="player-profile__widget player-profile__stats">
-                    <h3>Stats</h3>
-
                     <ContentBox>
-                        asd
+                    <h3>Stats</h3>
+                        Coming soon...
                     </ContentBox>
                 </div>
 
                 <div className="player-profile__widget player-profile__recent">
-                    <h3>Recent games</h3>
-
                     <ContentBox>
-                        asd
+                        <h3>Recent games</h3>
+                        Coming soon...
                     </ContentBox>
                 </div>
             </div>

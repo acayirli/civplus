@@ -127,7 +127,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Nubian",
         strength: 2,
         difficulty: 2,
-        labels: ["Versatile"],
+        labels: ["Versatile", "Tall"],
         strategies: [
             "Always make sure that you have at least one flat tile adjacent to city centers for your nubian pyramid. More is even better.",
             "You can do any opening.",
@@ -157,7 +157,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Byzantine",
         strength: 3,
         difficulty: 2,
-        labels: ["War", "Religion"],
+        labels: ["War", "Faith"],
         strategies: [
             "Standard holy site opening.",
             "Play with the crusade belief, it is easy for Basil to convert enemy cities.",
@@ -218,7 +218,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Indian",
         strength: 2,
         difficulty: 1,
-        labels: ["Religion", "War"],
+        labels: ["Faith", "War"],
         strategies: [
             "Standard holy site opening.",
             "Defend yourself early with your unique unit."
@@ -248,7 +248,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Egyptian",
         strength: 2,
         difficulty: 1,
-        labels: ["Beginner-friendly", "Versatile"],
+        labels: ["Beginner-friendly", "Versatile", "Tall", "Appeal"],
         strategies: [
             "Coming soon..."
         ],
@@ -341,7 +341,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Indian",
         strength: 2,
         difficulty: 1,
-        labels: ["Religion"],
+        labels: ["Faith"],
         strategies: [
             "Standard holy site opening.",
             "Encourage other players to spread their religion to your cities.",
@@ -385,7 +385,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Indonesian",
         strength: 2,
         difficulty: 2,
-        labels: ["Naval", "Religion"],
+        labels: ["Naval", "Faith"],
         strategies: [
             "Standard holy site opening.",
             "Go into harbors.",
@@ -424,7 +424,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Babylonian",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile", "Beginner-friendly"],
+        labels: ["Versatile", "Beginner-friendly", "Tall"],
         strategies: [
             "You can do any opening.",
             "In FFA, standard commercial hub + Magnus opening is recommended.",
@@ -440,7 +440,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Norwegian",
         strength: 3,
         difficulty: 2,
-        labels: ["Religion", "Naval"],
+        labels: ["Faith", "Naval", "Wide"],
         strategies: [
             "Standard holy site opening.",
             "Go into harbors.",
@@ -473,7 +473,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Polish",
         strength: 3,
         difficulty: 2,
-        labels: ["Religion", "War"],
+        labels: ["Faith", "War"],
         strategies: [
             "Standard holy site opening.",
             "Pick the choral music belief to boost culture. This helps you reach your unique unit faster.",
@@ -494,7 +494,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Khmer",
         strength: 3,
         difficulty: 2,
-        labels: ["Religion", "Culture", "Tall"],
+        labels: ["Faith", "Culture", "Tall"],
         strategies: [
             "Standard holy site opening.",
             "Build an aqueduct in every city.",
@@ -524,7 +524,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Australian",
         strength: 3,
         difficulty: 2,
-        labels: ["Versatile", "Science", "Naval"],
+        labels: ["Versatile", "Science", "Naval", "Appeal"],
         strategies: [
             "You can do any opening.",
             "In FFA, standard harbor + Magnus opening is recommended.",
@@ -600,7 +600,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Māori",
         strength: 2,
         difficulty: 3,
-        labels: ["Naval", "Versatile", "Culture"],
+        labels: ["Naval", "Versatile", "Culture", "Appeal"],
         strategies: [
             "Very complicated leader. You can easily end up in awkward situations.",
             "Standard theather square or harbor opening."
@@ -631,7 +631,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Mapuche",
         strength: 3,
         difficulty: 1,
-        labels: ["War"],
+        labels: ["War", "Appeal"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Go into encampments.",
@@ -649,7 +649,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Malian",
         strength: 3,
         difficulty: 3,
-        labels: ["Gold", "Religion"],
+        labels: ["Gold", "Faith"],
         strategies: [
             "Standard holy site opening.",
             "Go into commercial hubs.",
@@ -687,7 +687,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Ethiopian",
         strength: 2,
         difficulty: 2,
-        labels: ["Religion", "Versatile"],
+        labels: ["Faith", "Versatile"],
         strategies: [
             "Standard holy site opening.",
             "Always settle on hills.",
@@ -787,7 +787,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Brazilian",
         strength: 3,
         difficulty: 2,
-        labels: ["Versatile"],
+        labels: ["Versatile", "Appeal"],
         strategies: [
             "You can do any opening.",
             "When doing a holy site opening, pick sacred path pantheon for exceptional holy site adjacency.",
@@ -824,7 +824,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Russian",
         strength: 3,
         difficulty: 1,
-        labels: ["Religion", "Wide", "Culture", "Beginner-friendly"],
+        labels: ["Faith", "Wide", "Culture", "Beginner-friendly"],
         strategies: [
             "Standard holy site opening.",
             "Pick the feed the world belief, as you will lack food in tundra.",
@@ -843,7 +843,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Spanish",
         strength: 3,
         difficulty: 2,
-        labels: ["Naval", "Religion", "Gold", "Production"],
+        labels: ["Naval", "Faith", "Gold", "Production"],
         strategies: [
             "Standard holy site opening.",
             "Go into harbors.",
@@ -922,7 +922,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Scottish",
         strength: 2,
         difficulty: 2,
-        labels: ["Science", "Production"],
+        labels: ["Science", "Production", "Tall"],
         strategies: [
             "Standard campus opening.",
             "Go into industrial zones.",
@@ -941,7 +941,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Arabian",
         strength: 3,
         difficulty: 2,
-        labels: ["Religion", "Science"],
+        labels: ["Faith", "Science"],
         strategies: [
             "Standard holy site opening.",
             "Pick the choral music belief (this will be your main culture income).",
@@ -969,7 +969,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Arabian",
         strength: 3,
         difficulty: 2,
-        labels: ["Religion", "Science", "War"],
+        labels: ["Faith", "Science", "War"],
         strategies: [
             "Standard holy site opening.",
             "Pick the choral music belief (this will be your main culture income).",
@@ -1041,7 +1041,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Ottoman",
         strength: 2,
         difficulty: 2,
-        labels: ["War", "Gold"],
+        labels: ["War", "Gold", "Wide"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Go into campuses.",
@@ -1063,7 +1063,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Ottoman",
         strength: 3,
         difficulty: 2,
-        labels: ["Versatile"],
+        labels: ["Versatile", "Wide"],
         strategies: [
             "Standard commercial hub + Magnus opening."
         ],
@@ -1076,7 +1076,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Malian",
         strength: 3,
         difficulty: 3,
-        labels: ["Gold", "Religion", "Culture"],
+        labels: ["Gold", "Faith", "Culture"],
         strategies: [
             "Coming soon..."
         ],
@@ -1089,7 +1089,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Georgian",
         strength: 2,
         difficulty: 2,
-        labels: ["Religion", "Versatile", "Diplomatic"],
+        labels: ["Faith", "Versatile", "Diplomatic"],
         strategies: [
             "Three holy site opening.",
             "Pick jesuit education. You have extra faith income from your unique walls.",
@@ -1108,7 +1108,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "American",
         strength: 3,
         difficulty: 3,
-        labels: ["Versatile", "Religion", "Diplomatic"],
+        labels: ["Versatile", "Faith", "Diplomatic", "Appeal"],
         strategies: [
             "Standard holy site + preserve opening.",
             "Go into campuses.",
@@ -1144,7 +1144,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Japanese",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile", "Beginner-friendly"],
+        labels: ["Versatile", "Beginner-friendly", "Wide"],
         strategies: [
             "Standard harbor hub + Magnus opening."
         ],
@@ -1201,7 +1201,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Canadian",
         strength: 3,
         difficulty: 2,
-        labels: ["Culture", "Diplomatic"],
+        labels: ["Culture", "Diplomatic", "Appeal"],
         strategies: [
             "Standard theather square or holy site opening.",
             "Use your unique unit to mass produce national parks and secure a strong culture victory.",
@@ -1217,7 +1217,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Dutch",
         strength: 2,
         difficulty: 1,
-        labels: ["Versatile", "Beginner-friendly", "Naval"],
+        labels: ["Versatile", "Beginner-friendly", "Naval", "Wide"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Quickly transition to international trade routes."

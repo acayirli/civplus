@@ -9,7 +9,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
-import { CivLabelModel, labels as allLabels } from '../../../../../labels';
+import { CivLabelModel } from '../../../../../labels';
 
 ChartJS.register(
     RadialLinearScale,
@@ -21,17 +21,13 @@ ChartJS.register(
 );
 
 export function PlaystyleRadar({ labels }: { labels: { label: CivLabelModel, occurences: number }[] }) {
-    const allLabelsExceptBeginner = allLabels.filter((label) => label != "Beginner-friendly");
-
+    const labelsExceptBeginner = labels.filter((x) => x.label != "Beginner-friendly");
     const data = {
-        labels: allLabelsExceptBeginner.map((label) => label),
+        labels: labelsExceptBeginner.map((label) => label.label), //allLabelsExceptBeginner.map((label) => label),
         datasets: [
             {
                 label: '',
-                data: allLabelsExceptBeginner.map((label) => {
-                    const filteredLabel = labels.filter((x) => x.label == label);
-                    return filteredLabel.length > 0 ? filteredLabel[0].occurences : 0;
-                }),
+                data: labelsExceptBeginner.map((label) => label.occurences),
                 backgroundColor: 'rgba(153, 66, 16, 0.6)',
                 borderColor: '#6e2e08',
                 borderWidth: 1,

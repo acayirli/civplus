@@ -1,13 +1,30 @@
 .stats {
     margin: 0 auto;
     max-width: 1920px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 750px;
+}
+
+.stats .content_box {
+    margin: 0;
+    overflow: auto;
+}
+
+.stats .content_box h3 {
+    /* position: sticky;
+    top: 0;
+    background-color: var(--color-primary-4); */
 }
 
 .stats-lists {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    overflow: hidden;
 }
 
 .stats-lists__list {
@@ -15,18 +32,42 @@
     flex-direction: column;
 }
 
+.stats-lists__list--players {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+}
+
+.stats-lists__list--picked {
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+.stats-lists__list--banned {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.stats-lists__list--recent {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+}
+
 .stats-lists__entry {
     border-radius: 2px;
-    background-color: var(--color-primary-4);
-    margin-bottom: 10px;
+    border-bottom: thin solid var(--color-primary-2);
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 5px;
     min-width: 170px;
     max-width: 450px;
-    height: 85px;
     transition: background-color .2s;
     cursor: pointer;
+}
+
+.stats-lists__entry:last-of-type {
+    border-bottom: none;
 }
 
 .stats-lists__entry:hover {
@@ -55,6 +96,7 @@
     gap: 5px;
     font-size: 13px;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 @media only screen and (max-width: 640px) {
