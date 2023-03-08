@@ -70,15 +70,9 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
             {/* <DrafterTimeline activeStep={1} /> */}
             <h2>Settings</h2>
 
-            <p>
-                Start the drafting process by either selecting a preset or inputting custom values below. Team and player names are optional. Seperate names with a comma.
-            </p>
-
-            <Space spacing="md" />
-
-            <h3>Presets</h3>
-
             <ContentBox className="">
+                <h3>Presets</h3>
+
                 <InlineInput type="text" label="Team names" width={310} onChange={handleOnChangeTeamNames} placeholder="Comma seperated team names..." />
 
                 <Space spacing="sm" />
@@ -92,9 +86,9 @@ export function DrafterSettings({ onSettingsConfirmed }: { onSettingsConfirmed: 
 
             <Space spacing="md" />
 
-            <h3>Custom</h3>
-
             <ContentBox>
+                <h3>Custom</h3>
+
                 <InlineInput type="number" label="Number of players *" width={143} onChange={handleOnChangeNumberOfPlayer} />
 
                 <Space spacing="sm" />

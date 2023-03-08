@@ -1,96 +1,94 @@
-export {};
-/* import { civs } from "../../../../civs";
+import { civs as allCivs } from "../../../../civs";
 import { ContentBox } from "../../../meadow/contentBox/ContentBox";
-import { Main } from "../../../meadow/main/Main";
+import { CivStatsList } from "../civStatsList/CivStatsList";
+import { CivProfileModel, PlayerProfileModel } from "../statsMain/StatsMain";
+
+import "./playerProfile.css";
+
+import civs from "../../../../../scripts/data/civs.json";
+import { CivPortrait } from "../../civPortrait/CivPortrait";
+import { PlaystyleRadar } from "./playstyleRadar/PlaystyleRadar";
+import { CivLabelModel } from "../../../../labels";
 import { Space } from "../../../meadow/space/Space";
-import { Civ } from "../../civ/Civ";
+import { Button } from "../../../meadow/button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
-export function PlayerProfile() {
-    let playersBarebones: { [ playerName: string]: PlayerProfileModel };
+function getMostPlayedCiv(player: PlayerProfileModel) {
+    return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
+}
 
-    games.forEach(
-        (game: Game) => {
-            game.placements.forEach(
-                (placement: PlayerInGame[], placementIndex: number) => {
-                    placement.forEach(
-                        (playerInGame: PlayerInGame) => {
-                            if(playersBarebones[playerInGame.player])
-                            {
-                                const player = playersBarebones[playerInGame.player];
-                                const isWin = placementIndex <= (game.placements.length / 2) - 1;
+export function PlayerProfile({ player, onClickBack }: { player: PlayerProfileModel, onClickBack: () => void }) {
+    const civsAsCivProfiles = Object.values(player.civs)
+        .sort((civA, civB) => {
+            return civB.numberOfTimesPlayed - civA.numberOfTimesPlayed
+        })
+        .map((civ): CivProfileModel => ({
+            bans: 0,
+            draws: 0,
+            gameIds: [],
+            losses: 0,
+            name: civ.civ,
+            picks: civ.numberOfTimesPlayed,
+            wins: 0
+        }));
 
-                                player.gameIds.push(game.id);
+    const playstyleRadar: { [key: string]: { label: CivLabelModel, occurences: number } } = {};
 
-                                if(isWin)
-                                {
-                                    player.wins += 1;
-                                }
-                                else
-                                {
-                                    player.losses += 1;
-                                }
-
-                                // todo rating
-                            }
-                            else
-                            {
-                                playersBarebones[playerInGame.player] = {
-                                    name: playerInGame.player,
-                                    rating: 1000,
-                                    losses: 0,
-                                    wins: 0,
-                                    gameIds: []
-                                }
-                            }
-                        }
-                    )
-                }
-            );
-        }
-    );
-
+    Object.values(player.civs).forEach((civ) => {
+        const civDetails = allCivs[civ.civ];
+        civDetails.labels.forEach((label) => {
+            playstyleRadar[label] = playstyleRadar[label] || { label: label, occurences: 0 };
+            playstyleRadar[label].occurences += civ.numberOfTimesPlayed;
+        });
+    });
 
     return (
-        <Main className="player-profiles-main">
-            <h2>Abdul</h2>
+        <div className="player-profile">
+            <Button onClick={onClickBack} text="Back" icon={<FontAwesomeIcon icon={faCircleLeft} />} variant="free" />
 
-            <div className="player-profile__container">
-                <div className="player-profile__left">
+            <Space spacing="lg" />
+
+            <h2>
+                {player.name}
+            </h2>
+
+            <div className="player-profile__dashboard">
+                <div className="player-profile__widget player-profile__rating">
+                    <ContentBox>
                     <h3>Rating</h3>
-
-                    <ContentBox>
-                        <div>
-                            [] Diamond
-                        </div>
-
-                        <div>
-                            MMR 1200
-                        </div>
-                    </ContentBox>
-
-                    <Space spacing="md" />
-
-                    <h3>Stats</h3>
-
-                    <ContentBox>
-                        <div>Games: 10</div>
-                        <div>Wins: 7</div>
-                        <div>Losses: 3</div>
-                        <div>Winrate: 70 %</div>
+                        Coming soon...
                     </ContentBox>
                 </div>
 
-                <div className="player-profile__right">
-                    <h3>Most played civs</h3>
-
+                <div className="player-profile__widget player-profile__most-played">
                     <ContentBox>
-                        <div>
-                            <Civ civ={civs.ambiorix}></Civ>
-                            <span>Winrate: 56 %</span>
-                        </div>
+                    <h3>Most played leaders</h3>
+                        <CivStatsList civList={civsAsCivProfiles} />
+                    </ContentBox>
+                </div>
+
+                <div className="player-profile__widget player-profile__playstyle">
+                    <ContentBox>
+                    <h3>Playstyle</h3>
+                        <PlaystyleRadar labels={Object.values(playstyleRadar)} />
+                    </ContentBox>
+                </div>
+
+                <div className="player-profile__widget player-profile__stats">
+                    <ContentBox>
+                    <h3>Stats</h3>
+                        Coming soon...
+                    </ContentBox>
+                </div>
+
+                <div className="player-profile__widget player-profile__recent">
+                    <ContentBox>
+                        <h3>Recent games</h3>
+                        Coming soon...
                     </ContentBox>
                 </div>
             </div>
-        </Main>
+        </div>
     );
-} */
+}

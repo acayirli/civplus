@@ -1,7 +1,7 @@
 export type CivLabelModel = 
-"Science" | "Culture" | "Religion" | "Production" |
-"Gold" | "War" | "Carry" | "Beginner-friendly" |
-"Timing push" | "Versatile" | "Naval" | "Wide" | "Tall";
+"Science" | "Culture" | "Faith" | "Production" |
+"Gold" | "War" | "Beginner-friendly" | "Versatile" |
+"Naval" | "Wide" | "Tall" | "Diplomatic" | "Appeal";
 
-export const labels: CivLabelModel[] = ["Science", "Culture", "Religion", "Production", "Gold",
- "War", "Carry", "Beginner-friendly", "Timing push", "Versatile", "Naval", "Wide", "Tall"];
+export const labels: CivLabelModel[] = 
+["Science", "Culture", "Faith", "Production", "Gold", "War", "Beginner-friendly", "Versatile", "Naval", "Wide", "Tall", "Diplomatic", "Appeal"];
