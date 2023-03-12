@@ -23,6 +23,7 @@ body {
   background-color: var(--color-primary-darkest);
   color: var(--color-grey-1);
   min-width: 375px;
+  color-scheme: dark;
 }
 
 b {
