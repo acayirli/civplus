@@ -301,5 +301,50 @@
             "seondeok",
             "philip"
         ]
+    },
+
+    {
+        "date": "2023-03-12T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "matthias"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "dido"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "Hannes",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "harald"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "genghis",
+            "shaka",
+            "hojo",
+            "ladySixSky",
+            "catherine",
+            "philip"
+        ]
     }
 ]
