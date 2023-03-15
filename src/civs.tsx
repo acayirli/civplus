@@ -36,6 +36,7 @@ import kublaiMongolia from "./assets/images/portraits/kublaiMongolia.webp";
 import kupe from "./assets/images/portraits/Kupe.webp";
 import ladySixSky from "./assets/images/portraits/ladySixSky.webp";
 import lautaro from "./assets/images/portraits/Lautaro.webp";
+import ludwig from "./assets/images/portraits/ludwig.webp";
 import mansamusa from "./assets/images/portraits/mansamusa.webp";
 import matthias from "./assets/images/portraits/matthias.webp";
 import menelik from "./assets/images/portraits/menelik.webp";
@@ -56,6 +57,7 @@ import robert from "./assets/images/portraits/robert.webp";
 import saladin from "./assets/images/portraits/Saladin.webp";
 import saladinSultan from "./assets/images/portraits/saladinSultan.webp";
 import seondeok from "./assets/images/portraits/Seondeok.webp";
+import sejong from "./assets/images/portraits/sejong.webp";
 import shaka from "./assets/images/portraits/Shaka.webp";
 import simon from "./assets/images/portraits/simon.webp";
 import suleiman from "./assets/images/portraits/Suleiman.webp";
@@ -64,6 +66,7 @@ import sundiata from "./assets/images/portraits/sundiata.webp";
 import tamar from "./assets/images/portraits/Tamar.webp";
 import teddy from "./assets/images/portraits/teddy.webp";
 import teddyRR from "./assets/images/portraits/teddyRR.webp";
+import theodora from "./assets/images/portraits/theodora.webp";
 import tokugawa from "./assets/images/portraits/tokugawa.webp";
 import tomyris from "./assets/images/portraits/Tomyris.webp";
 import trajan from "./assets/images/portraits/Trajan.webp";
@@ -642,6 +645,26 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: []
     },
+    ludwig: {
+        id: "ludwig",
+        portrait: ludwig,
+        leader: "Ludwig II",
+        nation: "German",
+        strength: 3,
+        difficulty: 1,
+        labels: ["Production", "Culture"],
+        strategies: [
+            "Standard commercial hub + Magnus opening.",
+            "Go into industrial zones, then campus, then encampment.",
+            "Rush industrialization. Your high adjacency makes coal power plants very valuable.",
+            "Mass produce cuirassier armies before researching tanks and steamroll your opponents.",
+            "Place as many wonders as you can, as quickly as you can, next to districts."
+        ],
+        counters: [
+            "Vulnerable early."
+        ],
+        pantheons: [pantheons.cityPatronGoddess]
+    },
     mansamusa: {
         id: "mansamusa",
         portrait: mansamusa,
@@ -987,7 +1010,24 @@ export const civs: { [leader: string]: CivModel } = {
         id: "seondeok",
         portrait: seondeok,
         leader: "Seondeok",
-        nation: "korean",
+        nation: "Korean",
+        strength: 3,
+        difficulty: 1,
+        labels: ["Science", "Beginner-friendly", "Tall"],
+        strategies: [
+            "Standard campus opening.",
+            "Build campuses adjacent to as many hills as possible (not mountains).",
+            "Quickly build builders to improve mines next to campuses.",
+            "Go into theather squares.",
+            "Don't build districts next to campuses, except theather squares.",
+        ],
+        pantheons: [pantheons.fertilityRites]
+    },
+    sejong: {
+        id: "sejong",
+        portrait: sejong,
+        leader: "Sejong",
+        nation: "Korean",
         strength: 3,
         difficulty: 1,
         labels: ["Science", "Beginner-friendly", "Tall"],
@@ -1136,6 +1176,25 @@ export const civs: { [leader: string]: CivModel } = {
 
         ],
         pantheons: []
+    },
+    theodora: {
+        id: "theodora",
+        portrait: theodora,
+        leader: "Theodora",
+        nation: "Byzantine",
+        strength: 3,
+        difficulty: 2,
+        labels: ["Faith", "Culture", "War"],
+        strategies: [
+            "Standard holy site opening.",
+            "Use the sacred path pantheon for the highest holy site adjacencies.",
+            "Play with the crusade belief, it is easy for Theodora to convert enemy cities.",
+        ],
+        counters: [
+            "Deny crusade."
+        ],
+        pantheons: [pantheons.sacredPath],
+        beliefs: [beliefs.enhancer.crusade]
     },
     tokugawa: {
         id: "tokugawa",

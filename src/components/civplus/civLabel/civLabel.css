@@ -6,6 +6,7 @@
     background-color: var(--color-grey-1);
     transition: .2s;
     white-space: nowrap;
+    color: #333;
 }
 
 .civ_label--toggle:hover {
