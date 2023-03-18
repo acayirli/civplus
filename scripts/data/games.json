@@ -346,5 +346,135 @@
             "catherine",
             "philip"
         ]
+    },
+
+    {
+        "date": "2023-03-18T18:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Kjetil",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "ludwig"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "ladySixSky"
+                }
+            ],
+            [
+                {
+                    "player": "Jacob",
+                    "civ": "joao"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "cyrus"
+                }, 
+                {
+                    "player": "Justin",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "pericles"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "trajan"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "batrieu",
+            "shaka",
+            "suleiman",
+            "theodora",
+            "teddyRR",
+            "philip"
+        ]
+    },
+
+    {
+        "date": "2023-03-18T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "kristina"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "peter"
+                }
+            ],
+            [
+                {
+                    "player": "Simon",
+                    "civ": "cyrus"
+                }
+            ],
+            [
+                {
+                    "player": "Tobi",
+                    "civ": "tokugawa"
+                }
+            ],
+            [
+                {
+                    "player": "Alex",
+                    "civ": "suleimanMuhtesem"
+                }
+            ],
+            [
+                {
+                    "player": "Kjetil",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                }
+            ],
+            [
+                {
+                    "player": "Hendrik",
+                    "civ": "hammurabi"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "batrieu",
+            "shaka",
+            "genghis",
+            "theodora",
+            "teddyRR",
+            "philip"
+        ]
     }
 ]

@@ -158,13 +158,36 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                                                 </b>
                                             </span>
 
-                                            <span>
-                                                Winners
-                                                <br />
-                                                {game.hasVictory
-                                                    ? <b>{game.placements.slice(0, game.placements.length / 2).map((placement) => placement.map((player) => player.player).join(" "))}</b>
-                                                    : <i style={{}}>(draw)</i>}
-                                            </span>
+                                            {
+                                                getGameMode(game).startsWith("FFA") ?
+                                                    <>
+                                                        <span>
+                                                            1st
+                                                            <br />
+                                                            <b>{game.placements[0].map((player) => player.player).join(" ")}</b>
+                                                        </span>
+
+                                                        <span>
+                                                            2nd
+                                                            <br />
+                                                            <b>{game.placements[1].map((player) => player.player).join(" ")}</b>
+                                                        </span>
+
+                                                        <span>
+                                                            3rd
+                                                            <br />
+                                                            <b>{game.placements[2].map((player) => player.player).join(" ")}</b>
+                                                        </span>
+                                                    </>
+                                                    :
+                                                    <span>
+                                                        Winners
+                                                        <br />
+                                                        {game.hasVictory
+                                                            ? <b>{game.placements[0].map((player) => player.player).join(" ")}</b>
+                                                            : <i style={{}}>(draw)</i>}
+                                                    </span>
+                                            }
                                         </div>
                                     </div>)
                         }
