@@ -328,7 +328,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "English",
         strength: 2,
         difficulty: 1,
-        labels: ["Naval", "Gold"],
+        labels: ["Naval", "Gold", "Production"],
         strategies: [
             "Standard harbor opening.",
             "Trade with city states."

@@ -591,5 +591,99 @@
             "lautaro",
             "philip"
         ]
+    },
+
+    {
+        "date": "2023-04-01T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "peter"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "ladySixSky"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "saladinSultan"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "kublai"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "lautaro"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "wilfried"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "matthias",
+            "shaka",
+            "harald",
+            "genghis",
+            "philip"
+        ]
+    },
+
+    {
+        "date": "2023-04-01T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "harald"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "cleopatra"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "matthias",
+            "shaka",
+            "harald",
+            "genghis",
+            "philip"
+        ]
     }
 ]

@@ -118,8 +118,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                                 civList={Object.values(civData)
                                     .sort((civA, civB) => {
                                         return civB.picks - civA.picks;
-                                    })
-                                    .slice(0, 5)} />
+                                    })} />
                         }
                     </ContentBox>
 
@@ -131,8 +130,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                             civList={Object.values(civData)
                                 .sort((civA, civB) => {
                                     return civB.bans - civA.bans;
-                                })
-                                .slice(0, 5)} />
+                                })} />
                     </ContentBox>
 
                     <ContentBox className="stats-lists__list stats-lists__list--recent">
