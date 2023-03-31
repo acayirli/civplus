@@ -16,6 +16,7 @@ import cyrus from "./assets/images/portraits/cyrus.webp";
 import dido from "./assets/images/portraits/Dido.webp";
 import eleanor from "./assets/images/portraits/eleanor.webp";
 import eleanorFrance from "./assets/images/portraits/eleanorFrance.webp";
+import elizabeth from "./assets/images/portraits/elizabeth.webp";
 import frederick from "./assets/images/portraits/frederick.webp";
 import gandhi from "./assets/images/portraits/Gandhi.webp";
 import genghis from "./assets/images/portraits/genghis.webp";
@@ -24,6 +25,7 @@ import gitarja from "./assets/images/portraits/Gitarja.webp";
 import gorgo from "./assets/images/portraits/Gorgo.webp";
 import hammurabi from "./assets/images/portraits/Hammurabi.webp";
 import harald from "./assets/images/portraits/harald.webp";
+import haraldVarangian from "./assets/images/portraits/harald_varangian.webp";
 import hojo from "./assets/images/portraits/hojo.webp";
 import jadwiga from "./assets/images/portraits/Jadwiga.webp";
 import jayavarman from "./assets/images/portraits/Jayavarman.webp";
@@ -71,6 +73,7 @@ import tokugawa from "./assets/images/portraits/tokugawa.webp";
 import tomyris from "./assets/images/portraits/Tomyris.webp";
 import trajan from "./assets/images/portraits/Trajan.webp";
 import victoria from "./assets/images/portraits/Victoria.webp";
+import victoriaSteam from "./assets/images/portraits/victoria_ageofsteam.webp";
 import wilfried from "./assets/images/portraits/wilfried.webp";
 import wilhelmina from "./assets/images/portraits/Wilhelmina.webp";
 import wuzetian from "./assets/images/portraits/wuzetian.webp";
@@ -318,6 +321,20 @@ export const civs: { [leader: string]: CivModel } = {
         ],
         pantheons: [pantheons.divineSpark]
     },
+    elizabeth: {
+        id: "elizabeth",
+        portrait: elizabeth,
+        leader: "Elizabeth I",
+        nation: "English",
+        strength: 2,
+        difficulty: 1,
+        labels: ["Naval", "Gold"],
+        strategies: [
+            "Standard harbor opening.",
+            "Trade with city states."
+        ],
+        pantheons: [pantheons.godOfTheSea]
+    },
     frederick: {
         id: "frederick",
         portrait: frederick,
@@ -439,7 +456,7 @@ export const civs: { [leader: string]: CivModel } = {
     harald: {
         id: "harald",
         portrait: harald,
-        leader: "Harald Hardrada",
+        leader: "Harald Hardrada (Konge)",
         nation: "Norwegian",
         strength: 3,
         difficulty: 2,
@@ -448,6 +465,23 @@ export const civs: { [leader: string]: CivModel } = {
             "Standard holy site opening.",
             "Go into harbors.",
             "Rush your unique holy site building.",
+        ],
+        pantheons: [pantheons.godOfTheSea],
+        beliefs: [beliefs.follower.choralMusic]
+    },
+    haraldVarangian: {
+        id: "haraldVarangian",
+        portrait: haraldVarangian,
+        leader: "Harald Hardrada (Varangian)",
+        nation: "Norwegian",
+        strength: 2,
+        difficulty: 2,
+        labels: ["Faith", "Naval", "Wide"],
+        strategies: [
+            "Standard holy site opening.",
+            "Go into harbors.",
+            "Rush your unique holy site building.",
+            "Levy city states."
         ],
         pantheons: [pantheons.godOfTheSea],
         beliefs: [beliefs.follower.choralMusic]
@@ -1243,13 +1277,28 @@ export const civs: { [leader: string]: CivModel } = {
     victoria: {
         id: "victoria",
         portrait: victoria,
-        leader: "Victoria",
+        leader: "Victoria (Age of Empire)",
         nation: "English",
         strength: 2,
         difficulty: 1,
         labels: ["Naval", "Versatile", "Production", "Beginner-friendly"],
         strategies: [
             "Standard harbor opening."
+        ],
+        pantheons: [pantheons.godOfTheSea]
+    },
+    victoriaSteam: {
+        id: "victoriaSteam",
+        portrait: victoriaSteam,
+        leader: "Victoria (Age of Steam)",
+        nation: "English",
+        strength: 3,
+        difficulty: 1,
+        labels: ["Naval", "Versatile", "Production", "Beginner-friendly"],
+        strategies: [
+            "Rush animal husbandry.",
+            "Standard harbor opening.",
+            "Quickly transition to industrial zones and rush industrialization."
         ],
         pantheons: [pantheons.godOfTheSea]
     },
