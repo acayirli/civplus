@@ -685,5 +685,75 @@
             "genghis",
             "philip"
         ]
+    },
+
+    {
+        "date": "2023-04-02T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "mvemba"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "elizabeth"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "philip"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "matthias",
+            "hojo",
+            "harald",
+            "peter",
+            "ambiorix"
+        ]
+    },
+
+    {
+        "date": "2023-04-02T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "yongle"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "suleimanMuhtesem"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "elizabeth"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "joao"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "matthias",
+            "hojo",
+            "harald",
+            "peter",
+            "ambiorix"
+        ]
     }
 ]
