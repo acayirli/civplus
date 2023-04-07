@@ -755,5 +755,142 @@
             "peter",
             "ambiorix"
         ]
+    },
+
+    {
+        "date": "2023-04-08T17:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "nzinga"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "victoriaSteam"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gilgamesh"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "shaka",
+            "jadwiga",
+            "harald",
+            "batrieu",
+            "ambiorix"
+        ]
+    },
+
+    {
+        "date": "2023-04-08T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "robert"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "saladin"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "gitarja"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "ludwig"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "joao"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "shaka",
+            "teddyRR",
+            "genghis",
+            "batrieu",
+            "peter"
+        ]
+    },
+
+    {
+        "date": "2023-04-08T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "elizabeth"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "philip"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladinSultan"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "joao"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "shaka",
+            "teddyRR",
+            "genghis",
+            "batrieu",
+            "peter"
+        ]
     }
 ]
