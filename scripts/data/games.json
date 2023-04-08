@@ -892,5 +892,59 @@
             "batrieu",
             "peter"
         ]
+    },
+
+    {
+        "date": "2023-04-08T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "eleanorFrance"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "pedro"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "jayavarman"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+
+    {
+        "date": "2023-04-08T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "genghis"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "theodora"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "jadwiga",
+            "shaka",
+            "mvemba",
+            "nader",
+            "batrieu",
+            "trajan"
+        ]
     }
 ]
