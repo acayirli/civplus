@@ -1111,7 +1111,7 @@ export const civs: { [leader: string]: CivModel } = {
     suleiman: {
         id: "suleiman",
         portrait: suleiman,
-        leader: "Suleiman",
+        leader: "Suleiman (Kanuni)",
         nation: "Ottoman",
         strength: 2,
         difficulty: 2,
