@@ -946,5 +946,50 @@
             "batrieu",
             "trajan"
         ]
+    },
+
+    {
+        "date": "2023-04-09T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "ludwig"
+                }
+            ],
+            [
+                {
+                    "player": "Maxim",
+                    "civ": "tokugawa"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "peter"
+                }
+            ],
+            [
+                {
+                    "player": "Hannes",
+                    "civ": "mansamusa"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "kristina"
+                }
+            ],
+            [
+                {
+                    "player": "Hendrik",
+                    "civ": "sejong"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
