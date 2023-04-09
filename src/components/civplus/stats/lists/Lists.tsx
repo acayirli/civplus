@@ -10,6 +10,7 @@ import { PlayerProfile } from "../playerProfile/PlayerProfile";
 import { CivProfileModel, Game, PlayerProfileModel } from "../statsMain/StatsMain";
 
 import "./lists.css";
+import { ordinal } from "openskill";
 
 function getNumberOfGames(player: PlayerProfileModel) {
     return player.wins + player.losses + player.draws;
@@ -18,6 +19,10 @@ function getNumberOfGames(player: PlayerProfileModel) {
 function getWinRate(player: PlayerProfileModel) {
     return Math.floor(player.wins / getNumberOfGames(player) * 100);
 }
+
+function getRating(player: PlayerProfileModel) {
+    return Math.floor(1500 + (ordinal(player.rating) * 10));
+}   
 
 function getMostPlayedCiv(player: PlayerProfileModel) {
     return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
@@ -104,6 +109,8 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                                             <span>Draws <br /> <b>{player.draws}</b></span>
 
                                             <span>Winrate <br /> <b>{getWinRate(player)} %</b></span>
+
+                                            <span>Rating <br /> <b>{getRating(player)}</b></span>
                                         </div>
                                     </div>)
                         }

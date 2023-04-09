@@ -1,4 +1,5 @@
 import gamesData from "./data/games.json" assert { type: "json" };
+import { rating, rate } from 'openskill';
 import fs from "fs";
 
 let players = {};
@@ -61,7 +62,7 @@ gamesData.forEach((game, gameIndex) => {
                     losses: hasVictory && !istWin ? 1 : 0,
                     draws: !hasVictory ? 1 : 0,
                     gameIds: [gameIndex],
-                    rating: 1000,
+                    rating: rating(),
                     civs: playedCivs
                 };
             }
@@ -98,6 +99,9 @@ gamesData.forEach((game, gameIndex) => {
             }
         });
     });
+
+    const ratings = rate(game.placements.map((placement) => placement.map((playerData) => players[playerData.player].rating)), { rank: !game.hasVictory && [game.placements.map(() => 1)] });
+    game.placements.map((placement, placementIndex) => placement.forEach((playerData, playerDataIndex) => { players[playerData.player].rating = ratings[placementIndex][playerDataIndex]}));
 });
 
 const playersJsonString = JSON.stringify(players);

@@ -27,7 +27,7 @@ export type CivProfileModel = {
 
 export type PlayerProfileModel = {
     name: string,
-    rating: number,
+    rating: { mu: number, sigma: number },
     losses: number,
     wins: number,
     draws: number,
