@@ -37,7 +37,7 @@
                     "player": "Maxim",
                     "civ": "montezuma"
                 }
-            ]            
+            ]
         ],
         "hasVictory": true,
         "bans": [
@@ -49,7 +49,6 @@
             "hojo"
         ]
     },
-
     {
         "date": "2023-02-24T20:00:00",
         "placements": [
@@ -87,7 +86,6 @@
             "kublai"
         ]
     },
-
     {
         "date": "2023-02-25T20:00:00",
         "placements": [
@@ -126,7 +124,6 @@
             "lautaro"
         ]
     },
-
     {
         "date": "2023-03-03T20:00:00",
         "placements": [
@@ -159,7 +156,6 @@
             "suleiman"
         ]
     },
-
     {
         "date": "2023-03-04T20:00:00",
         "placements": [
@@ -204,7 +200,6 @@
             "peter"
         ]
     },
-
     {
         "date": "2023-03-04T23:50:00",
         "placements": [
@@ -249,7 +244,6 @@
             "peter"
         ]
     },
-
     {
         "date": "2023-03-05T19:00:00",
         "placements": [
@@ -302,7 +296,6 @@
             "philip"
         ]
     },
-
     {
         "date": "2023-03-12T19:00:00",
         "placements": [
@@ -347,7 +340,6 @@
             "philip"
         ]
     },
-
     {
         "date": "2023-03-18T18:00:00",
         "placements": [
@@ -385,7 +377,7 @@
                 {
                     "player": "Selim",
                     "civ": "cyrus"
-                }, 
+                },
                 {
                     "player": "Justin",
                     "civ": "cleopatra"
@@ -412,7 +404,6 @@
             "philip"
         ]
     },
-
     {
         "date": "2023-03-18T22:00:00",
         "placements": [
@@ -477,7 +468,6 @@
             "philip"
         ]
     },
-
     {
         "date": "2023-03-24T22:00:00",
         "placements": [
@@ -522,7 +512,6 @@
             "harald"
         ]
     },
-
     {
         "date": "2023-03-25T22:00:00",
         "placements": [
@@ -555,7 +544,6 @@
             "batrieu"
         ]
     },
-
     {
         "date": "2023-03-29T19:00:00",
         "placements": [
@@ -592,7 +580,6 @@
             "philip"
         ]
     },
-
     {
         "date": "2023-04-01T19:00:00",
         "placements": [
@@ -639,7 +626,6 @@
             "philip"
         ]
     },
-
     {
         "date": "2023-04-01T23:00:00",
         "placements": [
@@ -686,7 +672,6 @@
             "philip"
         ]
     },
-
     {
         "date": "2023-04-02T20:00:00",
         "placements": [
@@ -721,7 +706,6 @@
             "ambiorix"
         ]
     },
-
     {
         "date": "2023-04-02T23:00:00",
         "placements": [
@@ -756,7 +740,6 @@
             "ambiorix"
         ]
     },
-
     {
         "date": "2023-04-08T17:00:00",
         "placements": [
@@ -791,7 +774,6 @@
             "ambiorix"
         ]
     },
-
     {
         "date": "2023-04-08T20:00:00",
         "placements": [
@@ -842,7 +824,6 @@
             "peter"
         ]
     },
-
     {
         "date": "2023-04-08T23:00:00",
         "placements": [
@@ -893,7 +874,6 @@
             "peter"
         ]
     },
-
     {
         "date": "2023-04-08T20:00:00",
         "placements": [
@@ -917,10 +897,8 @@
             ]
         ],
         "hasVictory": true,
-        "bans": [
-        ]
+        "bans": []
     },
-
     {
         "date": "2023-04-08T23:00:00",
         "placements": [
@@ -947,7 +925,6 @@
             "trajan"
         ]
     },
-
     {
         "date": "2023-04-09T19:00:00",
         "placements": [
@@ -989,7 +966,41 @@
             ]
         ],
         "hasVictory": true,
-        "bans": [
-        ]
+        "bans": []
+    },
+    {
+        "date": "2023-04-10T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "ladySixSky"
+                },
+                {
+                    "player": "Torben",
+                    "civ": "cleopatra"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "philip"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": []
     }
 ]
