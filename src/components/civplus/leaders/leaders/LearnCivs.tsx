@@ -12,7 +12,7 @@ import { CivLabelFilters } from "../../CivLabelFilters/CivLabelFilters";
 import { CivsContentBox } from "../../civsContentBox/CivsContentBox";
 import "./learnCivs.css";
 
-export function LearnCivs() {
+export function Leaders() {
     const [selectedCiv, setSelectedCiv] = useState<CivModel | undefined>(undefined);
     const [activeLabels, setActiveLabels] = useState<CivLabelModel[]>([]);
 
@@ -30,7 +30,7 @@ export function LearnCivs() {
 
     return (
         <div className="learn-civs">
-            <h2>Learn</h2>
+            <h2>Leaders</h2>
 
             {
                 selectedCiv

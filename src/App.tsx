@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { AboutMain } from "./components/civplus/about/aboutMain/AboutMain";
 import { DrafterMain } from "./components/civplus/drafter/drafterMain/DrafterMain";
-import { LearnMain } from "./components/civplus/learn/leanMain/LearnMain";
 import { CivPlusNavbar, Page } from "./components/civplus/navbar/CivPlusNavbar";
 import { StatsMain } from "./components/civplus/stats/statsMain/StatsMain";
 import { AppShell } from "./components/meadow/appShell/AppShell";
+import { LeadersMain } from "./components/civplus/leaders/leadersMain/LearnMain";
 
 export function App() {
     const [activePage, setActivePage] = useState<Page>("Drafter");
@@ -19,8 +19,8 @@ export function App() {
                 return <DrafterMain />
             case "Stats":
                 return <StatsMain />
-            case "Learn":
-                return <LearnMain />
+            case "Leaders":
+                return <LeadersMain />
             case "About":
                 return <AboutMain />
             default:
