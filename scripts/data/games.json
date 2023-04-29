@@ -1002,5 +1002,267 @@
         ],
         "hasVictory": true,
         "bans": []
+    },
+    {
+        "date": "2023-04-15T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tamar"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "seondeok"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "genghis"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "cyrus"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "peter",
+            "hojo",
+            "saladinSultan",
+            "matthias"
+        ]
+    },
+    {
+        "date": "2023-04-16T18:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "saladinSultan"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "jadwiga"
+                }
+            ],
+            [
+                {
+                    "player": "Jacob",
+                    "civ": "harald"
+                }
+            ],
+            [
+                {
+                    "player": "Maxim",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "qin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "peter",
+            "hojo",
+            "saladinSultan",
+            "matthias"
+        ]
+    },
+    {
+        "date": "2023-04-19T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "menelik"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "matthias"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "basil",
+            "tomyris",
+            "batrieu",
+            "shaka",
+            "teddyRR"
+        ]
+    },
+    {
+        "date": "2023-04-22T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Maxim",
+                    "civ": "philip"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "ambiorix"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "robert"
+                }
+            ],
+            [
+                {
+                    "player": "Jacob",
+                    "civ": "tokugawa"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-04-29T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "chandragupta"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "wilhelmina"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "philip"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "poundmaker"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-04-29T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "robert"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "jayavarman"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "elizabeth"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "victoriaSteam"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    }, 
+    {
+        "date": "2023-04-29T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "wilfried"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "ladySixSky"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "batrieu"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-04-29T23:50:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gandhi"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "chandragupta"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "pericles"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "joao"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "victoriaSteam"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
