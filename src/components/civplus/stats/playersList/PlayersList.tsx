@@ -54,11 +54,11 @@ function sortPlayers(players: { [player: string]: PlayerProfileModel }, playerSo
     });
 }
 
-export function PlayersList({ players }: { players: { [player: string]: PlayerProfileModel } }) {
+export function PlayersList({ players, onSelect }: { players: { [player: string]: PlayerProfileModel }, onSelect: (player: PlayerProfileModel) => void }) {
     const [playerSort, setPlayerSort] = useState<PlayerSort>("wins");
 
     function handleClickEntry(player: PlayerProfileModel) {
-
+        onSelect(player);
     }
 
     return (
@@ -66,8 +66,8 @@ export function PlayersList({ players }: { players: { [player: string]: PlayerPr
             <div css={{ display: "flex", justifyContent: "space-between", gap: "20px" }}>
                 <h3>Players</h3>
 
-                <div css={{flexGrow: 1}}>
-                    <select onChange={(e) => setPlayerSort(e.target.value as PlayerSort)} css={{width: "100%"}}>
+                <div css={{ flexGrow: 1 }}>
+                    <select onChange={(e) => setPlayerSort(e.target.value as PlayerSort)} css={{ width: "100%" }}>
                         <option value="wins">Wins</option>
                         <option value="losses">Losses</option>
                         <option value="winrate">Winrate</option>
@@ -80,7 +80,12 @@ export function PlayersList({ players }: { players: { [player: string]: PlayerPr
             <ContentBox css={listStyles}>
                 {
                     sortPlayers(players, playerSort)
-                        .map((player, index) => <PlayerListEntry key={player.name} player={player} position={index + 1} displayedStat={getDisplayedStat(player, playerSort)} />)
+                        .map((player, index) => <PlayerListEntry
+                            key={player.name}
+                            player={player}
+                            position={index + 1}
+                            displayedStat={getDisplayedStat(player, playerSort)}
+                            onClick={() => { handleClickEntry(player); }} />)
                 }
             </ContentBox>
         </div>

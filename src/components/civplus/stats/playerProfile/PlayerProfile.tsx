@@ -64,7 +64,7 @@ export function PlayerProfile({ player, onClickBack }: { player: PlayerProfileMo
                 <div className="player-profile__widget player-profile__most-played">
                     <ContentBox>
                     <h3>Most played leaders</h3>
-                        <CivStatsList civList={civsAsCivProfiles} />
+                        
                     </ContentBox>
                 </div>
 

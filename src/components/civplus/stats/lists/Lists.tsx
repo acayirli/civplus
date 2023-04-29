@@ -10,6 +10,10 @@ import "./lists.css";
 export function Lists({ players, civData, games }: { players: { [player: string]: PlayerProfileModel }, civData: { [civ: string]: CivProfileModel }, games: Game[] }) {
     const [selectedDetail, setSelectedDetail] = useState<PlayerProfileModel | CivProfileModel | Game>();
 
+    function handleOnSelectPlayer(player: PlayerProfileModel) {
+        //setSelectedDetail(player);
+    }
+
     function isPlayer(entry: PlayerProfileModel | (CivProfileModel | Game)): entry is PlayerProfileModel {
         return (entry as PlayerProfileModel).rating !== undefined;
     }
@@ -35,7 +39,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                 <h2>Stats</h2>
 
                 <div className="stats-lists">
-                    <PlayersList players={players} />
+                    <PlayersList players={players} onSelect={handleOnSelectPlayer} />
 
                     <CivStatsList civList={civData} />
                 </div>

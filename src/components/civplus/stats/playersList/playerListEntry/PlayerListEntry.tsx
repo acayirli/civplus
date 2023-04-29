@@ -8,9 +8,9 @@ function getMostPlayedCiv(player: PlayerProfileModel) {
     return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
 }
 
-export function PlayerListEntry({ player, position, displayedStat }: { player: PlayerProfileModel, position: number, displayedStat: React.ReactNode }) {
+export function PlayerListEntry({ player, position, displayedStat, onClick }: { player: PlayerProfileModel, position: number, displayedStat: React.ReactNode, onClick?: () => void }) {
     return (
-        <div css={listEntryStyles}>
+        <div css={listEntryStyles} onClick={onClick}>
             <div>{position}.</div>
 
             <div css={{ display: "flex", flexGrow: 1 }}>
