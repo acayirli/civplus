@@ -1264,5 +1264,89 @@
         "hasVictory": true,
         "bans": [
         ]
+    },
+    {
+        "date": "2023-04-30T18:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "nader"
+                },
+                {
+                    "player": "Hannes",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "johnCurtin"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "nzinga"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "philip"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "hammurabi",
+            "genghis",
+            "basil",
+            "batrieu",
+            "harald",
+            "teddyRR"
+        ]
+    },
+    {
+        "date": "2023-04-30T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "amanitore"
+                },
+                {
+                    "player": "Hannes",
+                    "civ": "seondeok"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "ludwig"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "cyrus"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "genghis",
+            "basil",
+            "philip",
+            "harald",
+            "teddyRR"
+        ]
     }
 ]
