@@ -106,8 +106,8 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 2,
         labels: ["Production", "Diplomatic"],
         strategies: [
-            "Standard commercial hub + Magnus opening.",
-            "Go into industrial zones once you unlocked a strong melee unit you want to push with (man-at-arms, musketman, infantry)."
+            "Open with campus & commercial hub.",
+            "Create industrial zone setups with multiple cities involving aqueducts."
         ],
         pantheons: [pantheons.cityPatronGoddess, pantheons.godOfCraftsmen]
     },
@@ -120,8 +120,9 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 2,
         labels: ["War"],
         strategies: [
-            "Standard commercial hub + Magnus opening.",
-            "Go into encampments and build your unique building.",
+            "In Team games, go campus into encampment.",
+            "In FFA, go commercial into encampment (if you want to push someone).",
+            "Build your unique encampment building.",
             "Start harassing opponents with your unique units."
         ],
         pantheons: [pantheons.godOfWarAndPlunder, pantheons.godOfTheForge, pantheons.cityPatronGoddess]
@@ -152,7 +153,9 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 2,
         labels: ["Production", "Culture"],
         strategies: [
-            "Start with your unique industrial zone.",
+            "Start with your unique industrial zone, which gives you a culture bomb (culture bomb on mines have been removed!).",
+            "Use the culture bomb from your Oppidum to build quarries & mines on adjacent hill tiles.",
+            "Go into campus & commercial hub."
         ],
         pantheons: [pantheons.stoneCircles, pantheons.godOfCraftsmen]
     },
@@ -165,9 +168,11 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 2,
         labels: ["War", "Faith"],
         strategies: [
-            "Standard holy site opening.",
+            "You have no bonuses towards holy sites, all you need is a holy city (a city which founded a religion). This means you could build only one holy site.",
             "Play with the crusade belief, it is easy for Basil to convert enemy cities.",
-            "Do a timing push with your unique unit."
+            "Do a timing push with your unique unit.",
+            "Start building your unique entertainment complex, once you unlocked the heavy cavalry unit you want to push with.",
+            "If you spawn coastal, spam your unique ship to crush your neighbour."
         ],
         counters: [
             "Deny crusade."
@@ -226,7 +231,7 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 1,
         labels: ["Faith", "War"],
         strategies: [
-            "Standard holy site opening.",
+            "Build holy site in every city.",
             "Defend yourself early with your unique unit."
         ],
         pantheons: [pantheons.riverGoddess, pantheons.sacredPath],
@@ -242,7 +247,7 @@ export const civs: { [leader: string]: CivModel } = {
         labels: ["Gold", "Beginner-friendly", "Wide"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
-            "Quickly transition to international trade routes."
+            "Quickly transition to international trade routes or start right away with Amani international trade routes."
         ],
         pantheons: [pantheons.ladyOfTheReedsAndMarshes, pantheons.godOfWarAndPlunder, pantheons.religiousSettlements],
         beliefs: [beliefs.follower.religiousCommunity]
@@ -254,9 +259,15 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Egyptian",
         strength: 2,
         difficulty: 1,
-        labels: ["Beginner-friendly", "Versatile", "Tall", "Appeal"],
+        labels: ["Versatile", "Tall", "Appeal"],
         strategies: [
-            "Coming soon..."
+            "You will most likely spawn on floodplains and have a strong capital. Build etemenanki quickly, before anyone denies it. Put Liang in your floodplains city and pick the floodplains pantheon.",
+            "Incase the floodplain pantheon is denied, you could go for earth goddess, which will give your floodplain tiles faith. More complicated."
+        ],
+        counters: [
+            "Deny floodplain pantheon.",
+            "Deny etemenanki.",
+            "Deny floodplain settles."
         ],
         pantheons: [pantheons.ladyOfTheReedsAndMarshes, pantheons.earthGoddess],
     },
@@ -379,8 +390,9 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 1,
         labels: ["War", "Beginner-friendly"],
         strategies: [
-            "Standard commercial hub + Magnus opening.",
-            "Go into encampments and build your unique building.",
+            "In teamers, go campus into encampment.",
+            "In FFA, go commercial hub into encampment.",
+            "Build your unique encampment building.",
             "Do a timing push with your unique unit."
         ],
         pantheons: [pantheons.godOfWarAndPlunder]
@@ -394,7 +406,7 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 2,
         labels: ["Versatile", "War"],
         strategies: [
-            "Standard commercial hub + Magnus opening.",
+            "You can do any opening.",
         ],
         pantheons: [pantheons.godOfTheForge]
     },
@@ -513,7 +525,7 @@ export const civs: { [leader: string]: CivModel } = {
         labels: ["Faith", "War"],
         strategies: [
             "Standard holy site opening.",
-            "Pick the choral music belief to boost culture. This helps you reach your unique unit faster.",
+            "Pick reliquaries for more faith income (more monumentality tempo) or pick the choral music belief to boost culture, this helps you reach your unique unit faster.",
             "Go into commercial hubs.",
             "Do a timing push with your unique unit (one of the strongest in the game)."
         ],
@@ -688,11 +700,10 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 1,
         labels: ["Production", "Culture"],
         strategies: [
-            "Standard commercial hub + Magnus opening.",
-            "Go into industrial zones, then campus, then encampment.",
+            "Go campus into commercial hub into industrial zone into encampment.",
             "Rush industrialization. Your high adjacency makes coal power plants very valuable.",
             "Mass produce cuirassier armies before researching tanks and steamroll your opponents.",
-            "Place as many wonders as you can, as quickly as you can, next to districts."
+            "Build wonders next to districts."
         ],
         counters: [
             "Vulnerable early."
@@ -708,8 +719,9 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 3,
         labels: ["Gold", "Faith"],
         strategies: [
-            "Standard holy site opening.",
+            "Standard holy site opening. Place your holy sites to boost commercial hubs.",
             "Go into commercial hubs.",
+            "Take free inquiry in the second golden age with double commercial hub adjacency",
             "Use your exceptional gold income to buy buildings to offset your production malus."
         ],
         counters: [
@@ -793,7 +805,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Persian",
         strength: 2,
         difficulty: 1,
-        labels: ["Culture", "War"],
+        labels: ["Science", "War"],
         strategies: [
             "Standard commercial hub + Magnus opening."
         ],
@@ -951,11 +963,11 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: qinUnifier,
         leader: "Qin Shi Huang (Unifier)",
         nation: "Chinese",
-        strength: 1,
-        difficulty: 1,
-        labels: ["War"],
+        strength: 2,
+        difficulty: 2,
+        labels: ["War", "Culture"],
         strategies: [
-            "Don't play this leader.",
+            "Go encampment plus barracks into campus.",
         ],
         pantheons: [],
     },
@@ -968,7 +980,8 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 1,
         labels: ["Beginner-friendly", "Versatile", "Culture"],
         strategies: [
-            "Coming soon...",
+            "You can do any opening.",
+            "Build wonders.",
         ],
         pantheons: [],
     },
@@ -1152,7 +1165,8 @@ export const civs: { [leader: string]: CivModel } = {
         difficulty: 3,
         labels: ["Gold", "Faith", "Culture"],
         strategies: [
-            "Coming soon..."
+            "Holy sites into commercial hubs into theather squares.",
+            "Pick free inquiry in the second golden age with double commercial hub adjacency for massive science."
         ],
         pantheons: []
     },
@@ -1221,13 +1235,12 @@ export const civs: { [leader: string]: CivModel } = {
         labels: ["Faith", "Culture", "War"],
         strategies: [
             "Standard holy site opening.",
-            "Use the sacred path pantheon for the highest holy site adjacencies.",
             "Play with the crusade belief, it is easy for Theodora to convert enemy cities.",
         ],
         counters: [
             "Deny crusade."
         ],
-        pantheons: [pantheons.sacredPath],
+        pantheons: [pantheons.sacredPath, pantheons.riverGoddess],
         beliefs: [beliefs.enhancer.crusade]
     },
     tokugawa: {
@@ -1255,6 +1268,7 @@ export const civs: { [leader: string]: CivModel } = {
         labels: ["War"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
+            "Place your unique improvement next to pastures to generate faith, which you can use to buy cavalry units.",
             "In Teamers, you can all-in early with your unique unit."
         ],
         pantheons: []
