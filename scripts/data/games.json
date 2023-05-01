@@ -1348,5 +1348,43 @@
             "harald",
             "teddyRR"
         ]
+    },
+    {
+        "date": "2023-05-01T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "gorgo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "philip"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "hojo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "genghis",
+            "basil",
+            "matthias",
+            "harald",
+            "batrieu"
+        ]
     }
 ]
