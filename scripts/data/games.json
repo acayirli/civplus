@@ -1420,5 +1420,70 @@
             "harald",
             "batrieu"
         ]
+    },
+    {
+        "date": "2023-05-03T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "chandragupta"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "wilfried"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "victoriaSteam"
+                }
+            ],
+            [
+                {
+                    "player": "Birk",
+                    "civ": "cyrus"
+                }
+            ],
+            [
+                {
+                    "player": "Maxim",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Tobi",
+                    "civ": "poundmaker"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "robert"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "saladin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "genghis",
+            "basil"
+        ]
     }
 ]

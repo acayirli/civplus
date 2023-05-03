@@ -6,6 +6,7 @@ import { CivProfileModel, Game, PlayerProfileModel } from "../statsMain/StatsMai
 import { PlayersList } from "../playersList/PlayersList";
 
 import "./lists.css";
+import { GamesList } from "../gamesList/GamesList";
 
 export function Lists({ players, civData, games }: { players: { [player: string]: PlayerProfileModel }, civData: { [civ: string]: CivProfileModel }, games: Game[] }) {
     const [selectedDetail, setSelectedDetail] = useState<PlayerProfileModel | CivProfileModel | Game>();
@@ -42,6 +43,8 @@ export function Lists({ players, civData, games }: { players: { [player: string]
                     <PlayersList players={players} onSelect={handleOnSelectPlayer} />
 
                     <CivStatsList civList={civData} />
+
+                    <GamesList games={games} />
                 </div>
             </div>
         );
