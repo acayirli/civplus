@@ -4,6 +4,7 @@ import { PlayerProfileModel } from "../statsMain/StatsMain";
 import { ordinal } from "openskill";
 import { PlayerListEntry } from "./playerListEntry/PlayerListEntry";
 import { listStyles } from "../list.styles";
+import { LeagueIcon } from "../../leagueIcon/LeagueIcon";
 
 type PlayerSort = "wins" | "losses" | "winrate" | "rating" | "noOfGames";
 
@@ -26,7 +27,7 @@ function getDisplayedStat(player: PlayerProfileModel, playerSort: PlayerSort) {
         case "losses":
             return <span>Losses <br /> <b>{player.losses}</b></span>
         case "rating":
-            return <span>Rating <br /> <b>{getRating(player)}</b></span>
+            return <span><LeagueIcon rating={getRating(player)} /></span>
         case "noOfGames":
             return <span>Games <br /> <b>{getNumberOfGames(player)}</b></span>
         case "winrate":

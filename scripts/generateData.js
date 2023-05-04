@@ -1,5 +1,5 @@
 import gamesData from "./data/games.json" assert { type: "json" };
-import { rating, rate } from 'openskill';
+import { rating, rate, ordinal } from 'openskill';
 import fs from "fs";
 
 let players = {};
@@ -104,8 +104,15 @@ gamesData.forEach((game, gameIndex) => {
     game.placements.map((placement, placementIndex) => placement.forEach((playerData, playerDataIndex) => { players[playerData.player].rating = ratings[placementIndex][playerDataIndex]}));
 });
 
+const playersSortedByRating = Object.values(players).sort((a, b) => ordinal(b.rating) - ordinal(a.rating));
+const ratingThresholds = {
+    highestRating: Math.floor(1500 + (ordinal(playersSortedByRating[0].rating) * 10)),
+    lowestRating: Math.floor(1500 + (ordinal(playersSortedByRating[playersSortedByRating.length-1].rating) * 10))
+}
+
 const playersJsonString = JSON.stringify(players);
 const civsJsonString = JSON.stringify(civs);
+const ratingThresholdsJsonString = JSON.stringify(ratingThresholds);
 
 fs.writeFile('data/players.json', playersJsonString, function (err) {
     if (err) throw err;
@@ -115,4 +122,9 @@ fs.writeFile('data/players.json', playersJsonString, function (err) {
 fs.writeFile('data/civs.json', civsJsonString, function (err) {
     if (err) throw err;
     console.log('Civs saved!');
+});
+
+fs.writeFile('data/ratings.json', ratingThresholdsJsonString, function (err) {
+    if (err) throw err;
+    console.log('Ratings saved!');
 });
