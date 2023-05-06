@@ -1485,5 +1485,97 @@
             "genghis",
             "basil"
         ]
+    },
+    {
+        "date": "2023-05-06T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "suleimanMuhtesem"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "jayavarman"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "pachacuti"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "ambiorix",
+            "basil",
+            "matthias",
+            "hammurabi",
+            "batrieu",
+            "peter",
+            "chandragupta"
+        ]
+    },
+    {
+        "date": "2023-05-06T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "trajan"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "alexander"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "cyrus"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "ambiorix",
+            "basil",
+            "matthias",
+            "theodora",
+            "batrieu",
+            "genghis",
+            "chandragupta"
+        ]
     }
 ]
