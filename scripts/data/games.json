@@ -1577,5 +1577,110 @@
             "genghis",
             "chandragupta"
         ]
+    },
+    {
+        "date": "2023-05-07T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tomyris"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "jayavarman"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "nader"
+                },
+                {
+                    "player": "PeterPan",
+                    "civ": "suleimanMuhtesem"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "basil",
+            "matthias",
+            "simon",
+            "batrieu",
+            "harald",
+            "hammurabi"
+        ]
+    },
+    {
+        "date": "2023-05-07T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "matthias"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "dido"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "PeterPan",
+                    "civ": "alexander"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "basil",
+            "matthias",
+            "simon",
+            "batrieu",
+            "harald",
+            "hammurabi"
+        ]
+    },
+    {
+        "date": "2023-05-07T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "saladinSultan"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "nader"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "PeterPan",
+                    "civ": "sejong"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "basil",
+            "matthias",
+            "simon",
+            "batrieu",
+            "harald",
+            "hammurabi"
+        ]
     }
 ]
