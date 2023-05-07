@@ -1682,5 +1682,65 @@
             "harald",
             "hammurabi"
         ]
+    },
+    {
+        "date": "2023-05-08T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "seondeok"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "menelik"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "abraham"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "hammurabi"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-05-08T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "ludwig"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "yongle"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "johnCurtin"
+                }
+            ],
+            [
+                {
+                    "player": "Alex",
+                    "civ": "hojo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
