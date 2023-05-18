@@ -132,17 +132,22 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
                     </Container>
                 </Container>
 
-                Bans
+                {
+                    bans &&
+                    <>
+                        Bans
 
-                <Space spacing="xs" />
+                        <Space spacing="xs" />
 
-                <div css={{display: "flex", gap: "10px"}}>
-                    {
-                        bans.map((bannedCivId) => <CivPortrait civ={civs[bannedCivId]} />)
-                    }
-                </div>
+                        <div css={{ display: "flex", gap: "10px" }}>
+                            {
+                                bans.map((bannedCivId) => <CivPortrait civ={civs[bannedCivId]} />)
+                            }
+                        </div>
 
-                <Space spacing="md" />
+                        <Space spacing="md" />
+                    </>
+                }
 
                 Tags
 
