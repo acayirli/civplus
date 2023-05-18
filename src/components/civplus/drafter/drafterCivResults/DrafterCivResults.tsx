@@ -17,6 +17,7 @@ import { DrafterTimeline } from "../drafterTimeline/DrafterTimeline";
 import { DrafterSettingsModel } from "../settings/DrafterSettings";
 
 import "./drafterCivResults.css";
+import { CivPortrait } from "../../civPortrait/CivPortrait";
 
 type PlayerResult = {
     name: string,
@@ -130,6 +131,18 @@ export function DrafterCivResults({ settings, bans, results, onRestart }: { sett
                         <Button text="Restart" icon={<FontAwesomeIcon icon={faSync} />} onClick={onRestart} variant="secondary" />
                     </Container>
                 </Container>
+
+                Bans
+
+                <Space spacing="xs" />
+
+                <div css={{display: "flex", gap: "10px"}}>
+                    {
+                        bans.map((bannedCivId) => <CivPortrait civ={civs[bannedCivId]} />)
+                    }
+                </div>
+
+                <Space spacing="md" />
 
                 Tags
 

@@ -1898,5 +1898,123 @@
             "genghis",
             "jadwiga"
         ]
+    },
+    {
+        "date": "2023-05-17T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "catherine"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "kristina"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "Patrick",
+                    "civ": "cleopatra"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "hammurabi",
+            "wilfried",
+            "ludwig",
+            "nzinga",
+            "peter"
+        ]
+    },
+    {
+        "date": "2023-05-17T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "alexander"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                }
+            ],
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "gilgamesh"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "chandragupta"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-05-18T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "johnCurtin"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "menelik"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "theodora"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
