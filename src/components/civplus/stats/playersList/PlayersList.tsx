@@ -8,11 +8,11 @@ import { LeagueIcon } from "../../leagueIcon/LeagueIcon";
 
 type PlayerSort = "wins" | "losses" | "winrate" | "rating" | "noOfGames";
 
-function getNumberOfGames(player: PlayerProfileModel) {
+export function getNumberOfGames(player: PlayerProfileModel) {
     return player.wins + player.losses + player.draws;
 }
 
-function getWinRate(player: PlayerProfileModel) {
+export function getWinRate(player: PlayerProfileModel) {
     return Math.floor(player.wins / getNumberOfGames(player) * 100);
 }
 

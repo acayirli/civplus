@@ -12,7 +12,7 @@ export function Lists({ players, civData, games }: { players: { [player: string]
     const [selectedDetail, setSelectedDetail] = useState<PlayerProfileModel | CivProfileModel | Game>();
 
     function handleOnSelectPlayer(player: PlayerProfileModel) {
-        //setSelectedDetail(player);
+        setSelectedDetail(player);
     }
 
     function isPlayer(entry: PlayerProfileModel | (CivProfileModel | Game)): entry is PlayerProfileModel {

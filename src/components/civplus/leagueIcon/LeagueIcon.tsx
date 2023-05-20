@@ -6,31 +6,30 @@ import oil from "../../../assets/images/ranks/oil.webp";
 import aluminium from "../../../assets/images/ranks/aluminium.webp";
 import uranium from "../../../assets/images/ranks/uranium.webp";
 
-import ratingThresholds from "../../../../scripts/data/ratings.json";
+import { getLeague } from "../league/legauehelper";
 
 export function LeagueIcon({ rating }: { rating: number }) {
-    const ratings: { highestRating: number, lowestRating: number } = ratingThresholds;
-    const percentage = (rating - ratings.lowestRating) / (ratings.highestRating - ratings.lowestRating);
+    const league = getLeague(rating);
 
     let leagueIcon;
 
-    switch (true) {
-        case (percentage >= .90):
+    switch (league) {
+        case "Uranium":
             leagueIcon = uranium;
             break;
-        case (percentage >= .75):
+        case "Aluminium":
             leagueIcon = aluminium;
             break;
-        case (percentage >= .60):
+        case "Oil":
             leagueIcon = oil;
             break;
-        case (percentage >= .45):
+        case "Coal":
             leagueIcon = coal;
             break;
-        case (percentage >= .30):
+        case "Niter":
             leagueIcon = niter;
             break;
-        case (percentage >= .15):
+        case "Iron":
             leagueIcon = iron;
             break;
         default:
