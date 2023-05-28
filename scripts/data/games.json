@@ -2178,57 +2178,83 @@
         ]
     },
     {
-        "date": "2023-05-26T22:00:00",
+        "date": "2023-05-28T19:00:00",
         "placements": [
             [
                 {
-                    "player": "Abdul",
-                    "civ": "kristina"
+                    "player": "Schmiddl",
+                    "civ": "montezuma"
                 },
                 {
-                    "player": "Lukas",
-                    "civ": "peter"
+                    "player": "Hannes",
+                    "civ": "sejong"
                 },
                 {
-                    "player": "Tobi",
-                    "civ": "cleopatra"
-                },
-                {
-                    "player": "Luca",
-                    "civ": "ambiorix"
+                    "player": "Jacob",
+                    "civ": "hojo"
                 }
             ],
             [
                 {
-                    "player": "Schmiddl",
-                    "civ": "jadwiga"
+                    "player": "Abdul",
+                    "civ": "suleimanMuhtesem"
                 },
                 {
-                    "player": "Selim",
-                    "civ": "harald"
-                },
-                {
-                    "player": "Hendrik",
-                    "civ": "sejong"
-                },
-                {
-                    "player": "Birk",
-                    "civ": "gorgo"
-                },
-                {
-                    "player": "Mirko",
-                    "civ": "victoriaSteam"
+                    "player": "Luca",
+                    "civ": "pedro"
                 }
             ]
         ],
         "hasVictory": true,
         "bans": [
-            "matthias",
+            "hammurabi",
             "shaka",
+            "johnCurtin",
+            "nzinga",
+            "saladinSultan",
+            "basil"
+        ]
+    },
+    {
+        "date": "2023-05-28T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "chandragupta"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "lautaro"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "pachacuti"
+                },
+                {
+                    "player": "Hannes",
+                    "civ": "wilfried"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "batrieu",
+            "shaka",
+            "johnCurtin",
             "teddyRR",
-            "genghis",
-            "basil",
-            "johnCurtin"
+            "kristina",
+            "basil"
         ]
     }
 ]
