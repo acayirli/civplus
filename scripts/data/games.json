@@ -2256,5 +2256,51 @@
             "kristina",
             "basil"
         ]
+    },
+    {
+        "date": "2023-06-04T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Abdul",
+                    "civ": "sejong"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "suleimanMuhtesem"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "nzinga"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "teddyRR",
+            "wilfried",
+            "chandragupta",
+            "matthias",
+            "shaka",
+            "peter"
+        ]
     }
 ]
