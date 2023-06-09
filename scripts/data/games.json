@@ -2302,5 +2302,93 @@
             "shaka",
             "peter"
         ]
+    },
+    {
+        "date": "2023-10-04T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tamar"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "batrieu"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "basil"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "mvemba"
+                },
+                {
+                    "player": "Niclas",
+                    "civ": "cleopatra"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "teddyRR",
+            "suleiman",
+            "chandragupta",
+            "johnCurtin",
+            "shaka",
+            "hojo"
+        ]
+    },
+    {
+        "date": "2023-10-04T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "cleopatraPto"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "nzinga"
+                },
+                {
+                    "player": "Niclas",
+                    "civ": "kublai"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "jadwiga",
+            "ambiorix",
+            "chandragupta",
+            "genghis",
+            "shaka",
+            "batrieu"
+        ]
     }
 ]
