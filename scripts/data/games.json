@@ -2390,5 +2390,51 @@
             "shaka",
             "batrieu"
         ]
+    },
+    {
+        "date": "2023-11-04T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tamar"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "sejong"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "peter"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Hannes",
+                    "civ": "seondeok"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "hammurabi"
+                }
+            ]
+        ],
+        "hasVictory": false,
+        "bans": [
+            "jadwiga",
+            "catherine",
+            "chandragupta",
+            "hojo",
+            "shaka",
+            "batrieu"
+        ]
     }
 ]
