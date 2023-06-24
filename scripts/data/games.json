@@ -2304,7 +2304,7 @@
         ]
     },
     {
-        "date": "2023-10-04T20:00:00",
+        "date": "2023-06-04T20:00:00",
         "placements": [
             [
                 {
@@ -2350,7 +2350,7 @@
         ]
     },
     {
-        "date": "2023-10-04T22:00:00",
+        "date": "2023-06-04T22:00:00",
         "placements": [
             [
                 {
@@ -2392,7 +2392,7 @@
         ]
     },
     {
-        "date": "2023-11-04T22:00:00",
+        "date": "2023-06-05T22:00:00",
         "placements": [
             [
                 {
@@ -2438,7 +2438,7 @@
         ]
     },
     {
-        "date": "2023-11-17T20:00:00",
+        "date": "2023-06-17T20:00:00",
         "placements": [
             [
                 {
@@ -2484,6 +2484,98 @@
             "shaka",
             "basil",
             "chandragupta",
+            "montezuma"
+        ]
+    },
+    {
+        "date": "2023-06-21T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "amanitore"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "poundmaker"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "mansamusa"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "mvemba"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-06-25T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "nzinga"
+                },
+                {
+                    "player": "Birk",
+                    "civ": "genghis"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "elizabeth"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "teddyRR",
+            "chandragupta",
+            "basil",
+            "nader",
+            "montezuma"
+        ]
+    },
+    {
+        "date": "2023-06-25T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "kublai"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladin"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Birk",
+                    "civ": "trajan"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "suleiman",
+            "chandragupta",
+            "basil",
+            "hammurabi",
             "montezuma"
         ]
     }
