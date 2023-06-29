@@ -2578,5 +2578,85 @@
             "hammurabi",
             "montezuma"
         ]
+    },
+    {
+        "date": "2023-06-28T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wilhelmina"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "theodora"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-06-28T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wilhelmina"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "theodora"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-06-30T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "eleanorFrance"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-06-30T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "cleopatraPto"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "genghis"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
