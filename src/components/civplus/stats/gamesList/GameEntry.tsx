@@ -21,19 +21,19 @@ export function GameEntry({ game }: { game: Game }) {
     return (
         <div css={listEntryStyles}>
 
-            <div className="civ__title" css={{width: 140, flexShrink: 0}}>
-                <div className="fancy_title" css={{ marginBottom: "5px" }}>
+            <div className="civ__title" css={{width: 115, flexShrink: 0}}>
+                <div className="fancy_title" css={{ marginBottom: "5px", fontSize: 13 }}>
                     {getGameMode(game)}
                 </div>
 
-                <div className="civ__nation">
+                <div className="civ__nation" css={{fontSize: 11}}>
                     {DateTime.fromISO(game.date).toFormat("dd.MM.yyyy")}
                     &nbsp;&nbsp;
                     {DateTime.fromISO(game.date).toFormat("HH:mm")}
                 </div>
             </div>
 
-            <div css={{fontSize:11, display: "flex", gap: "5px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis"}}>
+            <div css={{fontSize:11, display: "flex", gap: "5px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", flexGrow: 1, justifyContent: "center"}}>
                 {
                     getGameMode(game).startsWith("FFA") ?
                         <>
@@ -56,12 +56,12 @@ export function GameEntry({ game }: { game: Game }) {
                             </span>
                         </>
                         :
-                        <span>
-                            Winners
+                        <span css={{textAlign: "center"}}>
+                            [{game.hasVictory ? "W" : "D"}] <b>{game.placements[0].map((player) => player.player).join(" ")}</b>
                             <br />
-                            {game.hasVictory
-                                ? <b>{game.placements[0].map((player) => player.player).join(" ")}</b>
-                                : <i style={{}}>(draw)</i>}
+                            vs.
+                            <br />
+                            [{game.hasVictory ? "L" : "D"}] <b>{game.placements[1].map((player) => player.player).join(" ")}</b>
                         </span>
                 }
             </div>

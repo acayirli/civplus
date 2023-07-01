@@ -187,7 +187,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Vietnamese",
         strength: 3,
         difficulty: 3,
-        labels: ["Versatile", "Culture"],
+        labels: ["War", "Culture"],
         strategies: [
             "You can do any opening.",
             "Place your unique encampment adjacent to as many districts as possible, to generate a lot of culture. They don't consume a district slot.",
@@ -227,7 +227,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: chandragupta,
         leader: "Chandragupta",
         nation: "Indian",
-        strength: 2,
+        strength: 3,
         difficulty: 1,
         labels: ["Faith", "War"],
         strategies: [
@@ -276,9 +276,9 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: cyrus,
         leader: "Cyrus",
         nation: "Persian",
-        strength: 3,
+        strength: 2,
         difficulty: 1,
-        labels: ["Versatile", "War", "Culture", "Beginner-friendly"],
+        labels: ["War", "Culture", "Gold", "Beginner-friendly"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "You can do a timing push with your unique unit (with a general and ram)."
@@ -322,7 +322,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "French",
         strength: 2,
         difficulty: 2,
-        labels: ["Versatile", "Culture"],
+        labels: ["Culture"],
         strategies: [
             "Standard harbor opening.",
             "Go into theather squares."
@@ -404,7 +404,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Sumerian",
         strength: 2,
         difficulty: 2,
-        labels: ["Versatile", "War"],
+        labels: ["War"],
         strategies: [
             "You can do any opening.",
         ],
@@ -456,7 +456,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Babylonian",
         strength: 3,
         difficulty: 1,
-        labels: ["Versatile", "Beginner-friendly", "Tall"],
+        labels: ["Science", "Beginner-friendly", "Tall"],
         strategies: [
             "You can do any opening.",
             "In FFA, standard commercial hub + Magnus opening is recommended.",
@@ -573,7 +573,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Australian",
         strength: 3,
         difficulty: 2,
-        labels: ["Versatile", "Science", "Naval", "Appeal"],
+        labels: ["Science", "Naval", "Appeal"],
         strategies: [
             "You can do any opening.",
             "In FFA, standard harbor + Magnus opening is recommended.",
@@ -603,7 +603,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Swedish",
         strength: 3,
         difficulty: 2,
-        labels: ["Culture", "Versatile", "Diplomatic"],
+        labels: ["Culture", "Diplomatic"],
         strategies: [
             "Standard theather square opening",
             "Build wonders with great work slots, like great library and apadana. You get easy theming bonuses with Kristina."
@@ -618,9 +618,9 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: kublai,
         leader: "Kublai Khan",
         nation: "Chinese",
-        strength: 3,
+        strength: 2,
         difficulty: 1,
-        labels: ["Versatile", "Beginner-friendly"],
+        labels: ["Versatile", "Gold", "Beginner-friendly"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Quickly transition to international trade routes."
@@ -632,9 +632,9 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: kublaiMongolia,
         leader: "Kublai Khan",
         nation: "Mongolian",
-        strength: 3,
+        strength: 1,
         difficulty: 1,
-        labels: ["Versatile"],
+        labels: ["War"],
         strategies: [
             "Standard commercial hub + Magnus opening.",
             "Quickly transition to international trade routes.",
@@ -661,7 +661,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: ladySixSky,
         leader: "Lady Six Sky",
         nation: "Mayan",
-        strength: 3,
+        strength: 2,
         difficulty: 2,
         labels: ["Science", "Tall"],
         strategies: [
@@ -678,7 +678,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: lautaro,
         leader: "Lautaro",
         nation: "Mapuche",
-        strength: 3,
+        strength: 2,
         difficulty: 1,
         labels: ["War", "Appeal"],
         strategies: [
@@ -756,7 +756,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Ethiopian",
         strength: 2,
         difficulty: 2,
-        labels: ["Faith", "Versatile"],
+        labels: ["Faith"],
         strategies: [
             "Standard holy site opening.",
             "Always settle on hills.",
@@ -788,7 +788,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: mvemba,
         leader: "Mvemba a Nzinga",
         nation: "Kongolese",
-        strength: 1,
+        strength: 2,
         difficulty: 2,
         labels: ["Culture", "Tall"],
         strategies: [
@@ -816,7 +816,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: nzinga,
         leader: "Nzinga Mbande",
         nation: "Kongolese",
-        strength: 2,
+        strength: 3,
         difficulty: 1,
         labels: ["Tall", "Versatile", "Beginner-friendly"],
         strategies: [
@@ -836,7 +836,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Inca",
         strength: 2,
         difficulty: 1,
-        labels: ["Tall", "Versatile", "Science", "Beginner-friendly"],
+        labels: ["Tall", "Science", "Beginner-friendly"],
         strategies: [
             "You can do many openings.",
             "In FFA, standard commercial hub + Magnus opening is recommended.",
@@ -854,7 +854,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: pedro,
         leader: "Pedro II",
         nation: "Brazilian",
-        strength: 3,
+        strength: 2,
         difficulty: 2,
         labels: ["Versatile", "Appeal"],
         strategies: [
@@ -976,9 +976,9 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: ramses,
         leader: "Ramses II",
         nation: "Egyptian",
-        strength: 3,
+        strength: 2,
         difficulty: 1,
-        labels: ["Beginner-friendly", "Versatile", "Culture"],
+        labels: ["Beginner-friendly", "Versatile"],
         strategies: [
             "You can do any opening.",
             "Build wonders.",
@@ -1107,7 +1107,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: simon,
         leader: "Simón Bolívar",
         nation: "Gran Columbian",
-        strength: 1,
+        strength: 2,
         difficulty: 2,
         labels: ["War"],
         strategies: [
@@ -1150,7 +1150,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Ottoman",
         strength: 3,
         difficulty: 2,
-        labels: ["Versatile", "Wide"],
+        labels: ["Versatile", "Gold", "Wide"],
         strategies: [
             "Standard commercial hub + Magnus opening."
         ],
@@ -1177,7 +1177,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "Georgian",
         strength: 2,
         difficulty: 2,
-        labels: ["Faith", "Versatile", "Diplomatic"],
+        labels: ["Faith", "Diplomatic"],
         strategies: [
             "Three holy site opening.",
             "Pick jesuit education. You have extra faith income from your unique walls.",
@@ -1196,7 +1196,7 @@ export const civs: { [leader: string]: CivModel } = {
         nation: "American",
         strength: 3,
         difficulty: 3,
-        labels: ["Versatile", "Faith", "Diplomatic", "Appeal"],
+        labels: ["Science", "Culture", "Faith", "Diplomatic", "Appeal"],
         strategies: [
             "Standard holy site + preserve opening.",
             "Go into campuses.",
@@ -1230,7 +1230,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: theodora,
         leader: "Theodora",
         nation: "Byzantine",
-        strength: 3,
+        strength: 2,
         difficulty: 2,
         labels: ["Faith", "Culture", "War"],
         strategies: [
@@ -1351,7 +1351,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: wuzetian,
         leader: "Wu Zetian",
         nation: "Chinese",
-        strength: 3,
+        strength: 2,
         difficulty: 3,
         labels: ["Versatile"],
         strategies: [
@@ -1364,7 +1364,7 @@ export const civs: { [leader: string]: CivModel } = {
         portrait: yongle,
         leader: "Yongle ",
         nation: "Chinese",
-        strength: 3,
+        strength: 2,
         difficulty: 2,
         labels: ["Versatile", "Tall"],
         strategies: [

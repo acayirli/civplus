@@ -17,6 +17,8 @@ import { Civ } from "../../civ/Civ";
 
 import games from "../../../../../scripts/data/games.json";
 import { GamesList } from "../gamesList/GamesList";
+import { Progressbar } from "../../../meadow/progressbar/Progressbar";
+import { Stack } from "../../../meadow/stack/Stack";
 
 function getMostPlayedCiv(player: PlayerProfileModel) {
     return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
@@ -37,8 +39,6 @@ export function PlayerProfile({ player, onClickBack }: { player: PlayerProfileMo
             playstyleRadar[label].occurences += civ.numberOfTimesPlayed;
         });
     });
-
-    console.log(player.gameIds)
 
     return (
         <div css={{ maxWidth: 1150, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "flex-start", flexGrow: 1 }}>
@@ -69,27 +69,37 @@ export function PlayerProfile({ player, onClickBack }: { player: PlayerProfileMo
                         </div>
                     </ContentBox>
 
-                    <ContentBox>
+                    <ContentBox css={{flexGrow: 1}}>
                         <h3>Playstyle</h3>
                         <PlaystyleRadar labels={Object.values(playstyleRadar)} />
                     </ContentBox>
                 </div>
 
-                <ContentBox css={{flexGrow: 1}}>
+                <ContentBox css={{flexGrow: 1, display: "flex", flexDirection: "column"}}>
                     <h3>Most played leaders</h3>
 
-                    <div css={{position: "relative", overflow: "auto"}}>
-                        <div css={{position: "absolute", height: "100%"}}>
+                    <div css={{position: "relative", overflow: "auto", flexGrow: 1}}>
+                        <div css={{position: "absolute", height: "100%", width: "100%", display: "flex", flexDirection: "column", gap: "20px"}}>
                             {
-                                mostPlayedLeaders.map((leader) => <Civ civ={allCivs[leader.civ]} />)
+                                mostPlayedLeaders.map((leader) => 
+                                <Stack key={leader.civ} spacing={10}>
+                                    <Civ civ={allCivs[leader.civ]} />
+                                    
+                                    <div css={{display: "flex", gap: 5, alignItems: "center"}}>
+                                        <span>{leader.numberOfTimesPlayed}</span>
+                                        <Progressbar progress={(leader.numberOfTimesPlayed / player.gameIds.length) * 100} />
+                                    </div>
+                                </Stack>)
                             }
                         </div>
                     </div>
                 </ContentBox>
 
-                <ContentBox>
-                    <div css={{position: "relative"}}>
-                        {/* <GamesList games={player.gameIds.map((gameId) => games[gameId])} /> */}
+                <ContentBox css={{flexGrow: 1, display: "flex", flexDirection: "column"}}>
+                    <div css={{position: "relative", overflow: "auto", flexGrow: 1}}>
+                        <div css={{position: "absolute", height: "100%", width: "100%", display: "flex", flexDirection: "column", gap: "20px"}}>
+                            { <GamesList games={player.gameIds.map((gameId) => games[gameId])} /> }
+                        </div>
                     </div>
                 </ContentBox>
             </div>
