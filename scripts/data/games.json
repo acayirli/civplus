@@ -2813,5 +2813,97 @@
         "hasVictory": true,
         "bans": [
         ]
+    },
+    {
+        "date": "2023-07-02T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "suleimanMuhtesem"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "batrieu"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "sejong"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "jayavarman"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Torben",
+                    "civ": "frederick"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "chandragupta",
+            "victoriaSteam",
+            "robert",
+            "hojo",
+            "matthias"
+        ]
+    },
+    {
+        "date": "2023-07-02T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "simon"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "alexander"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "robert"
+                },
+                {
+                    "player": "Torben",
+                    "civ": "ambiorix"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "seondeok"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "chandragupta",
+            "johnCurtin",
+            "basil",
+            "hojo",
+            "matthias"
+        ]
     }
 ]
