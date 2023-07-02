@@ -2793,5 +2793,25 @@
             "shaka",
             "batrieu"
         ]
+    },
+    {
+        "date": "2023-07-02T01:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wuzetian"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "simon"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
