@@ -2905,5 +2905,189 @@
             "hojo",
             "matthias"
         ]
+    },
+    {
+        "date": "2023-07-05T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "alexander"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "joao"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "chandragupta",
+            "peter",
+            "teddyRR",
+            "hojo",
+            "matthias"
+        ]
+    },
+    {
+        "date": "2023-07-05T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "simon"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "montezuma"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "pericles"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "suleiman"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "chandragupta",
+            "peter",
+            "teddyRR",
+            "hojo",
+            "matthias"
+        ]
+    },
+    {
+        "date": "2023-07-08T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Tobi",
+                    "civ": "genghis"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "johnCurtin"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "amanitore"
+                },
+                {
+                    "player": "Daniel Schröder",
+                    "civ": "pachacuti"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-07-08T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Tobi",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tamar"
+                },
+                {
+                    "player": "Daniel Schröder",
+                    "civ": "pachacuti"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "philip"
+                }
+            ]
+        ],
+        "hasVictory": false,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-07-09T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Jacob",
+                    "civ": "pachacuti"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "basil"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "mansamusa"
+                }
+            ],
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Torben",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
