@@ -3089,5 +3089,223 @@
         "hasVictory": true,
         "bans": [
         ]
+    },
+    {
+        "date": "2023-07-15T12:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "batrieu"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "pericles"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "teddy"
+                },
+                {
+                    "player": "Phil",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "gandhi"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "eleanor"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "harald"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "johnCurtin",
+            "matthias",
+            "simon",
+            "peter",
+            "basil",
+            "chandragupta",
+            "shaka",
+            "hojo"
+        ]
+    },
+    {
+        "date": "2023-07-15T18:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "lautaro"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "frederick"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "joao"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "johnCurtin",
+            "matthias",
+            "simon",
+            "peter",
+            "basil",
+            "chandragupta",
+            "shaka",
+            "genghis"
+        ]
+    },
+    {
+        "date": "2023-07-15T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "matthias"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "genghis"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Hendrik",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladin"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "nzinga"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "peter",
+            "chandragupta",
+            "victoriaSteam",
+            "cleopatra",
+            "cleopatraPto",
+            "basil",
+            "suleiman"
+        ]
+    },
+    {
+        "date": "2023-07-16T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "pachacuti"
+                },
+                {
+                    "player": "Hannes",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "victoriaSteam"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "genghis",
+            "matthias",
+            "lautaro",
+            "basil",
+            "simon"
+        ]
     }
 ]
