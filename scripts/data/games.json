@@ -3501,5 +3501,43 @@
             "victoriaSteam",
             "montezuma"
         ]
+    },
+    {
+        "date": "2023-07-30T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "ludwig"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "suleiman"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "abraham"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "johnCurtin",
+            "hojo",
+            "poundmaker",
+            "chandragupta",
+            "basil",
+            "matthias"
+        ]
     }
 ]
