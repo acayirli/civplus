@@ -3503,7 +3503,7 @@
         ]
     },
     {
-        "date": "2023-07-30T23:00:00",
+        "date": "2023-07-29T23:00:00",
         "placements": [
             [
                 {
@@ -3538,6 +3538,35 @@
             "chandragupta",
             "basil",
             "matthias"
+        ]
+    },
+    {
+        "date": "2023-07-30T18:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "tokugawa"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "victoriaSteam"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "qin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "frederick",
+            "ludwig"
         ]
     }
 ]
