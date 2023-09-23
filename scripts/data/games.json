@@ -3838,7 +3838,7 @@
         ]
     },
     {
-        "date": "2023-09-02T19:00:00",
+        "date": "2023-09-15T19:00:00",
         "placements": [
             [
                 {
@@ -3866,6 +3866,66 @@
                 {
                     "player": "Selim",
                     "civ": "suleimanMuhtesem"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2023-09-22T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "pachacuti"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "kublai"
+                },
+                {
+                    "player": "Andreas",
+                    "civ": "cleopatra"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "saladinSultan"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Lokman",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "gorgo"
                 }
             ]
         ],
