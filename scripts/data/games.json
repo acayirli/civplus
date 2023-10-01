@@ -3932,5 +3932,313 @@
         "hasVictory": true,
         "bans": [
         ]
+    },
+    {
+        "date": "2023-09-29T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tomyris"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "frederick"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "hojo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "matthias",
+            "chandragupta",
+            "simon",
+            "cleopatraPto",
+            "basil",
+            "johnCurtin",
+            "teddyRR"
+        ]
+    },
+    {
+        "date": "2023-09-29T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "sejong"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "amanitore"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "nzinga"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "poundmaker"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "matthias",
+            "chandragupta",
+            "simon",
+            "cleopatraPto",
+            "basil",
+            "johnCurtin",
+            "teddyRR"
+        ]
+    },
+    {
+        "date": "2023-09-30T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "ambiorix"
+                }
+            ],
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "cleopatraPto"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "wuzetian"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "matthias",
+            "chandragupta",
+            "simon",
+            "tamar",
+            "basil",
+            "robert",
+            "teddyRR"
+        ]
+    },
+    {
+        "date": "2023-09-30T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "abraham"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "jayavarman"
+                }
+            ],
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "alexander"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "peter"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "johnCurtin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "matthias",
+            "chandragupta",
+            "simon",
+            "tamar",
+            "basil",
+            "cleopatraPto",
+            "montezuma"
+        ]
+    },
+    {
+        "date": "2023-10-01T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "abraham"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "cleopatraPto"
+                }
+            ],
+            [
+                {
+                    "player": "Tobi",
+                    "civ": "batrieu"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "frederick"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "matthias",
+            "chandragupta",
+            "simon",
+            "gorgo",
+            "basil",
+            "teddyRR",
+            "montezuma"
+        ]
+    },
+    {
+        "date": "2023-10-01T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "batrieu"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "peter"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "matthias",
+            "chandragupta",
+            "simon",
+            "cleopatraPto",
+            "basil",
+            "teddyRR",
+            "montezuma"
+        ]
+    },
+    {
+        "date": "2023-10-01T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "cleopatra"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "robert"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "trajan"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "shaka",
+            "matthias",
+            "chandragupta",
+            "simon",
+            "cleopatraPto",
+            "basil",
+            "teddyRR",
+            "montezuma"
+        ]
     }
 ]
