@@ -4240,5 +4240,38 @@
             "teddyRR",
             "montezuma"
         ]
+    },
+    {
+        "date": "2023-10-14T21:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wuzetian"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "robert"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "cyrus"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "chandragupta",
+            "batrieu",
+            "gorgo",
+            "hojo"
+        ]
     }
 ]
