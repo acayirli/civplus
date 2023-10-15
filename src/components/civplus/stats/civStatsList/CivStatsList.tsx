@@ -8,7 +8,11 @@ function getNumberOfGames(civ: CivProfileModel) {
     return civ.wins + civ.losses + civ.draws;
 }
 
-type CivSort = "picks" | "bans" | "wins" | "losses";
+type CivSort = "picks" | "bans" | "wins" | "losses" | "winrate";
+
+export function getWinRate(civ: CivProfileModel) {
+    return civ.wins > 0 ? Math.floor(civ.wins / getNumberOfGames(civ) * 100) : 0;
+}
 
 function getDisplayedStat(civ: CivProfileModel, sort: CivSort) {
     switch (sort) {
@@ -20,6 +24,8 @@ function getDisplayedStat(civ: CivProfileModel, sort: CivSort) {
             return <span>Wins <br /> <b>{civ.wins}</b></span>
         case "losses":
             return <span>Losses <br /> <b>{civ.losses}</b></span>
+        case "winrate":
+            return <span>Winrate <br /> <b>{getWinRate(civ)} %</b></span>
     }
 }
 
@@ -34,6 +40,8 @@ function sortCivs(civs: CivProfileModel[], sort: CivSort) {
                 return civB.wins - civA.wins;
             case "losses":
                 return civB.losses - civA.losses;
+            case "winrate":
+                return getWinRate(civB) - getWinRate(civA);
             default:
                 return civB.name.localeCompare(civA.name);
         }
@@ -54,6 +62,7 @@ export function CivStatsList({ civList, onClick }: { civList: { [civ: string]: C
                         <option value="bans">Bans</option>
                         <option value="wins">Wins</option>
                         <option value="losses">Losses</option>
+                        <option value="winrate">Winrate</option>
                     </select>
                 </div>
             </div>

@@ -4273,5 +4273,93 @@
             "gorgo",
             "hojo"
         ]
+    },
+    {
+        "date": "2023-10-15T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tomyris"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "victoriaSteam"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "wilhelmina"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "frederick"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "peter"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "chandragupta",
+            "simon",
+            "montezuma",
+            "hojo",
+            "ambiorix",
+            "shaka",
+            "basil"
+        ]
+    },
+    {
+        "date": "2023-10-15T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "theodora"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "pachacuti"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "kublai"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladinSultan"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "poundmaker"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "chandragupta",
+            "simon",
+            "montezuma",
+            "hojo",
+            "ambiorix",
+            "shaka",
+            "basil"
+        ]
     }
 ]
