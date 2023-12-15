@@ -5447,7 +5447,7 @@
         ]
     },
     {
-        "date": "2023-01-016T20:00:00",
+        "date": "2023-10-16T20:00:00",
         "placements": [
             [
                 {
@@ -5460,7 +5460,7 @@
                 },
                 {
                     "player": "Luca",
-                    "civ": "sultan"
+                    "civ": "saladinSultan"
                 }
             ],
             [
@@ -5483,7 +5483,7 @@
         ]
     },
     {
-        "date": "2023-01-016T23:00:00",
+        "date": "2023-10-16T23:00:00",
         "placements": [
             [
                 {
@@ -5513,5 +5513,67 @@
         "hasVictory": true,
         "bans": [
         ]
+    },
+    {
+        "date": "2023-12-08T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "genghis"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "johnCurtin"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "kristina"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "kupe"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2023-12-09T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wuzetian"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "seondeok"
+                }
+            ],
+            [
+                {
+                    "player": "Tim",
+                    "civ": "kublaiMongolia"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "catherineMagnificence"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "diplo"
     }
 ]
