@@ -5575,5 +5575,133 @@
         "bans": [
         ],
         "victoryType": "diplo"
+    },
+    {
+        "date": "2023-12-20T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Tim",
+                    "civ": "kupe"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "suleimanMuhtesem"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2023-12-20T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Tim",
+                    "civ": "kupe"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "suleimanMuhtesem"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2023-12-20T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Tim",
+                    "civ": "kupe"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "suleimanMuhtesem"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2023-12-22T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "seondeok"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "teddyRR"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "tokugawa"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "nader"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
     }
 ]
