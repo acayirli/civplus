@@ -5703,5 +5703,87 @@
         "bans": [
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2023-12-30T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladin"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gandhi"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "johnCurtin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "basil",
+            "kupe",
+            "hojo",
+            "chandragupta",
+            "gorgo",
+            "shaka",
+            "tomyris"
+        ],
+        "victoryType": "culture"
+    },
+    {
+        "date": "2024-01-07T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "batrieu"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "basil"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "catherine"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "lautaro",
+            "chandragupta",
+            "ambiorix",
+            "kupe",
+            "matthias",
+            "shaka",
+            "suleiman",
+            "suleimanMuhtesem"
+        ],
+        "victoryType": "domination"
     }
 ]
