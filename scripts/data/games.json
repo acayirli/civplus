@@ -5785,5 +5785,332 @@
             "suleimanMuhtesem"
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-01-20T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "batrieu"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "PeterPan",
+                    "civ": "tamar"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "poundmaker",
+            "shaka",
+            "alexander",
+            "ambiorix",
+            "simon",
+            "lautaro",
+            "tomyris"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-01-20T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "harald"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "shaka"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "robert"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "PeterPan",
+                    "civ": "tokugawa"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "suleiman",
+            "suleimanMuhtesem",
+            "cleopatra",
+            "basil",
+            "lautaro",
+            "alexander",
+            "tomyris"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-01-28T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "philip"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "ambiorix"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "suleimanMuhtesem"
+                },
+                {
+                    "player": "PeterPan",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "catherine"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "batrieu",
+            "shaka",
+            "lautaro",
+            "basil",
+            "chandragupta",
+            "kupe",
+            "suleiman"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-01-28T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "tomyris"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "trajan"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "alexander"
+                },
+                {
+                    "player": "PeterPan",
+                    "civ": "gilgamesh"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "simon"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "batrieu",
+            "shaka",
+            "lautaro",
+            "basil",
+            "chandragupta",
+            "kupe",
+            "suleiman"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-01-28T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "PeterPan",
+                    "civ": "tokugawa"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "catherineMagnificence"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "trajan"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "mvemba"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "sejong"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "batrieu",
+            "shaka",
+            "lautaro",
+            "basil",
+            "chandragupta",
+            "kupe",
+            "suleiman"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-02-10T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gandhi"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "jayavarman"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "ludwig"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "lautaro",
+            "shaka",
+            "kupe",
+            "basil",
+            "chandragupta",
+            "ambiorix",
+            "suleiman"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-02-10T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "joao"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "amanitore"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "genghis"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wilfried"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "tokugawa"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "pericles"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "abraham"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "lautaro",
+            "shaka",
+            "kupe",
+            "basil",
+            "chandragupta",
+            "ambiorix",
+            "suleiman"
+        ],
+        "victoryType": "domination"
     }
 ]
