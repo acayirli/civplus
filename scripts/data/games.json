@@ -6218,5 +6218,47 @@
         "bans": [
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-03T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Schmiddl",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "suleimanMuhtesem"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "montezuma"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "shaka"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "victoria"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "lautaro",
+            "chandragupta",
+            "batrieu",
+            "ambiorix"
+        ],
+        "victoryType": "domination"
     }
 ]
