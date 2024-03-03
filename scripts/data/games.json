@@ -6112,5 +6112,111 @@
             "suleiman"
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-01T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "victoria"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "suleiman"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Mariusz",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "batrieu"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-01T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "peter"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tamar"
+                },
+                {
+                    "player": "Mariusz",
+                    "civ": "nader"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "genghis"
+                },
+                {
+                    "player": "Tobi",
+                    "civ": "abraham"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "cleopatraPto"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
     }
 ]
