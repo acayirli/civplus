@@ -6260,5 +6260,50 @@
             "ambiorix"
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-08T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "kristina"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Phillip Glockner",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "suleimanMuhtesem"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "trajan"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "lautaro",
+            "chandragupta",
+            "batrieu",
+            "ambiorix",
+            "shaka",
+            "basil",
+            "tomyris"
+        ],
+        "victoryType": "culture"
     }
 ]
