@@ -6305,5 +6305,38 @@
             "tomyris"
         ],
         "victoryType": "culture"
+    },
+    {
+        "date": "2024-03-09T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "amanitore"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "poundmaker"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "matthias",
+            "tokugawa",
+            "nader",
+            "kupe",
+            "gorgo",
+            "wilfried"
+        ],
+        "victoryType": "domination"
     }
 ]
