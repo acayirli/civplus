@@ -6338,5 +6338,134 @@
             "wilfried"
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-23T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "gandhi"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "joao"
+                },
+                {
+                    "player": "Birk",
+                    "civ": "teddyRR"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "montezuma"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "mansamusa"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "poundmaker"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "lautaro",
+            "shaka",
+            "ambiorix",
+            "matthias",
+            "catherine",
+            "suleiman",
+            "batrieu"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-23T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "alexander"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "suleiman"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tomyris"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "catherine"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "ambiorix",
+            "matthias",
+            "basil",
+            "hojo",
+            "poundmaker",
+            "shaka",
+            "trajan",
+            "batrieu"
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-24T12:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "amanitore"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "tokugawa"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "hojo"
+                }
+            ],
+            [
+                {
+                    "player": "Mirko",
+                    "civ": "gorgo"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "saladin"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
     }
 ]
