@@ -6467,5 +6467,78 @@
         "bans": [
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-24T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladinSultan"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "kublai"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "cyrus"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "poundmaker"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-25T19:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "nader"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "robert"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "pedro"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "wilhelmina"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "poundmaker",
+            "tokugawa",
+            "shaka",
+            "basil",
+            "lautaro",
+            "teddyRR",
+            "alexander"
+        ],
+        "victoryType": "domination"
     }
 ]
