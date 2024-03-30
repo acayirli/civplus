@@ -6540,5 +6540,87 @@
             "alexander"
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-28T17:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tomyris"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "trajan"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "teddyRR"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "hammurabi"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "tamar"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "frederick"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "cyrus"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
+    },
+    {
+        "date": "2024-03-28T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "catherineMagnificence"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "mvemba"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "kupe"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "diplo"
     }
 ]
