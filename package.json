@@ -9,13 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.8",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@radix-ui/react-tabs": "^1.0.1",
+    "@tanstack/react-router": "^1.26.0",
     "chart.js": "^4.0.0",
+    "framer-motion": "^11.0.24",
     "luxon": "^3.2.1",
     "openskill": "^3.0.1",
     "react": "^18.2.0",
@@ -26,8 +29,12 @@
     "@types/luxon": "^3.2.0",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "@vitejs/plugin-react": "^2.2.0",
-    "typescript": "^4.6.4",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "typescript": "^5.4.3",
     "vite": "^3.2.3"
   }
 }

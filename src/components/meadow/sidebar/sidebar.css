@@ -1,8 +1,0 @@
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px 40px;
-    padding-top: 80px;
-    background-color: var(--color-grey-4);
-}

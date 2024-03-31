@@ -1,9 +1,0 @@
-.input_inline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.input_inline label {
-    margin-right: 5px;
-}

@@ -6622,5 +6622,32 @@
         "bans": [
         ],
         "victoryType": "diplo"
+    },
+    {
+        "date": "2024-03-30T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "menelik"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "mvemba"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "hojo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "religious"
     }
 ]
