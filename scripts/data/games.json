@@ -6649,5 +6649,32 @@
         "bans": [
         ],
         "victoryType": "religious"
+    },
+    {
+        "date": "2024-03-31T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "sejong"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "teddyRR"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "eleanor"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ],
+        "victoryType": "domination"
     }
 ]

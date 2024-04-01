@@ -7,7 +7,6 @@ import {ChakraProvider, ColorModeScript, DarkMode, extendTheme, ThemeConfig} fro
 import "./index.css";
 import {statsRoute} from "./routes/stats/statsRoute";
 
-
 // tanstack react router
 const routeTree = rootRoute.addChildren([defaultRoute, statsRoute]);
 const router = createRouter({ routeTree });

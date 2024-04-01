@@ -1,40 +1,22 @@
-﻿import {Table, TableContainer, Tbody, Td, Th, Thead, Tr} from "@chakra-ui/react";
+﻿import {PlayerProfileModel} from "../../types/playerProfile.types";
+import {useState} from "react";
+import {PlayersStatsTable} from "../PlayersStatsTable/PlayersStatsTable";
+import {PlayerProfile} from "../PlayerProfile/PlayerProfile";
+
+
+
+
 
 export function PlayersStats()
 {
-    return (
-        <TableContainer>
-            <Table variant='simple' size='sm'>                
-                <Thead>
-                    <Tr>
-                        <Th>Name</Th>
-                        <Th isNumeric>Rating</Th>
-                        <Th isNumeric>Winrate</Th>
-                        <Th isNumeric>Wins</Th>
-                        <Th isNumeric>Losses</Th>
-                        <Th isNumeric>Number of games</Th>
-                    </Tr>
-                </Thead>
-                
-                <Tbody>
-                    <Tr>
-                        <Td>inches</Td>
-                        <Td isNumeric>5</Td>
-                        <Td isNumeric>25.4</Td>
-                        <Td isNumeric>25.4</Td>
-                        <Td isNumeric>25.4</Td>
-                        <Td isNumeric>25.4</Td>
-                    </Tr>
-                    <Tr>
-                        <Td>inches</Td>
-                        <Td isNumeric>5</Td>
-                        <Td isNumeric>25.4</Td>
-                        <Td isNumeric>25.4</Td>
-                        <Td isNumeric>25.4</Td>
-                        <Td isNumeric>25.4</Td>
-                    </Tr>
-                </Tbody>
-            </Table>
-        </TableContainer>
-    );
+    const [selectedPlayer, setSelectedPlayer] = useState<PlayerProfileModel | undefined>();
+    
+    if(selectedPlayer)
+    {
+        return <PlayerProfile player={selectedPlayer} onBack={() => setSelectedPlayer(undefined)} />;
+    }
+    else
+    {
+        return <PlayersStatsTable onSelectPlayer={setSelectedPlayer} />;
+    }
 }
