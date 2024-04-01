@@ -6676,5 +6676,42 @@
         "bans": [
         ],
         "victoryType": "domination"
+    },
+    {
+        "date": "2024-04-01T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Abdul",
+                    "civ": "wuzetian"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "robert"
+                },
+                {
+                    "player": "Schmiddl",
+                    "civ": "nader"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "lautaro",
+            "batrieu",
+            "basil",
+            "suleiman",
+            "matthias",
+            "shaka",
+            "trajan",
+            "poundmaker"
+        ],
+        "victoryType": "domination"
     }
 ]

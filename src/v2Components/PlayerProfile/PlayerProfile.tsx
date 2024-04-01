@@ -3,6 +3,7 @@ import {Card, CardBody, CardHeader, Flex, Heading, Select, Stack} from "@chakra-
 import {PlayerMetadata} from "./PlayerMetadata";
 import {PlayerMostPlayedLeaders} from "./PlayerMostPlayedLeaders";
 import {PlayerRecentGames} from "../PlayerRecentGames/PlayerRecentGames";
+import {PlayerTeammates} from "../PlayerTeammates/PlayerTeammates";
 
 export function PlayerProfile({ player }: { player: PlayerProfileModel, onBack: () => void })
 {
@@ -21,14 +22,20 @@ export function PlayerProfile({ player }: { player: PlayerProfileModel, onBack: 
             }}>
                 <CardHeader paddingBottom="10px">
                     <Flex justifyContent="space-between">
-                        <Heading size="md">Most player leaders</Heading>
+                        <Heading size="md">Leaders</Heading>
                         
-                        <div>
-                            <Select size="sm">
-                                <option value="recent" selected>Recent</option>
+                        <Flex gap="20px">
+                            <Select size="sm" defaultValue="recent" width="200px">
+                                <option value="recent">Most played</option>
+                                <option value="all time">Highest winrate</option>
+                                <option value="all time">Lowest winrate</option>
+                            </Select>
+                            
+                            <Select size="sm" defaultValue="recent" width="200px">
+                                <option value="recent">Recent</option>
                                 <option value="all time">All time</option>
                             </Select>
-                        </div>
+                        </Flex>
                     </Flex>                       
                 </CardHeader>
                 
@@ -37,13 +44,42 @@ export function PlayerProfile({ player }: { player: PlayerProfileModel, onBack: 
                 </CardBody>
             </Card>
             
-            <Card>
+            <Card sx={{
+                overflowX: "auto",
+            }}>
                 <CardHeader paddingBottom="10px">
                     <Heading size="md">Recent games</Heading>
                 </CardHeader>
                 
                 <CardBody paddingTop="10px">
                     <PlayerRecentGames />
+                </CardBody>
+            </Card>
+
+            <Card sx={{
+                overflowX: "auto",
+            }}>
+                <CardHeader paddingBottom="10px">
+                    <Flex justifyContent="space-between">
+                        <Heading size="md">Teammates</Heading>
+
+                        <Flex gap="20px">
+                            <Select size="sm" defaultValue="recent" width="200px">
+                                <option value="recent">Most played with</option>
+                                <option value="all time">Highest winrate</option>
+                                <option value="all time">Lowest winrate</option>
+                            </Select>
+
+                            <Select size="sm" defaultValue="recent" width="200px">
+                                <option value="recent">Recent</option>
+                                <option value="all time">All time</option>
+                            </Select>
+                        </Flex>
+                    </Flex>
+                </CardHeader>
+
+                <CardBody paddingTop="10px">
+                    <PlayerTeammates player={player} />
                 </CardBody>
             </Card>
         </Stack>

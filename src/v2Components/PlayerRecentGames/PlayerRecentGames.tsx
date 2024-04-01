@@ -4,7 +4,9 @@ import {GameCard} from "../GameCard";
 export function PlayerRecentGames()
 {
     return (
-        <Flex>
+        <Flex gap="10px">
+            <GameCard />
+            <GameCard />
             <GameCard />
         </Flex>            
     );
