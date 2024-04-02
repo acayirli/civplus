@@ -14,15 +14,15 @@ export function Stats()
             </TabList>
 
             <TabPanels>
-                <TabPanel>
+                <TabPanel paddingLeft={0} paddingTop={10}>
                     <PlayersStats />
                 </TabPanel>
                 
-                <TabPanel>
+                <TabPanel paddingLeft={0} paddingTop={10}>
                     <p>two!</p>
                 </TabPanel>
                 
-                <TabPanel>
+                <TabPanel paddingLeft={0} paddingTop={10}>
                     <p>three!</p>
                 </TabPanel>
             </TabPanels>

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import {createRouter, RouterProvider} from "@tanstack/react-router";
 import {rootRoute} from "./routes/rootRoute";
 import {defaultRoute} from "./routes/defaultRoute";
-import {ChakraProvider, ColorModeScript, DarkMode, extendTheme, ThemeConfig} from "@chakra-ui/react";
+import {ChakraProvider, ColorModeScript, extendTheme, ThemeConfig} from "@chakra-ui/react";
 import "./index.css";
 import {statsRoute} from "./routes/stats/statsRoute";
 
@@ -22,9 +22,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
         <ChakraProvider theme={theme}>
             <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-            <DarkMode>
-                <RouterProvider router={router} />
-            </DarkMode>
+            <RouterProvider router={router} />
         </ChakraProvider>
     </React.StrictMode> 
 );

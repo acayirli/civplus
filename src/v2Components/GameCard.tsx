@@ -1,15 +1,27 @@
 ﻿import {Card, CardBody, CardHeader, Flex, Heading, SimpleGrid, Stack, Text} from "@chakra-ui/react";
+import {Game} from "../types/games.types";
+import {DateTime} from "luxon";
 
-export function GameCard()
+export function GameCard({ game }: { game: Game})
 {
+    function getHeading()
+    {
+        if(game.placements.length == 2)
+        {
+            
+        }
+    }
+    
     return (
         <Card variant="outline" sx={{ flexShrink: 0 }}>
             <CardHeader paddingBottom="10px">
                 <Flex justifyContent="space-between" gap="20px" alignItems="flex-start">
-                    <Heading size="sm">Teamers 4v5</Heading>
+                    <Heading size="sm">
+                        
+                    </Heading>
                     
                     <Text fontSize="xs">
-                        12.01.2023 15:50
+                        { DateTime.fromISO(game.date).toFormat("dd.MM.yyyy hh:mm") }
                     </Text>
                 </Flex>
             </CardHeader>

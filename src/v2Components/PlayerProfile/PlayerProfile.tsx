@@ -1,15 +1,37 @@
 ﻿import {PlayerProfileModel} from "../../types/playerProfile.types";
-import {Card, CardBody, CardHeader, Flex, Heading, Select, Stack} from "@chakra-ui/react";
+import {
+    Breadcrumb, BreadcrumbItem,
+    Button,
+    Card,
+    CardBody,
+    CardHeader,
+    Flex,
+    Heading,
+    Select,
+    Stack,
+} from "@chakra-ui/react";
 import {PlayerMetadata} from "./PlayerMetadata";
 import {PlayerMostPlayedLeaders} from "./PlayerMostPlayedLeaders";
 import {PlayerRecentGames} from "../PlayerRecentGames/PlayerRecentGames";
 import {PlayerTeammates} from "../PlayerTeammates/PlayerTeammates";
 
-export function PlayerProfile({ player }: { player: PlayerProfileModel, onBack: () => void })
+export function PlayerProfile({ player, onBack }: { player: PlayerProfileModel, onBack: () => void })
 {
     return (
-        <Stack>
-            <Heading size="lg">{player.name}</Heading>
+        <Stack sx={{ maxWidth: "1280px", margin: "0 auto" }} gap="20px">            
+            <Breadcrumb>
+                <BreadcrumbItem>
+                    <Heading size="md" onClick={onBack} sx={{ cursor: "pointer", transition: "color .2s", ":hover": { color: "#A0AEC0" } }}>
+                        Players
+                    </Heading>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <Heading size="md" color="#90CDF4">
+                        {player.name}
+                    </Heading>
+                </BreadcrumbItem>
+            </Breadcrumb>
             
             <Card>
                 <CardBody>
@@ -52,7 +74,7 @@ export function PlayerProfile({ player }: { player: PlayerProfileModel, onBack: 
                 </CardHeader>
                 
                 <CardBody paddingTop="10px">
-                    <PlayerRecentGames />
+                    <PlayerRecentGames player={player} />
                 </CardBody>
             </Card>
 
