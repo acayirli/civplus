@@ -8,8 +8,19 @@ export function GameCard({ game }: { game: Game})
     {
         if(game.placements.length == 2)
         {
-            
+            if(game.placements[0].length == 1 && game.placements[1].length == 1)
+            {
+                return "Duel";
+            }
+            else
+            {
+                return "Teamers " + game.placements[0].length + "v" + game.placements[1].length;
+            }
         }
+        else 
+        {
+            return "FFA " + game.placements.length;
+        }            
     }
     
     return (
@@ -17,7 +28,7 @@ export function GameCard({ game }: { game: Game})
             <CardHeader paddingBottom="10px">
                 <Flex justifyContent="space-between" gap="20px" alignItems="flex-start">
                     <Heading size="sm">
-                        
+                        { getHeading() }
                     </Heading>
                     
                     <Text fontSize="xs">
@@ -27,27 +38,49 @@ export function GameCard({ game }: { game: Game})
             </CardHeader>
             
             <CardBody paddingTop="10px">
-                <SimpleGrid columns={3}>
-                    <Stack>
-                        <Heading size="sm">Winners</Heading>
-                        <Text noOfLines={1}>Selim</Text>
-                        <Text noOfLines={1}>Luca</Text>
-                        <Text noOfLines={1}>Mirko</Text>
-                        <Text noOfLines={1} color="#F6AD55">Abdul</Text>
-                    </Stack>
+                {
+                    game.placements.length == 2
+                        ? (
+                            <SimpleGrid columns={3}>
+                                <Stack>
+                                    <Heading size="sm">{game.hasVictory ? "Winners" : "Draw"}</Heading>
+                                    {
+                                        game.placements[0].map(player => (
+                                            <Text key={player.player} noOfLines={1}>
+                                                {player.player}
+                                            </Text>
+                                        ))
+                                    }
+                                </Stack>
 
-                    <Stack alignItems="center" justifyContent="center">
-                        <Text>vs</Text>
-                    </Stack>
+                                <Stack alignItems="center" justifyContent="center">
+                                    <Text>vs</Text>
+                                </Stack>
 
-                    <Stack alignItems="flex-end">
-                        <Heading size="sm">Losers</Heading>
-                        <Text noOfLines={1}>Lukas</Text>
-                        <Text noOfLines={1}>Tim</Text>
-                        <Text noOfLines={1}>Maxim</Text>
-                        <Text noOfLines={1}>Jacob</Text>
-                    </Stack>
-                </SimpleGrid>
+                                <Stack alignItems="flex-end">
+                                    <Heading size="sm">{game.hasVictory ? "Losers" : "Draw"}</Heading>
+                                    {
+                                        game.placements[1].map((player) => (
+                                            <Text key={player.player} noOfLines={1}>
+                                                {player.player}
+                                            </Text>
+                                        ))
+                                    }
+                                </Stack>
+                            </SimpleGrid>
+                        )
+                        : (
+                            <SimpleGrid columns={2} rowGap="10px" columnGap="20px">
+                                {
+                                    game.placements.map((p, index) => (
+                                        <Text key={index} noOfLines={1}>
+                                            {`${index+1}. ${p[0].player}`}
+                                        </Text>
+                                    ))
+                                }
+                            </SimpleGrid>
+                        )
+                }
             </CardBody>
         </Card>
     );

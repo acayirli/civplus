@@ -1,7 +1,6 @@
 ﻿import {PlayerProfileModel} from "../../types/playerProfile.types";
 import {
     Breadcrumb, BreadcrumbItem,
-    Button,
     Card,
     CardBody,
     CardHeader,
@@ -38,33 +37,8 @@ export function PlayerProfile({ player, onBack }: { player: PlayerProfileModel, 
                     <PlayerMetadata player={player} />
                 </CardBody>
             </Card>
-            
-            <Card sx={{
-                overflowX: "auto",
-            }}>
-                <CardHeader paddingBottom="10px">
-                    <Flex justifyContent="space-between">
-                        <Heading size="md">Leaders</Heading>
-                        
-                        <Flex gap="20px">
-                            <Select size="sm" defaultValue="recent" width="200px">
-                                <option value="recent">Most played</option>
-                                <option value="all time">Highest winrate</option>
-                                <option value="all time">Lowest winrate</option>
-                            </Select>
-                            
-                            <Select size="sm" defaultValue="recent" width="200px">
-                                <option value="recent">Recent</option>
-                                <option value="all time">All time</option>
-                            </Select>
-                        </Flex>
-                    </Flex>                       
-                </CardHeader>
-                
-                <CardBody paddingTop="10px">
-                    <PlayerMostPlayedLeaders player={player} />
-                </CardBody>
-            </Card>
+
+            <PlayerMostPlayedLeaders player={player} />
             
             <Card sx={{
                 overflowX: "auto",
