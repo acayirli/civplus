@@ -1,5 +1,6 @@
 ﻿import {Tab, TabList, TabPanel, TabPanels, Tabs} from "@chakra-ui/react";
 import {PlayersStats} from "../PlayersStats/PlayersStats";
+import {LeaderStats} from "../LeaderStats/LeaderStats";
 
 export function Stats()
 {
@@ -19,7 +20,7 @@ export function Stats()
                 </TabPanel>
                 
                 <TabPanel paddingLeft={0} paddingTop={10}>
-                    <p>two!</p>
+                    <LeaderStats />
                 </TabPanel>
                 
                 <TabPanel paddingLeft={0} paddingTop={10}>

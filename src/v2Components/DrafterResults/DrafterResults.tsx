@@ -1,10 +1,10 @@
 ﻿import {leaders, LeaderType} from "../../data/leaders";
 import {DrafterSettingsType} from "../DrafterSettings/DrafterSettings";
-import {useMemo} from "react";
-import {Card, CardBody, CardHeader, Heading, SimpleGrid, Stack} from "@chakra-ui/react";
+import {useEffect, useMemo} from "react";
+import {Button, Card, CardBody, CardHeader, Flex, Heading, SimpleGrid, Stack, useToast} from "@chakra-ui/react";
 import {Leader} from "../Leader/Leader";
 
-type PlayerResult = {
+export type PlayerResult = {
     name: string,
     leaders: LeaderType[]
 }
@@ -26,14 +26,55 @@ function calculateDrafterResults(settings: DrafterSettingsType, bans: string[]):
     return playerResults;
 }
 
-export function DrafterResults({ settings, bans }: { settings: DrafterSettingsType, bans: LeaderType[] })  
+export function DrafterResults({ settings, bans, overrideResults, onRestart }: { settings?: DrafterSettingsType, bans?: string[], overrideResults?: PlayerResult[], onRestart: () => void })  
 {
-    const calculatedResults = useMemo(() => 
-        calculateDrafterResults(settings, bans.map(ban => ban.id)),
-    [settings, bans]);
+    const calculatedResults = useMemo(() => overrideResults ||
+        calculateDrafterResults(settings!, bans || []),
+    [settings, bans, overrideResults]);
+
+    // write results to url
+    useEffect(() => {
+        const reducedResults = calculatedResults.map((playerResult) =>
+            ({
+                name: playerResult.name, leaders: playerResult.leaders.map((leader) => leader.id)
+            }));
+        const uriEncodedReults = encodeURIComponent(JSON.stringify({ draft: reducedResults, bans: bans }));
+        history.replaceState(null, "", import.meta.env.BASE_URL + "?drafterresults=" + uriEncodedReults);
+    }, [settings, bans, overrideResults]);
+
+    const toast = useToast();
+    
+    function handleOnClickShare()
+    {
+        navigator.clipboard.writeText(window.location.href);
+        toast({
+            title: "Copied URL to clipboard.",
+            status: "success"
+        });
+    }
     
     return (
-        <Stack>
+        <Stack gap="20px">
+            <Flex justifyContent="space-between">
+                <Heading size="lg">
+                    Results
+                </Heading>
+
+                <Flex gap="20px">
+                    <Button onClick={handleOnClickShare}>
+                        Share
+                    </Button>
+
+                    <Button variant="outline" onClick={() => toast({ title: "Not implemented.", status: "error" })}>
+                        Report
+                    </Button>
+
+                    <Button variant="ghost" onClick={onRestart}>
+                        Restart
+                    </Button>
+                </Flex>
+            </Flex>
+            
             {
                 calculatedResults.map(result => (
                     <Card key={result.name}>
@@ -53,6 +94,14 @@ export function DrafterResults({ settings, bans }: { settings: DrafterSettingsTy
                     </Card>
                 ))
             }
+
+            <Heading size="md">Bans</Heading>
+
+            <Flex gap={"40px"}>
+                {
+                    bans && bans.map(leaderId => <Leader key={leaderId} leader={leaders[leaderId]} />)
+                }
+            </Flex>
         </Stack>
     );
 }

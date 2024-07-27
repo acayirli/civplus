@@ -8,6 +8,7 @@ export function LeaderPortrait({ leader }: { leader: LeaderType })
             width: "44px",
             height: "44px",
             borderRadius: "50%",
+            border: "thin solid white",
             flexShrink: 0,
         }}>
             <img src={leader.portrait} alt={`${leader.leader} portrait`}></img>

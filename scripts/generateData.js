@@ -1,5 +1,5 @@
 import gamesData from "./data/games.json" assert { type: "json" };
-import { rating, rate, ordinal } from 'openskill';
+import { rating, rate, ordinal } from "openskill";
 import fs from "fs";
 
 let players = {};
@@ -28,15 +28,17 @@ gamesData.forEach((game, gameIndex) => {
     game.placements.forEach((placement, placementIndex) => {
         const hasVictory = game.hasVictory;
         const istWin = isWin(placementIndex, game.placements);
+        const isActualWin = hasVictory && istWin;
+        const isActualLoss = hasVictory && !istWin;
 
         placement.forEach((playerData) => {
             if (players.hasOwnProperty(playerData.player)) {
-                const playerObject = players[playerData.player];
+                const playerObject = players[playerData.player];                
 
-                if (hasVictory && istWin) {
+                if (isActualWin) {
                     playerObject.wins += 1;
                 }
-                else if (hasVictory && !istWin) {
+                else if (isActualLoss) {
                     playerObject.losses += 1;
                 }
                 else {
@@ -45,16 +47,25 @@ gamesData.forEach((game, gameIndex) => {
 
                 if (playerObject.civs.hasOwnProperty(playerData.civ)) {
                     playerObject.civs[playerData.civ].numberOfTimesPlayed += 1;
+                    
+                    if(isActualWin)
+                    {
+                        playerObject.civs[playerData.civ].wins += 1;
+                    }
+                    else if(isActualLoss)
+                    {
+                        playerObject.civs[playerData.civ].losses += 1;
+                    }
                 }
                 else {
-                    playerObject.civs[playerData.civ] = { civ: playerData.civ, numberOfTimesPlayed: 1 };
+                    playerObject.civs[playerData.civ] = { civ: playerData.civ, numberOfTimesPlayed: 1, wins: isActualWin ? 1 : 0, losses: isActualLoss ? 1 : 0 };
                 }
 
                 playerObject.gameIds.push(gameIndex);
             }
             else {
                 const playedCivs = {};
-                playedCivs[playerData.civ] = { civ: playerData.civ, numberOfTimesPlayed: 1 };
+                playedCivs[playerData.civ] = { civ: playerData.civ, numberOfTimesPlayed: 1, wins: isActualWin ? 1 : 0, losses: isActualLoss ? 1 : 0 };
 
                 players[playerData.player] = {
                     name: playerData.player,
@@ -101,30 +112,30 @@ gamesData.forEach((game, gameIndex) => {
     });
 
     const ratings = rate(game.placements.map((placement) => placement.map((playerData) => players[playerData.player].rating)), { rank: !game.hasVictory && [game.placements.map(() => 1)] });
-    game.placements.map((placement, placementIndex) => placement.forEach((playerData, playerDataIndex) => { players[playerData.player].rating = ratings[placementIndex][playerDataIndex]}));
+    game.placements.map((placement, placementIndex) => placement.forEach((playerData, playerDataIndex) => { players[playerData.player].rating = ratings[placementIndex][playerDataIndex];}));
 });
 
 const playersSortedByRating = Object.values(players).sort((a, b) => ordinal(b.rating) - ordinal(a.rating));
 const ratingThresholds = {
     highestRating: Math.floor(1500 + (ordinal(playersSortedByRating[0].rating) * 10)),
     lowestRating: Math.floor(1500 + (ordinal(playersSortedByRating[playersSortedByRating.length-1].rating) * 10))
-}
+};
 
 const playersJsonString = JSON.stringify(players);
 const civsJsonString = JSON.stringify(civs);
 const ratingThresholdsJsonString = JSON.stringify(ratingThresholds);
 
-fs.writeFile('data/players.json', playersJsonString, function (err) {
+fs.writeFile("data/players.json", playersJsonString, function (err) {
     if (err) throw err;
-    console.log('Players saved!');
+    console.log("Players saved!");
 });
 
-fs.writeFile('data/civs.json', civsJsonString, function (err) {
+fs.writeFile("data/civs.json", civsJsonString, function (err) {
     if (err) throw err;
-    console.log('Civs saved!');
+    console.log("Civs saved!");
 });
 
-fs.writeFile('data/ratings.json', ratingThresholdsJsonString, function (err) {
+fs.writeFile("data/ratings.json", ratingThresholdsJsonString, function (err) {
     if (err) throw err;
-    console.log('Ratings saved!');
+    console.log("Ratings saved!");
 });

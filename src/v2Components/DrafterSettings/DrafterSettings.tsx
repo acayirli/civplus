@@ -6,7 +6,7 @@
     Input, NumberDecrementStepper, NumberIncrementStepper,
     NumberInput,
     NumberInputField, NumberInputStepper,
-    Stack
+    Stack, useToast
 } from "@chakra-ui/react";
 import {useState} from "react";
 
@@ -19,11 +19,19 @@ export function DrafterSettings({ onConfirm }: { onConfirm: (settings: DrafterSe
 {
     const [playerNames, setPlayerNames] = useState<string>("");
     const [noOfLeaders, setNoOfLeaders] = useState<number>(0);
+    const toast = useToast();
     
     function handleConfirm()
     {
         if(!noOfLeaders || !playerNames)
         {
+            toast({
+                title: "Please input player names and number of leaders per player.",
+                status: "error",
+                variant: "subtle",
+                isClosable: true,
+            });
+            
             return;
         }
         
@@ -64,7 +72,7 @@ export function DrafterSettings({ onConfirm }: { onConfirm: (settings: DrafterSe
             
             <CardFooter>
                 <Flex justifyContent="flex-end" flexGrow={1}>
-                    <Button onClick={handleConfirm} disabled={!!playerNames && !!noOfLeaders}>
+                    <Button onClick={handleConfirm}>
                         Continue
                     </Button>
                 </Flex>

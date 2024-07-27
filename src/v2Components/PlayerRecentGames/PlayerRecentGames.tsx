@@ -6,11 +6,12 @@ import games from "../../../scripts/data/games.json";
 
 export function PlayerRecentGames({ player }: { player: PlayerProfileModel })
 {
+    console.log(player.gameIds.reverse());
     return (
         <Flex gap="10px">
             {
-                player.gameIds.map(gId => (
-                    <GameCard key={gId} game={games[gId]} />
+                player.gameIds.sort((a, b) => games[b].date.localeCompare(games[a].date)).map(gId => (
+                    <GameCard key={gId} game={games[gId]} highlightedPlayer={player.name} />
                 ))
             }
         </Flex>            

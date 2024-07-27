@@ -4,6 +4,8 @@ import {getNumberOfGames, getWinRate} from "../../helper/playerHelper";
 import {PlayerProfileModel} from "../../types/playerProfile.types";
 import players from "../../../scripts/data/players.json";
 import {useState} from "react";
+import {LeaderPortrait} from "../LeaderPortrait/LeaderPortrait";
+import {leaders} from "../../data/leaders";
 
 type PlayerSort = "wins" | "losses" | "winrate" | "rating" | "noOfGames" | "name";
 
@@ -26,6 +28,10 @@ function sortPlayers(players: { [player: string]: PlayerProfileModel }, playerSo
     });
 }
 
+function getMostPlayedCiv(player: PlayerProfileModel) {
+    return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
+}
+
 export function PlayersStatsTable({ onSelectPlayer }: { onSelectPlayer: (player: PlayerProfileModel) => void })
 {
     const [sort, setSort] = useState<PlayerSort>("rating");
@@ -33,7 +39,7 @@ export function PlayersStatsTable({ onSelectPlayer }: { onSelectPlayer: (player:
     const playersJs: { [player: string]: PlayerProfileModel } = players;
     
     return (
-        <Stack>
+        <Stack sx={{ maxWidth: "1280px", margin: "0 auto" }}>
             <Flex justifyContent="space-between">
                 <Heading size="md" color="#90CDF4">Players</Heading>
                 
@@ -69,7 +75,10 @@ export function PlayersStatsTable({ onSelectPlayer }: { onSelectPlayer: (player:
                             sortPlayers(playersJs, sort).map(player => (
                                 <Tr key={player.name} onClick={() => onSelectPlayer(player)} sx={{ transition: "background-color .2s", cursor: "pointer", ":hover": { backgroundColor: "#2D3748" }}}>
                                     <Td>
-                                        { player.name }
+                                        <Flex gap={"20px"} alignItems={"center"}>
+                                            <LeaderPortrait leader={leaders[getMostPlayedCiv(player)]} />
+                                            { player.name }
+                                        </Flex>
                                     </Td>
 
                                     <Td isNumeric>

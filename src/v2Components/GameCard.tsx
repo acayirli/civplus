@@ -2,7 +2,7 @@
 import {Game} from "../types/games.types";
 import {DateTime} from "luxon";
 
-export function GameCard({ game }: { game: Game})
+export function GameCard({ game, highlightedPlayer }: { game: Game, highlightedPlayer: string })
 {
     function getHeading()
     {
@@ -46,7 +46,7 @@ export function GameCard({ game }: { game: Game})
                                     <Heading size="sm">{game.hasVictory ? "Winners" : "Draw"}</Heading>
                                     {
                                         game.placements[0].map(player => (
-                                            <Text key={player.player} noOfLines={1}>
+                                            <Text key={player.player} noOfLines={1} sx={player.player == highlightedPlayer ? { color: "var(--chakra-colors-orange-400)" } : undefined}>
                                                 {player.player}
                                             </Text>
                                         ))
@@ -61,7 +61,7 @@ export function GameCard({ game }: { game: Game})
                                     <Heading size="sm">{game.hasVictory ? "Losers" : "Draw"}</Heading>
                                     {
                                         game.placements[1].map((player) => (
-                                            <Text key={player.player} noOfLines={1}>
+                                            <Text key={player.player} noOfLines={1} sx={player.player == highlightedPlayer ? { color: "var(--chakra-colors-orange-400)" } : undefined}>
                                                 {player.player}
                                             </Text>
                                         ))
@@ -73,8 +73,8 @@ export function GameCard({ game }: { game: Game})
                             <SimpleGrid columns={2} rowGap="10px" columnGap="20px">
                                 {
                                     game.placements.map((p, index) => (
-                                        <Text key={index} noOfLines={1}>
-                                            {`${index+1}. ${p[0].player}`}
+                                        <Text key={index} noOfLines={1} sx={p.some(x => x.player == highlightedPlayer) ? { color: "var(--chakra-colors-orange-400)" } : undefined}>
+                                            {`${index+1}. ${p.map(x => x.player).join(", ")}`}
                                         </Text>
                                     ))
                                 }

@@ -10,7 +10,7 @@ import {
     Stack,
 } from "@chakra-ui/react";
 import {PlayerMetadata} from "./PlayerMetadata";
-import {PlayerMostPlayedLeaders} from "./PlayerMostPlayedLeaders";
+import {PlayerLeaders} from "./PlayerLeaders";
 import {PlayerRecentGames} from "../PlayerRecentGames/PlayerRecentGames";
 import {PlayerTeammates} from "../PlayerTeammates/PlayerTeammates";
 
@@ -38,7 +38,7 @@ export function PlayerProfile({ player, onBack }: { player: PlayerProfileModel, 
                 </CardBody>
             </Card>
 
-            <PlayerMostPlayedLeaders player={player} />
+            <PlayerLeaders player={player} />
             
             <Card sx={{
                 overflowX: "auto",

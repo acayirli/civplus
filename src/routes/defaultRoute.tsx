@@ -7,7 +7,7 @@ import {Drafter} from "../v2Components/Drafter/Drafter";
 export const defaultRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: "civplus/",
-    component:  () => {
+    component:  () => {        
         return (
             <Box sx={{ padding: "20px" }}>
                 <Drafter />
