@@ -6,7 +6,6 @@ import games from "../../../scripts/data/games.json";
 
 export function PlayerRecentGames({ player }: { player: PlayerProfileModel })
 {
-    console.log(player.gameIds.reverse());
     return (
         <Flex gap="10px">
             {

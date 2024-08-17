@@ -29,7 +29,13 @@ function sortPlayers(players: { [player: string]: PlayerProfileModel }, playerSo
 }
 
 function getMostPlayedCiv(player: PlayerProfileModel) {
-    return Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
+    const leader = Object.values(player.civs).reduce((prev, current) => (prev.numberOfTimesPlayed > current.numberOfTimesPlayed) ? prev : current).civ;
+    if(!leader)
+    {
+        console.error("Invalid leader: " + leader);
+        return "gilgamesh";
+    }
+    return leader;
 }
 
 export function PlayersStatsTable({ onSelectPlayer }: { onSelectPlayer: (player: PlayerProfileModel) => void })

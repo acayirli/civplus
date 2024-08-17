@@ -65,29 +65,39 @@ export function LeaderStatsTable()
 
                     <Tbody>
                         {
-                            Object.values(civs).sort(sortLeaders).map(leader => (
-                                <Tr key={leader.name} onClick={() => console.log("todo")} sx={{ transition: "background-color .2s", cursor: "pointer", ":hover": { backgroundColor: "#2D3748" }}}>
-                                    <Td>
-                                        <Leader leader={leaders[leader.name]} />
-                                    </Td>
+                            Object.values(civs).sort(sortLeaders).map(leader => {
+                                if(!leaders[leader.name]) 
+                                {
+                                    console.error("Invalid leader: " + leader.name);
+                                    return null;
+                                }
+                                
+                                return (
+                                    (
+                                        <Tr key={leader.name} onClick={() => console.log("todo")} sx={{ transition: "background-color .2s", cursor: "pointer", ":hover": { backgroundColor: "#2D3748" }}}>
+                                            <Td>
+                                                <Leader leader={leaders[leader.name]} />
+                                            </Td>
 
-                                    <Td isNumeric>
-                                        { Math.round(leader.wins / leader.picks * 100) } %
-                                    </Td>
+                                            <Td isNumeric>
+                                                { Math.round(leader.wins / leader.picks * 100) } %
+                                            </Td>
 
-                                    <Td isNumeric>
-                                        { leader.wins }
-                                    </Td>
+                                            <Td isNumeric>
+                                                { leader.wins }
+                                            </Td>
 
-                                    <Td isNumeric>
-                                        { leader.losses }
-                                    </Td>
+                                            <Td isNumeric>
+                                                { leader.losses }
+                                            </Td>
 
-                                    <Td isNumeric>
-                                        { leader.gameIds.length }
-                                    </Td>
-                                </Tr>
-                            ))
+                                            <Td isNumeric>
+                                                { leader.gameIds.length }
+                                            </Td>
+                                        </Tr>
+                                    )
+                                );
+                            })
                         }
                     </Tbody>
                 </Table>
