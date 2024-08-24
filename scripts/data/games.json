@@ -8400,5 +8400,209 @@
             "chandragupta",
             "suleiman"
         ]
+    },
+    {
+        "date": "2024-08-17T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "wuzetian"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "montezuma"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "shaka",
+            "catherine",
+            "hojo",
+            "matthias",
+            "lautaro",
+            "chandragupta",
+            "suleiman"
+        ]
+    },
+    {
+        "date": "2024-08-17T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "nader"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "kublaiMongolia"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "kupe"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "cyrus"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "shaka",
+            "catherine",
+            "hojo",
+            "matthias",
+            "lautaro",
+            "chandragupta",
+            "montezuma"
+        ]
+    },
+    {
+        "date": "2024-08-18T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Jacob",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "ludwig"
+                },
+                {
+                    "player": "Torben",
+                    "civ": "cleopatra"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "jayavarman"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "abraham"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+            "basil",
+            "shaka",
+            "catherine",
+            "hojo",
+            "matthias",
+            "lautaro",
+            "chandragupta",
+            "montezuma"
+        ]
+    },
+    {
+        "date": "2024-08-24T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Luca",
+                    "civ": "suleiman"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "genghis"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "cleopatra"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "simon"
+                }
+            ],
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "tamar"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "wuzetian"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "pedro"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "nader"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-08-24T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "sundiata"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Selim",
+                    "civ": "pericles"
+                }
+            ],
+            [
+                {
+                    "player": "Maxim",
+                    "civ": "pedro"
+                }
+            ],
+            [
+                {
+                    "player": "Simon",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "ambiorix"
+                }
+            ],
+            [
+                {
+                    "player": "Alex",
+                    "civ": "suleiman"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
     }
 ]
