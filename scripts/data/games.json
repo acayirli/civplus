@@ -3828,7 +3828,7 @@
             ],
             [
                 {
-                    "player": "Christian (Tim's Freund)",
+                    "player": "Christian",
                     "civ": "montezuma"
                 }
             ]
@@ -8086,7 +8086,7 @@
                     "civ": "poundmaker"
                 },
                 {
-                    "player": "Christian (Tim's Freund)",
+                    "player": "Christian",
                     "civ": "frederick"
                 }
             ],
@@ -8598,6 +8598,226 @@
                 {
                     "player": "Alex",
                     "civ": "suleiman"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-08-31T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "jayavarman"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "jadwiga"
+                }
+            ],
+            [
+                {
+                    "player": "Tim",
+                    "civ": "chandragupta"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladin"
+                },
+                {
+                    "player": "Jaymz",
+                    "civ": "suleimanMuhtesem"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-08-31T22:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "kublai"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "shaka"
+                }
+            ],
+            [
+                {
+                    "player": "Tim",
+                    "civ": "teddyRR"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "batrieu"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-09-07T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "johnCurtin"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "catherine"
+                },
+                {
+                    "player": "Simon",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "kupe"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "Maxim",
+                    "civ": "montezuma"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-09-15T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "genghis"
+                },
+                {
+                    "player": "Jacob",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Luca",
+                    "civ": "saladin"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "ambiorix"
+                },
+                {
+                    "player": "Mirko",
+                    "civ": "Simon"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "pedro"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-09-15T23:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "ramses"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "jayavarman"
+                }
+            ],
+            [
+                {
+                    "player": "Tim",
+                    "civ": "montezuma"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-10-19T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "saladin"
+                }
+            ],
+            [
+                {
+                    "player": "Alex",
+                    "civ": "hammurabi"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "wilhelmina"
+                }
+            ],
+            [
+                {
+                    "player": "Lukas",
+                    "civ": "ladySixSky"
+                }
+            ],
+            [
+                {
+                    "player": "Jacob",
+                    "civ": "johnCurtin"
+                }
+            ],
+            [
+                {
+                    "player": "Mariusz",
+                    "civ": "jadwiga"
+                }
+            ],
+            [
+                {
+                    "player": "Christian",
+                    "civ": "frederick"
+                }
+            ],
+            [
+                {
+                    "player": "Tim",
+                    "civ": "Gorgo"
                 }
             ]
         ],
