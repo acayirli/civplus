@@ -8725,7 +8725,7 @@
                 },
                 {
                     "player": "Mirko",
-                    "civ": "Simon"
+                    "civ": "simon"
                 },
                 {
                     "player": "Tim",
@@ -8818,6 +8818,54 @@
                 {
                     "player": "Tim",
                     "civ": "Gorgo"
+                }
+            ]
+        ],
+        "hasVictory": true,
+        "bans": [
+        ]
+    },
+    {
+        "date": "2024-11-10T20:00:00",
+        "placements": [
+            [
+                {
+                    "player": "Abdul",
+                    "civ": "theodora"
+                },
+                {
+                    "player": "Lukas",
+                    "civ": "wuzetian"
+                },
+                {
+                    "player": "Alex",
+                    "civ": "hojo"
+                },
+                {
+                    "player": "Jonas",
+                    "civ": "kupe"
+                }
+            ],
+            [
+                {
+                    "player": "Luca",
+                    "civ": "wilhelmina"
+                },
+                {
+                    "player": "Tim",
+                    "civ": "simon"
+                },
+                {
+                    "player": "Selim",
+                    "civ": "jadwiga"
+                },
+                {
+                    "player": "Mariusz",
+                    "civ": "poundmaker"
+                },
+                {
+                    "player": "Christian",
+                    "civ": "elizabeth"
                 }
             ]
         ],
