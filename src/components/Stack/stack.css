@@ -1,0 +1,24 @@
+.stack {
+	display: flex;
+	flex-direction: column;
+}
+
+.stack--gap-xs {
+	gap: 5px;
+}
+
+.stack--gap-sm {
+	gap: 10px;
+}
+
+.stack--gap-md {
+	gap: 15px;
+}
+
+.stack--gap-lg {
+	gap: 20px;
+}
+
+.stack--gap-xl {
+	gap: 40px;
+}

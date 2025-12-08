@@ -1,6 +1,3 @@
-# CIV +
-A website that provides useful tools for the game Civilization:
-- The "Drafter" allows players to easily draft leaders for any game type (ffa, teamers)
-- The "Learn" page gives you an overview for each leader
+# Civilization 6 Drafter
 
-more tools coming soon...
+This is a tool which allows you to draft Civilization 6 leaders for individual players or teams. You can also ban leaders.

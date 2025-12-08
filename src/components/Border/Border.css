@@ -1,0 +1,5 @@
+.border {
+	height: 1px;
+	width: 100%;
+	background-color: var(--sand-6);
+}

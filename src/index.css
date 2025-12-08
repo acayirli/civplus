@@ -1,9 +1,148 @@
-﻿@font-face {
-    font-family: 'Baskerville-Regular';
-    src: url('assets/fonts/LibreBaskerville-Regular.ttf');
+@font-face {
+	font-family: "MinionPro-Bold";
+	src: url("./assets/MinionPro-Bold.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'Baskerville-Bold';
-    src: url('assets/fonts/LibreBaskerville-Bold.ttf');
+	font-family: "MinionPro-Bold-Italic";
+	src: url("./assets/MinionPro-BoldIt.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Myriad-Regular";
+	src: url("./assets/MYRIADPRO-REGULAR.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Myriad-Bold";
+	src: url("./assets/MYRIADPRO-BOLD.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	display: flex;
+	margin: 0;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+	color: var(--gold-12);
+	background-color: var(--sand-2);
+	font-size: 16px;
+	font-family: Myriad-Regular, sans-serif;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+p {
+	margin: 0;
+}
+
+img {
+	border-style: none;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+	letter-spacing: normal;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+form {
+	display: inline;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+	appearance: none;
+	margin: 0;
+}
+
+i {
+	font-style: normal;
+}
+
+::-ms-clear {
+	display: none;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+	display: none;
+}
+
+fieldset {
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+select::-ms-value {
+	background: none;
 }

@@ -20,7 +20,7 @@ jobs:
       - name: 🏗 Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: '16.14.2'
+          node-version: "16.14.2"
 
       - name: ⤵ Install frontend dependencies
         run: npm ci

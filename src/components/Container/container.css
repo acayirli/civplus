@@ -1,0 +1,20 @@
+.container {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.container--sm {
+	max-width: 512px;
+}
+
+.container--md {
+	max-width: 1024px;
+}
+
+.container--lg {
+	max-width: 1280px;
+}
+
+.container--xl {
+	max-width: 1920px;
+}

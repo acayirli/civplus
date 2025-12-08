@@ -1,0 +1,47 @@
+.textInput_root {
+	padding: 10px 10px;
+	border: thin solid var(--sand-7);
+	transition: 0.2s;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 5px;
+	width: 100%;
+	cursor: text;
+	background-color: var(--sand-3);
+}
+
+.textInput_root--inline {
+	align-items: baseline;
+	gap: 10px;
+	flex-direction: row;
+}
+
+.textInput_root:first-of-type {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.textInput_root + .textInput_root {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top: none;
+}
+
+.textInput_label {
+	font-size: 14px;
+	color: var(--sand-11);
+}
+
+.textInput_input {
+	border: none;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	color: var(--sand-12);
+	font-size: 16px;
+	font-family: Myriad-Regular, sans-serif;
+	width: 100%;
+}

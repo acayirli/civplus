@@ -1,0 +1,75 @@
+.leaderCard {
+	padding: 10px;
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	transition: 0.2s;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.leaderCard:hover {
+	background-color: var(--gold-4);
+}
+
+.leaderCard__avatar {
+	height: 75px;
+	width: 75px;
+	border-radius: 50%;
+	position: relative;
+}
+
+.leaderCard--banned .leaderCard__avatar {
+	opacity: 0.2;
+}
+
+.leaderCard__text {
+}
+
+.leaderCard__name {
+	color: var(--gold-12);
+	font-size: 24px;
+	letter-spacing: 1px;
+	text-shadow: 0 0 10px var(--gold-10);
+	font-family: MinionPro-Bold-Italic, serif;
+	white-space: nowrap;
+	max-width: 230px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transition: 0.2s;
+}
+
+.leaderCard__name--mostBanned {
+	color: var(--red-11);
+	text-shadow: 0 0 10px var(--red-10);
+}
+
+.leaderCard--banned .leaderCard__name,
+.leaderCard--banned .leaderCard__name--mostBanned {
+	opacity: 0.2;
+	text-shadow: unset;
+}
+
+.leaderCard__civ {
+	color: var(--gold-11);
+	letter-spacing: 1px;
+	font-family: Myriad-Regular, sans-serif;
+	font-size: 14px;
+	transition: 0.2s;
+}
+
+.leaderCard--banned .leaderCard__civ {
+	color: var(--red-9);
+	text-shadow: unset;
+}
+
+.leaderCard .icon_skull {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 10px;
+	width: 10px;
+	background-color: var(--red-9);
+	border-radius: 50%;
+}

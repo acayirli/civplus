@@ -1,0 +1,10 @@
+.title {
+	font-family: MinionPro-Bold, serif;
+	font-size: 64px;
+	color: var(--gold-12);
+	margin-top: 100px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
