@@ -127,7 +127,7 @@ function DrafterResults({
 							))}
 						</LeaderGrid>
 					) : (
-						<div style={{ paddingLeft: 12 }}>No bans</div>
+						<div>No bans</div>
 					)}
 				</Stack>
 			</Stack>
