@@ -7,6 +7,8 @@ import { Button } from "../Button/Button.tsx";
 import type { DrafterSettingsType } from "./DrafterSettings.types.ts";
 import { useState } from "react";
 
+import logo from "../../assets/civlogo.png";
+
 export type DrafterSettingsProps = {
 	onContinue?: (settings: DrafterSettingsType) => void;
 };
@@ -41,8 +43,9 @@ export function DrafterSettings({
 
 	return (
 		<Container size={"md"}>
-			<div>
-				<div className={"title"}>Civilization 6 Drafter</div>
+			<div className={"title"}>
+				<img className={"title_image"} src={logo} alt={"civ logo"} />
+				<div style={{ marginTop: -15 }}>Drafter</div>
 			</div>
 
 			<Container size={"sm"}>

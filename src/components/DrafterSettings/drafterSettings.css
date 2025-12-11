@@ -1,12 +1,17 @@
 .title {
-	font-family: MinionPro-Bold, serif;
-	font-size: 64px;
-	color: var(--gold-12);
+	font-family: Myriad-Regular, sans-serif;
+	font-size: 32px;
+	color: var(--sand-12);
 	margin-top: 100px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 20px;
-	letter-spacing: 5px;
-	text-shadow: 0 0 10px var(--gold-10);
+	letter-spacing: 10px;
+	align-items: center;
+	font-variant: all-small-caps;
+}
+
+.title_image {
+	width: 600px
 }
