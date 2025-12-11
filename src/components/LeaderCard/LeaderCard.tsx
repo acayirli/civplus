@@ -22,7 +22,7 @@ export function LeaderCard({
 	...props
 }: Readonly<LeaderCardProps>) {
 	const [internalBanned, setInternalBanned] = useState<boolean>(false);
-
+	
 	return (
 		<div
 			className={`leaderCard${isBanned || internalBanned ? " leaderCard--banned" : ""}`}

@@ -11,7 +11,8 @@ import { Flex } from "../Flex/Flex.tsx";
 import { Button } from "../Button/Button.tsx";
 
 import "./drafterResults.css";
-import { useEffect, useMemo } from "react";
+import {Fragment, useEffect, useMemo} from "react";
+import {Heading} from "../Heading/Heading.tsx";
 
 export type DrafterResultsProps = {
 	settings?: DrafterSettingsType | null;
@@ -82,30 +83,38 @@ function DrafterResults({
 	return (
 		<Container size={"xl"} style={{ padding: "20px 40px" }}>
 			<Stack gap={"xl"}>
-				<Flex gap={"lg"} justifyContent={"flex-end"}>
-					<Button onClick={handleOnClickShare}>Share</Button>
+				<Flex justifyContent={"space-between"}>
+					<Heading>
+						Results
+					</Heading>
 
-					<Button onClick={onCancel} variant={"secondary"}>
-						Restart
-					</Button>
+					<Flex gap={"lg"} justifyContent={"flex-end"}>
+						<Button onClick={handleOnClickShare}>Share</Button>
+
+						<Button onClick={onCancel} variant={"secondary"}>
+							Restart
+						</Button>
+					</Flex>
 				</Flex>
 
 				{calculatedResults.map((result) => (
-					<Stack key={result.name} gap={"lg"}>
-						<div className={"results_playername"}>{result.name}</div>
+					<Fragment key={result.name}>
+						<Stack gap={"lg"}>
+							<div className={"results_playername"}>{result.name}</div>
 
-						<LeaderGrid>
-							{result.leaders.map((leader) => (
-								<LeaderCard key={leader.id} {...leader} />
-							))}
-						</LeaderGrid>
+							<LeaderGrid>
+								{result.leaders.map((leader) => (
+									<LeaderCard key={leader.id} {...leader} />
+								))}
+							</LeaderGrid>
+						</Stack>
 
 						<Border />
-					</Stack>
+					</Fragment>
 				))}
 
 				<Stack gap={"lg"}>
-					<div className={"results_bans-title"}>Bans</div>
+					<div className={"results_playername"}>Bans</div>
 
 					{bannedLeaders.length > 0 ? (
 						<LeaderGrid>
@@ -118,7 +127,7 @@ function DrafterResults({
 							))}
 						</LeaderGrid>
 					) : (
-						<div>No bans.</div>
+						<div style={{ paddingLeft: 12 }}>No bans</div>
 					)}
 				</Stack>
 			</Stack>

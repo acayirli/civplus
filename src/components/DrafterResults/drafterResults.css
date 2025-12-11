@@ -1,11 +1,6 @@
 .results_playername {
-	color: var(--gold-11);
+	color: var(--sand-11);
 	font-family: Myriad-Bold, sans-serif;
-	font-size: 24px;
-}
-
-.results_bans-title {
-	color: var(--sand-9);
-	font-family: Myriad-Regular, sans-serif;
-	font-size: 24px;
+	font-size: 20px;
+	padding-left: 12px;
 }
