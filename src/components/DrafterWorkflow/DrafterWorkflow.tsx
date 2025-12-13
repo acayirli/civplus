@@ -16,6 +16,9 @@ export function DrafterWorkflow() {
 	const [overrideResults, setOverrideResults] = useState<PlayerResult[] | null>(
 		null,
 	);
+	const [overridePostBans, setOverridePostBans] = useState<string[] | null>(
+		null,
+	);
 
 	// read results from url & localStorage
 	useEffect(() => {
@@ -35,6 +38,7 @@ export function DrafterWorkflow() {
 				setOverrideResults(playerResults);
 				setBannedLeaders(parsedDrafterResults.bans);
 				setDrafterState("results");
+				setOverridePostBans(parsedDrafterResults.postBans);
 			}
 		}
 	}, []);
@@ -70,6 +74,7 @@ export function DrafterWorkflow() {
 				bannedLeaders={bannedLeaders}
 				onCancel={handleCancel}
 				overrideResults={overrideResults}
+				overridePostBans={overridePostBans}
 			/>
 		);
 	} else {

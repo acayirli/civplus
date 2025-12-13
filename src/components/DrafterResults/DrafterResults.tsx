@@ -11,14 +11,15 @@ import { Flex } from "../Flex/Flex.tsx";
 import { Button } from "../Button/Button.tsx";
 
 import "./drafterResults.css";
-import {Fragment, useEffect, useMemo} from "react";
-import {Heading} from "../Heading/Heading.tsx";
+import { Fragment, useEffect, useMemo, useState } from "react";
+import { Heading } from "../Heading/Heading.tsx";
 
 export type DrafterResultsProps = {
 	settings?: DrafterSettingsType | null;
 	bannedLeaders: string[];
 	onCancel: () => void;
 	overrideResults?: PlayerResult[] | null;
+	overridePostBans?: string[] | null;
 };
 
 function calculateDrafterResults(
@@ -52,7 +53,12 @@ function DrafterResults({
 	bannedLeaders,
 	onCancel,
 	overrideResults,
+	overridePostBans,
 }: Readonly<DrafterResultsProps>) {
+	const [postBans, setPostBans] = useState<string[]>(
+		() => overridePostBans || [],
+	);
+
 	const calculatedResults = useMemo(
 		() =>
 			overrideResults ||
@@ -67,14 +73,18 @@ function DrafterResults({
 			leaders: playerResult.leaders.map((leader) => leader.id),
 		}));
 		const uriEncodedReults = encodeURIComponent(
-			JSON.stringify({ draft: reducedResults, bans: bannedLeaders }),
+			JSON.stringify({
+				draft: reducedResults,
+				bans: bannedLeaders,
+				postBans: postBans,
+			}),
 		);
 		history.replaceState(
 			null,
 			"",
 			`${import.meta.env.BASE_URL}?drafterresults=${uriEncodedReults}`,
 		);
-	}, [bannedLeaders, calculatedResults]);
+	}, [bannedLeaders, calculatedResults, postBans]);
 
 	function handleOnClickShare() {
 		void navigator.clipboard.writeText(window.location.href);
@@ -84,9 +94,7 @@ function DrafterResults({
 		<Container size={"xl"} style={{ padding: "20px 40px" }}>
 			<Stack gap={"xl"}>
 				<Flex justifyContent={"space-between"}>
-					<Heading>
-						Results
-					</Heading>
+					<Heading>Results</Heading>
 
 					<Flex gap={"lg"} justifyContent={"flex-end"}>
 						<Button onClick={handleOnClickShare}>Share</Button>
@@ -104,7 +112,18 @@ function DrafterResults({
 
 							<LeaderGrid>
 								{result.leaders.map((leader) => (
-									<LeaderCard key={leader.id} {...leader} />
+									<LeaderCard
+										key={leader.id}
+										isBanned={postBans.includes(leader.id)}
+										onToggleBan={(leaderId, banned) => {
+											if (banned) {
+												setPostBans([...postBans, leaderId]);
+											} else {
+												setPostBans(postBans.filter((x) => x !== leaderId));
+											}
+										}}
+										{...leader}
+									/>
 								))}
 							</LeaderGrid>
 						</Stack>

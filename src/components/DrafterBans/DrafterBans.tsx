@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Stack } from "../Stack/Stack.tsx";
 import { Flex } from "../Flex/Flex.tsx";
 import { Button } from "../Button/Button.tsx";
-import {Heading} from "../Heading/Heading.tsx";
+import { Heading } from "../Heading/Heading.tsx";
 
 export type DrafterBansProps = {
 	onContinue?: (bannedLeaders: string[]) => void;
@@ -37,22 +37,18 @@ export function DrafterBans({
 		<Container size={"xl"} style={{ padding: "20px 40px" }}>
 			<Stack gap={"lg"}>
 				<Heading>Bans</Heading>
-				
+
 				<Flex justifyContent={"space-between"} gap={"lg"}>
 					<Flex gap={"lg"} style={{ alignItems: "flex-end" }}>
-						<TextInput 
+						<TextInput
 							inline
 							label={"Search"}
 							value={searchTerm}
 							onChange={setSearchTerm}
 						/>
-						
+
 						<div style={{ whiteSpace: "nowrap" }}>
-							{
-								bannedLeaders.length > 0 && (
-									`${bannedLeaders.length} bans`
-								)
-							}
+							{bannedLeaders.length > 0 && `${bannedLeaders.length} bans`}
 						</div>
 					</Flex>
 
