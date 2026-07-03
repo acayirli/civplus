@@ -75,12 +75,25 @@ import wilfried from "../assets/avatars/wilfrid.webp";
 import wilhelmina from "../assets/avatars/wilhelmina.webp";
 import wuzetian from "../assets/avatars/wuzetian.webp";
 import yongle from "../assets/avatars/yongle.webp";
+import anacaona from "../assets/avatars/anacaona.webp";
+import olympias from "../assets/avatars/olympias.webp";
+import vercingetorix from "../assets/avatars/vercingetorix.webp";
+import tekinich from "../assets/avatars/tekinich2.webp";
+import maria from "../assets/avatars/maria.webp";
+import theodoric from "../assets/avatars/theodoric.webp";
+import ahiram from "../assets/avatars/ahiram.webp";
+import stanislaw from "../assets/avatars/stanislaw.webp";
+import alhasan from "../assets/avatars/alhasan.webp";
+import spearthrower from "../assets/avatars/spearthrower.webp";
+import kiviuq from "../assets/avatars/kiviuq.webp";
+import trisong from "../assets/avatars/trisong.webp";
 
 export type LeaderType = {
 	id: string;
-	portrait: string;
+	portrait?: string;
 	leader: string;
 	nation: string;
+	bbgExpanded?: boolean;
 };
 
 export const leaders: { [leader: string]: LeaderType } = {
@@ -90,11 +103,25 @@ export const leaders: { [leader: string]: LeaderType } = {
 		leader: "Abraham Lincoln",
 		nation: "American",
 	},
+	ahiram: {
+		id: "ahiram",
+		leader: "Ahiram",
+		nation: "Phoenician",
+		bbgExpanded: true,
+		portrait: ahiram,
+	},
 	alexander: {
 		id: "alexander",
 		portrait: alexander,
 		leader: "Alexander",
 		nation: "Macedonian",
+	},
+	alhasan: {
+		id: "alhasan",
+		leader: "Al-Hasan ibn Sulaiman",
+		nation: "Swahili",
+		bbgExpanded: true,
+		portrait: alhasan
 	},
 	amanitore: {
 		id: "amanitore",
@@ -108,6 +135,13 @@ export const leaders: { [leader: string]: LeaderType } = {
 		leader: "Ambiorix",
 		nation: "Gallic",
 	},
+	anacaona: {
+		id: "anacaona",
+		leader: "Anacaona",
+		nation: "Taíno",
+		bbgExpanded: true,
+		portrait: anacaona
+	},
 	basil: {
 		id: "basil",
 		portrait: basil,
@@ -119,6 +153,12 @@ export const leaders: { [leader: string]: LeaderType } = {
 		portrait: batrieu,
 		leader: "Bà Triệu",
 		nation: "Vietnamese",
+	},
+	caesar: {
+		id: "caesar",
+		portrait: caesar,
+		leader: "Julius Caesar",
+		nation: "Roman",
 	},
 	catherine: {
 		id: "catherine",
@@ -264,11 +304,12 @@ export const leaders: { [leader: string]: LeaderType } = {
 		leader: "John Curtin",
 		nation: "Australian",
 	},
-	caesar: {
-		id: "caesar",
-		portrait: caesar,
-		leader: "Julius Caesar",
-		nation: "Roman",
+	kiviuq: {
+		id: "kiviuq",
+		leader: "Kiviuq",
+		nation: "Thule",
+		bbgExpanded: true,
+		portrait: kiviuq
 	},
 	kristina: {
 		id: "kristina",
@@ -318,6 +359,13 @@ export const leaders: { [leader: string]: LeaderType } = {
 		leader: "Mansa Musa",
 		nation: "Malian",
 	},
+	mariatheresa: {
+		id: "mariatheresa",
+		leader: "Maria Theresa",
+		nation: "Austrian",
+		bbgExpanded: true,
+		portrait: maria
+	},
 	matthias: {
 		id: "matthias",
 		portrait: matthias,
@@ -353,6 +401,13 @@ export const leaders: { [leader: string]: LeaderType } = {
 		portrait: nzinga,
 		leader: "Nzinga Mbande",
 		nation: "Kongolese",
+	},
+	olympias: {
+		id: "olympias",
+		leader: "Olympias",
+		nation: "Macedonian",
+		bbgExpanded: true,
+		portrait: olympias
 	},
 	pachacuti: {
 		id: "pachacuti",
@@ -426,16 +481,16 @@ export const leaders: { [leader: string]: LeaderType } = {
 		leader: "Saladin (Sultan)",
 		nation: "Arabian",
 	},
-	seondeok: {
-		id: "seondeok",
-		portrait: seondeok,
-		leader: "Seondeok",
-		nation: "Korean",
-	},
 	sejong: {
 		id: "sejong",
 		portrait: sejong,
 		leader: "Sejong",
+		nation: "Korean",
+	},
+	seondeok: {
+		id: "seondeok",
+		portrait: seondeok,
+		leader: "Seondeok",
 		nation: "Korean",
 	},
 	shaka: {
@@ -448,7 +503,21 @@ export const leaders: { [leader: string]: LeaderType } = {
 		id: "simon",
 		portrait: simon,
 		leader: "Simón Bolívar",
-		nation: "Gran Columbian",
+		nation: "Gran Colombian",
+	},
+	spearthrower: {
+		id: "spearthrower",
+		leader: "Spearthrower Owl",
+		nation: "Teotihuacán",
+		bbgExpanded: true,
+		portrait: spearthrower,
+	},
+	stanislaw: {
+		id: "stanislaw",
+		leader: "Stanislaw II",
+		nation: "Polish",
+		bbgExpanded: true,
+		portrait: stanislaw
 	},
 	suleiman: {
 		id: "suleiman",
@@ -486,11 +555,25 @@ export const leaders: { [leader: string]: LeaderType } = {
 		leader: "Teddy Roosevelt (Rough Rider)",
 		nation: "American",
 	},
+	tekinich: {
+		id: "tekinich",
+		leader: "Te' K'inich II",
+		nation: "Mayan",
+		bbgExpanded: true,
+		portrait: tekinich
+	},
 	theodora: {
 		id: "theodora",
 		portrait: theodora,
 		leader: "Theodora",
 		nation: "Byzantine",
+	},
+	theodoric: {
+		id: "theodoric",
+		leader: "Theodoric",
+		nation: "Gothic",
+		bbgExpanded: true,
+		portrait: theodoric
 	},
 	tokugawa: {
 		id: "tokugawa",
@@ -509,6 +592,20 @@ export const leaders: { [leader: string]: LeaderType } = {
 		portrait: trajan,
 		leader: "Trajan",
 		nation: "Roman",
+	},
+	trisong: {
+		id: "trisong",
+		leader: "Trisong Detsen",
+		nation: "Tibetan",
+		bbgExpanded: true,
+		portrait: trisong
+	},
+	vercingetorix: {
+		id: "vercingetorix",
+		leader: "Vercingetorix",
+		nation: "Gallic",
+		bbgExpanded: true,
+		portrait: vercingetorix,
 	},
 	victoria: {
 		id: "victoria",

@@ -18,3 +18,7 @@
 .container--xl {
 	max-width: 1920px;
 }
+
+.container--unlimited {
+	max-width: auto;
+}

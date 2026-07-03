@@ -13,6 +13,7 @@ import { Button } from "../Button/Button.tsx";
 import "./drafterResults.css";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Heading } from "../Heading/Heading.tsx";
+import { useLocalStorage } from "../../hooks/useLocalStorage.ts";
 
 export type DrafterResultsProps = {
 	settings?: DrafterSettingsType | null;
@@ -25,10 +26,11 @@ export type DrafterResultsProps = {
 function calculateDrafterResults(
 	settings: DrafterSettingsType,
 	bans: string[],
+	withBbgExpanded: boolean,
 ): PlayerResult[] {
 	const playerResults = [];
 	const unbannedLeaders = Object.values(leaders)
-		.filter((leader) => !bans.includes(leader.id))
+		.filter((leader) => !bans.includes(leader.id) && (withBbgExpanded || !leader.bbgExpanded))
 		.sort(() => 0.5 - Math.random());
 	const leadersPerPlayer = Math.min(
 		settings.numberOfLeadersPerPlayer,
@@ -55,6 +57,8 @@ function DrafterResults({
 	overrideResults,
 	overridePostBans,
 }: Readonly<DrafterResultsProps>) {
+	const [withBbgExpanded] = useLocalStorage<boolean>("bbgexpanded", true);
+
 	const [postBans, setPostBans] = useState<string[]>(
 		() => overridePostBans || [],
 	);
@@ -62,7 +66,7 @@ function DrafterResults({
 	const calculatedResults = useMemo(
 		() =>
 			overrideResults ||
-			calculateDrafterResults(settings!, bannedLeaders || []),
+			calculateDrafterResults(settings!, bannedLeaders || [], withBbgExpanded),
 		[settings, bannedLeaders, overrideResults],
 	);
 

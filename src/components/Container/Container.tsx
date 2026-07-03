@@ -3,7 +3,7 @@ import type { HTMLAttributes } from "react";
 import "./container.css";
 
 export type ContainerProps = {
-	size: "sm" | "md" | "lg" | "xl";
+	size: "sm" | "md" | "lg" | "xl" | "unlimited";
 } & HTMLAttributes<HTMLDivElement>;
 
 export function Container({

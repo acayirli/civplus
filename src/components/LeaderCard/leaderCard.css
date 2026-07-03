@@ -18,6 +18,12 @@
 	width: 75px;
 	border-radius: 50%;
 	position: relative;
+	flex-shrink: 0;
+}
+
+.leaderCard__avatar img {
+	height: 100%;
+	width: 100%;
 }
 
 .leaderCard--banned .leaderCard__avatar {

@@ -8,6 +8,8 @@ import { Stack } from "../Stack/Stack.tsx";
 import { Flex } from "../Flex/Flex.tsx";
 import { Button } from "../Button/Button.tsx";
 import { Heading } from "../Heading/Heading.tsx";
+import { Switch } from "../Switch/Switch.tsx";
+import { useLocalStorage } from "../../hooks/useLocalStorage.ts";
 
 export type DrafterBansProps = {
 	onContinue?: (bannedLeaders: string[]) => void;
@@ -18,11 +20,13 @@ export function DrafterBans({
 	onContinue,
 	onCancel,
 }: Readonly<DrafterBansProps>) {
+	const [withBbgExpanded, setWithBbgExpanded] = useLocalStorage<boolean>("bbgexpanded", false);
 	const [bannedLeaders, setBannedLeaders] = useState<string[]>([]);
 	const [searchTerm, setSearchTerm] = useState<string>("");
 
 	const filteredLeaders = Object.values(leaders).filter((leader) =>
-		leader.leader.toLowerCase().includes(searchTerm.toLowerCase()),
+		leader.leader.toLowerCase().includes(searchTerm.toLowerCase()) 
+		&& (withBbgExpanded || !leader.bbgExpanded),
 	);
 
 	function handleToggleBan(leaderId: string, banned: boolean) {
@@ -34,18 +38,22 @@ export function DrafterBans({
 	}
 
 	return (
-		<Container size={"xl"} style={{ padding: "20px 40px" }}>
+		<Container size={"unlimited"} style={{ padding: "20px 40px" }}>
 			<Stack gap={"lg"}>
 				<Heading>Bans</Heading>
 
 				<Flex justifyContent={"space-between"} gap={"lg"}>
 					<Flex gap={"lg"} style={{ alignItems: "flex-end" }}>
-						<TextInput
-							inline
-							label={"Search"}
-							value={searchTerm}
-							onChange={setSearchTerm}
-						/>
+						<Flex gap="lg">
+							<TextInput
+								inline
+								label={"Search"}
+								value={searchTerm}
+								onChange={setSearchTerm}
+							/>
+
+							<Switch checked={withBbgExpanded} onChange={setWithBbgExpanded} label="BBG Expanded" />
+						</Flex>
 
 						<div style={{ whiteSpace: "nowrap" }}>
 							{bannedLeaders.length > 0 && `${bannedLeaders.length} bans`}

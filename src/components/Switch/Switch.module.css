@@ -1,0 +1,60 @@
+.wrapper {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.label {
+	color: var(--gold-12);
+	user-select: none;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.track {
+	position: relative;
+	width: 46px;
+	height: 24px;
+	padding: 0;
+	border-radius: 999px;
+	border: 1px solid var(--gold-6);
+	background: var(--gold-3);
+	cursor: pointer;
+	transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.track:hover:not(:disabled) {
+	border-color: var(--gold-7);
+}
+
+.track:focus-visible {
+	outline: 2px solid var(--gold-9);
+	outline-offset: 2px;
+}
+
+.track:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.trackOn {
+	background-color: var(--gold-9);
+	border-color: var(--gold-5);
+}
+
+.thumb {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: var(--gold-9);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	transition: transform 160ms ease;
+}
+
+.thumbOn {
+	transform: translateX(22px);
+	background: var(--gold-12);
+}
