@@ -1,9 +1,9 @@
 .leaderCard {
 	display: flex;
-	gap: 15px;
+	gap: 10px;
 	align-items: center;
 	transition: 0.2s;
-	border-radius: 3px;
+	border-radius: 5px;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
@@ -37,14 +37,13 @@
 .leaderCard__name {
 	color: var(--gold-12);
 	font-size: 24px;
-	letter-spacing: 1px;
 	text-shadow: 0 0 5px var(--gold-10);
-	font-family: MinionPro-Bold, serif;
-	font-variant: small-caps;
+	font-family: 'Times New Roman', Times, serif;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	transition: 0.2s;
+	margin-bottom: 2px;
 }
 
 .leaderCard__name--mostBanned {
