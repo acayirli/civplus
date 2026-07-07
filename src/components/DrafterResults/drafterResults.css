@@ -1,3 +1,9 @@
+@media (max-width: 600px) {
+    .filterSectionResults {
+        flex-direction: column;
+    }
+}
+
 .results_playername {
 	color: var(--sand-11);
 	font-family: Myriad-Bold, sans-serif;

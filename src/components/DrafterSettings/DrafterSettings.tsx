@@ -48,7 +48,7 @@ export function DrafterSettings({
 				<div style={{ marginTop: -15 }}>Drafter</div>
 			</div>
 
-			<Container size={"sm"}>
+			<Container size={"sm"} style={{ padding: "20px 40px" }}>
 				<Stack gap={"lg"}>
 					<div>
 						<TextInput

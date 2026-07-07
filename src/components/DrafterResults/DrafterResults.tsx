@@ -57,6 +57,7 @@ function DrafterResults({
 	overrideResults,
 	overridePostBans,
 }: Readonly<DrafterResultsProps>) {
+	const [showText, setShowText] = useState(false);
 	const [withBbgExpanded] = useLocalStorage<boolean>("bbgexpanded", true);
 
 	const [postBans, setPostBans] = useState<string[]>(
@@ -92,16 +93,26 @@ function DrafterResults({
 
 	function handleOnClickShare() {
 		void navigator.clipboard.writeText(window.location.href);
+		setShowText(true);
+
+		setTimeout(() => {
+		setShowText(false);
+		}, 1000);
 	}
 
 	return (
 		<Container size={"xl"} style={{ padding: "20px 40px" }}>
 			<Stack gap={"xl"}>
-				<Flex justifyContent={"space-between"}>
+				<Flex justifyContent={"space-between"} className="filterSectionResults" gap="lg">
 					<Heading>Results</Heading>
 
 					<Flex gap={"lg"} justifyContent={"flex-end"}>
-						<Button onClick={handleOnClickShare}>Share</Button>
+						<Flex alignItems="center" gap="xs">
+							{
+								showText && (<div>URL copied to clipboard!</div>)
+							}
+							<Button onClick={handleOnClickShare}>Share</Button>
+						</Flex>
 
 						<Button onClick={onCancel} variant={"secondary"}>
 							Restart

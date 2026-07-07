@@ -10,6 +10,7 @@ import { Button } from "../Button/Button.tsx";
 import { Heading } from "../Heading/Heading.tsx";
 import { Switch } from "../Switch/Switch.tsx";
 import { useLocalStorage } from "../../hooks/useLocalStorage.ts";
+import "./DrafterBans.css";
 
 export type DrafterBansProps = {
 	onContinue?: (bannedLeaders: string[]) => void;
@@ -42,7 +43,7 @@ export function DrafterBans({
 			<Stack gap={"lg"}>
 				<Heading>Bans</Heading>
 
-				<Flex justifyContent={"space-between"} gap={"lg"}>
+				<Flex className="filterSection" justifyContent={"space-between"} gap={"lg"}>
 					<Flex gap={"lg"} style={{ alignItems: "flex-end" }}>
 						<Flex gap="lg">
 							<TextInput
